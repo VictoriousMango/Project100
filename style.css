@@ -1,0 +1,217 @@
+:root {
+    --bg-dark: #000000;
+    --card-bg: #1a1a1a;
+    --text-color: #ffffff;
+    --highlight: #00FFFF;
+    --highlight-hover: #FF00FF;
+    --glow-color: rgba(255, 0, 255, 0.8);
+    --glow-color-alt: rgba(0, 255, 255, 0.8);
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.nav-btn {
+    background-color: #00FFFF;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #FF00FF;
+}
+
+/* Main Layout */
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    max-width: 1200px; /* To ensure content doesn't stretch too much */
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 80vh;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.card {
+    display: none;
+    width: 80%;
+    height: 100%;
+    background-color: #1a1a1a;
+    color: #00FFFF;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px 0;
+    transition: transform 0.3s ease-in-out;
+    /* cursor: pointer; */
+}
+
+.card:hover {
+    box-shadow: 0 10px 30px var(--highlight);
+}
+
+.card.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.05);
+    animation: cardEntry 0.5s ease-in-out forwards;
+}
+
+@keyframes cardEntry {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1.05);
+    }
+}
+
+/* Glow Circle */
+.glow-circle {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(rgba(0, 255, 255, 0.8), transparent);
+    animation: pulse 2s infinite alternate;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-content {
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+}
+
+.details-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #00FFFF;
+}
+
+.details-text {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* Keyframes for Pulsating Effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+    }
+    100% {
+        transform: scale(1.2);
+        box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Stack cards and glow circle vertically on mobile */
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-container {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .glow-circle {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Card Footer */
+.card-footer {
+    position: absolute;
+    bottom: 20px; /* Position the footer at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the buttons horizontally */
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Make sure buttons don't overflow */
+    padding: 0 10px;
+}
+
+.nav-btn {
+    background-color: #00FFFF;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 45%; /* Button width to ensure they're side by side */
+}
+
+.nav-btn:hover {
+    background-color: #FF00FF;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsive Adjustments for Card Footer */
+@media (max-width: 768px) {
+    .card-footer {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .nav-btn {
+        width: 48%; /* Make the buttons slightly smaller on mobile */
+    }
+}

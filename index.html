@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Card Navigation with Animated Sphere</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <h1>
-        <a href="./DeepLearning100/DeepLearning100.html">Deep Learning 100</a>
-    </h1>
-    <h1>
-        <a href="./GuidedWaveCommunication/GuidedWaveCommunication.html">Guided Wave Communication</a>
-    </h1>
+
+    <div class="main-container">
+        <!-- Card Section -->
+        <div class="card-container">
+            <div class="card active" data-title="Deep Learning 100" data-description="Learn how users can participate and engage effectively in this system.">
+                <h2><a href="./DeepLearning100/DeepLearning100.html">Deep Learning 100</a></h2>
+                <div class="card-footer">
+                    <button class="nav-btn prevBtn">Previous</button>
+                    <button class="nav-btn nextBtn">Next</button>
+                </div>
+            </div>
+            <div class="card" data-title="Guided Wave Communication" data-description="Understand how resources and data are distributed efficiently.">
+                <h2><a href="./GuidedWaveCommunication/GuidedWaveCommunication.html">Guided Wave Communication</a></h2>
+                <div class="card-footer">
+                    <button class="nav-btn prevBtn">Previous</button>
+                    <button class="nav-btn nextBtn">Next</button>
+                </div>
+            </div>
+            <div class="card" data-title="Python 100" data-description="Explore the models of revenue sharing and profit distribution.">
+                <h2><a href="./Python100/Python100.html">Python 100</a></h2>
+                <div class="card-footer">
+                    <button class="nav-btn prevBtn">Previous</button>
+                    <button class="nav-btn nextBtn">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Animated Glow Circle for Details -->
+        <div class="glow-circle">
+            <div class="details-content">
+                <h2 id="detailsTitle">Participation</h2>
+                <p id="detailsText">Learn how users can participate and engage effectively in this system.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator Summary</title>
+    <link rel="stylesheet" href="../assets/css/content.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Password Generator</h1>
+    </header>
+
+    <section class="content">
+        <div class="section">
+            <h2>Summary of the Code</h2>
+            <p>
+                The "Password Generator" is a Python application built with the <strong>Streamlit</strong> library. 
+                It generates secure and customizable passwords based on user-defined inputs such as:
+            </p>
+            <ul>
+                <li>Desired password length.</li>
+                <li>Optional strings or characters to include.</li>
+                <li>Additional character sets (lowercase, uppercase, and special characters).</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Concepts Used</h2>
+            <ul>
+                <li><strong>Streamlit Library:</strong> Used for building an interactive and user-friendly application.</li>
+                <li><strong>ASCII Character Encoding:</strong> The `chr()` function and ASCII ranges are used to generate lowercase, uppercase, and special characters dynamically.</li>
+                <li><strong>User Input:</strong> `st.number_input` for password length and `st.text_input` for additional user-defined strings.</li>
+                <li><strong>Randomization:</strong> The `random.randint()` function selects random character sets and characters within those sets.</li>
+                <li><strong>Error Handling:</strong> `try-except-finally` blocks ensure robustness when user input is incomplete or missing.</li>
+                <li><strong>Lists and Dictionaries:</strong> These data structures organize character sets and manage generated passwords.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Difficulty Level</h2>
+            <p><strong>Category:</strong> Intermediate</p>
+            <p>
+                This code is categorized as <strong>Intermediate</strong> because it incorporates multiple foundational concepts like 
+                user input, randomization, and error handling while requiring a basic understanding of ASCII character encoding and Streamlit.
+                The logic is slightly more complex than beginner-level code, especially with dynamic character set management.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Key Highlights</h2>
+            <ul>
+                <li>Dynamic generation of character sets using ASCII ranges for flexibility and scalability.</li>
+                <li>Customizable password generation based on user preferences.</li>
+                <li>Streamlit's interactive UI elements make the application user-friendly and easy to use.</li>
+                <li>Error handling ensures the application works even with incomplete or unexpected inputs.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Advantages of This Code</h2>
+            <ul>
+                <li>Highly customizable: Users can define specific strings to include in the password.</li>
+                <li>Supports multiple character sets for secure password generation.</li>
+                <li>Interactive and easy-to-use interface thanks to Streamlit.</li>
+                <li>Efficiently handles edge cases to ensure smooth operation.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p><a href="https://victoriousmango-100-python-project-home-python-scripts-li8dph.streamlit.app/Password_Generator" target="_blank">Application Demo</a> | <a href="https://github.com/VictoriousMango/100-Python-Project/blob/Python-Scripts/pages/Password%20Generator.py" target="_blank">Code</a></p>
+        <a href="https://streamlit.io/" target="_blank">Learn more about Streamlit</a>
+    </footer>
+
+</body>
+
+</html>

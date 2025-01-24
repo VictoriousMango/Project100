@@ -1,0 +1,172 @@
+/* Define Neon Color Variables */
+:root {
+  --color1: #0d0d0d; /* Deep Black for Background */
+  --color2: #00ffcc; /* Neon Aqua for Text */
+  --color3: #ff00ff; /* Neon Magenta for Headers */
+  --color4: #ffcc00; /* Neon Yellow for Accents */
+  --color5: #ff6699; /* Neon Pink for Secondary Text */
+  --color6: #00ccff; /* Neon Blue for Highlights */
+  --color7: #1a1a1a; /* Dark Gray for Alternate Background */
+  --shadow-color: rgba(0, 255, 204, 0.4); /* Subtle Neon Glow */
+}
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--color1);
+  color: var(--color2);
+  line-height: 1.6;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+header {
+  background-color: var(--color7);
+  text-align: center;
+  padding: 40px;
+  color: var(--color3);
+  box-shadow: 0 0 15px var(--shadow-color);
+}
+
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 0 0 10px var(--color3), 0 0 20px var(--color3);
+}
+
+h2 {
+  color: var(--color4);
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px var(--color4);
+}
+
+ul {
+  list-style-type: '- ';
+  padding-left: 20px;
+}
+
+ul li {
+  font-size: 1.2rem;
+  color: var(--color2);
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px var(--color2);
+}
+
+p {
+  color: var(--color5);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 3px var(--color5);
+}
+
+/* Content Sections */
+.content {
+  padding: 40px 10%;
+  background-color: var(--color7);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+ol {
+  padding-left: 5%;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background-color: var(--color7);
+  color: var(--color2);
+  font-size: 1.1rem;
+  text-align: center;
+  box-shadow: 0 0 10px var(--shadow-color);
+}
+
+footer > a {
+  color: var(--color6);
+  text-decoration: none;
+  text-shadow: 0 0 5px var(--color6);
+}
+
+footer > p {
+  color: var(--color5);
+  text-align: right;
+  text-shadow: 0 0 5px var(--color5);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: center;
+  background-color: var(--color7);
+  box-shadow: 0 0 10px var(--shadow-color);
+}
+
+table thead th {
+  background-color: var(--color6);
+  color: var(--color1);
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid var(--color4);
+  text-shadow: 0 0 5px var(--color6);
+}
+
+table tbody td {
+  padding: 8px;
+  border: 1px solid var(--color3);
+  color: var(--color2);
+  text-shadow: 0 0 5px var(--color2);
+}
+
+table tbody tr:nth-child(even) {
+  background-color: var(--color7);
+}
+
+table tbody tr:hover {
+  background-color: var(--color5);
+}
+
+h3 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: var(--color3);
+  text-shadow: 0 0 10px var(--color3);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Styling for Responsiveness */
+@media (max-width: 768px) {
+  .content {
+    padding: 20px 5%;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+}
