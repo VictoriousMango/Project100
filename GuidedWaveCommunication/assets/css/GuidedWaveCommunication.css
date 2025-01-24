@@ -19,9 +19,28 @@ body {
     /* height: 100vh; */
     /* overflow: hidden; */
     position: relative;
-    background: url('../img/Space.jpeg') no-repeat center center fixed; /* Replace with your starry image URL */
-    background-size: cover;
+    /* animation: backgroundCycle 20s infinite; */
+    background: url('../img/GuidedWave.jpeg') no-repeat center center fixed;
     /* overflow-y: scroll; */
+}
+
+/* Keyframes for background image cycling */
+@keyframes backgroundCycle {
+    0% {
+        background: url('../img/GuidedWave4.jpeg') no-repeat center center fixed;
+    }
+    25% {
+        background: url('../img/GuidedWave5.jpeg') no-repeat center center fixed;
+    }
+    50% {
+        background: url('../img/GuidedWave6.jpeg') no-repeat center center fixed;
+    }
+    75% {
+        background: url('../img/GuidedWave7.jpeg') no-repeat center center fixed;
+    }
+    100% {
+        background: url('../img/GuidedWave8.jpeg') no-repeat center center fixed;
+    }
 }
 
 .navbar {
@@ -52,7 +71,7 @@ ul {
     padding: 50px;
     position: relative;
     z-index: 1;
-    margin-top: 50px;
+    margin-top: 15%;
 }
 
 /* Cards */
