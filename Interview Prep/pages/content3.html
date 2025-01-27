@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Anniversary</title>
+  <style>
+    body {
+  font-family: serif; /* Choose a serif font like Georgia, Times New Roman, etc. */
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  display: flex; /* Center content vertically */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 400px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2, h3 {
+  margin: 10px 0;
+}
+
+p {
+  margin: 15px 0;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Create the bokeh effect using a background image */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('bokeh.jpg'); /* Replace with your bokeh image */
+  background-size: cover;
+  filter: blur(5px);
+  opacity: 0.2; /* Adjust opacity as needed */
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Wish my Parents</h1>
+    <h2>Anniversary</h2>
+    <h3>Happy Anniversary</h3>
+    <p>Wishing you a lifetime of love and happiness.</p>
+    <button>Read More</button>
+  </div>
+</body>
+</html>

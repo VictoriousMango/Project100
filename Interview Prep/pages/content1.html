@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Interview Prep</title>
+    <link rel="stylesheet" href="../assets/css/content.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header class="header">
+        <h1>Python Interview Preparation</h1>
+        <p>Your one-stop guide to acing Python interviews</p>
+    </header>
+
+    <section class="content">
+        <!-- Tabs for Difficulty Levels -->
+        <ul class="nav nav-tabs" id="difficultyTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="beginner-tab" data-bs-toggle="tab" data-bs-target="#beginner"
+                    type="button" role="tab" aria-controls="beginner" aria-selected="true">Beginner</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="intermediate-tab" data-bs-toggle="tab" data-bs-target="#intermediate"
+                    type="button" role="tab" aria-controls="intermediate" aria-selected="false">Intermediate</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="professional-tab" data-bs-toggle="tab" data-bs-target="#professional"
+                    type="button" role="tab" aria-controls="professional" aria-selected="false">Professional</button>
+            </li>
+        </ul>
+        <div class="tab-content mt-4" id="difficultyTabContent">
+            <!-- Beginner Questions -->
+            <div class="tab-pane fade show active" id="beginner" role="tabpanel" aria-labelledby="beginner-tab">
+                <ol>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                What is Python? What are the benefits of using Python?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    Python is a high-level, general-purpose programming language known for its
+                                    readability and
+                                    versatility.
+
+                                    **Benefits of using Python:**
+
+                                    * **Readability:** Python's syntax is clean and easy to understand, making it
+                                    beginner-friendly and reducing development time.
+                                    * **Versatility:** Python can be used for various purposes, including web
+                                    development, data
+                                    science, machine learning, automation, and scripting.
+                                    * **Large and Active Community:** A strong community provides extensive libraries,
+                                    frameworks, and support resources.
+                                    * **Cross-platform Compatibility:** Python code can run on different operating
+                                    systems with
+                                    minimal modifications.
+                                    * **Extensive Libraries:** A vast collection of libraries (e.g., NumPy, Pandas,
+                                    TensorFlow)
+                                    simplifies complex tasks and accelerates development.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-2"
+                                aria-expanded="false" aria-controls="question-2">
+                                What is a dynamically typed language?
+                            </div>
+                            <div class="collapse" id="question-2">
+                                <div class="card card-body">
+                                    In a dynamically typed language, the data type of a variable is determined at
+                                    runtime, not
+                                    during compilation. This means you don't need to explicitly declare the data type of
+                                    a
+                                    variable before assigning a value to it.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-3"
+                                aria-expanded="false" aria-controls="question-3">
+                                What is an Interpreted language?
+                            </div>
+                            <div class="collapse" id="question-3">
+                                <div class="card card-body">
+                                    An interpreted language is executed line by line by an interpreter, unlike compiled
+                                    languages that are translated into machine code before execution. This allows for
+                                    more
+                                    flexibility and easier debugging but can be slower than compiled languages.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-4"
+                                aria-expanded="false" aria-controls="question-4">
+                                What is PEP 8 and why is it important?
+                            </div>
+                            <div class="collapse" id="question-4">
+                                <div class="card card-body">
+                                    PEP 8 is a style guide for writing Python code. It provides recommendations for code
+                                    formatting, naming conventions, and other stylistic aspects.
+
+                                    **Importance of PEP 8:**
+
+                                    * **Readability:** Following PEP 8 makes code more consistent and easier to read and
+                                    understand, both for the original author and others.
+                                    * **Maintainability:** Consistent code style improves code maintainability, making
+                                    it easier
+                                    to modify and debug in the future.
+                                    * **Collaboration:** PEP 8 promotes a common coding style within a team or project,
+                                    leading
+                                    to better collaboration and code sharing.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-5"
+                                aria-expanded="false" aria-controls="question-5">
+                                What is Scope in Python?
+                            </div>
+                            <div class="collapse" id="question-5">
+                                <div class="card card-body">
+                                    Scope in Python refers to the region of the program where a variable is accessible.
+                                    Different scopes include:
+
+                                    * **Global Scope:** Variables defined outside any function or class are global and
+                                    accessible from anywhere in the program.
+                                    * **Local Scope:** Variables defined within a function are local and only accessible
+                                    within
+                                    that function.
+                                    * **Enclosed Scope:** Variables defined in the enclosing function (if any) of a
+                                    nested
+                                    function.
+                                    * **Built-in Scope:** Predefined variables like `len()`, `print()`, etc., are
+                                    available in
+                                    all scopes.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-6"
+                                aria-expanded="false" aria-controls="question-6">
+                                What are lists and tuples? What is the key difference between the two?
+                            </div>
+                            <div class="collapse" id="question-6">
+                                <div class="card card-body">
+                                    * **Lists:** Ordered, mutable (changeable) collections of elements enclosed in
+                                    square
+                                    brackets `[]`.
+                                    * **Tuples:** Ordered, immutable (unchangeable) collections of elements enclosed in
+                                    parentheses `()`.
+
+                                    **Key Difference:** The primary difference is mutability. Lists can be modified by
+                                    adding,
+                                    removing, or changing elements, while tuples cannot be changed after creation.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-7"
+                                aria-expanded="false" aria-controls="question-7">
+                                What are the common built-in data types in Python?
+                            </div>
+                            <div class="collapse" id="question-7">
+                                <div class="card card-body">
+                                    Python offers several built-in data types:
+
+                                    * **Integers (`int`)**: Whole numbers (e.g., 10, -5, 0)
+                                    * **Floats (`float`)**: Numbers with decimal points (e.g., 3.14, -2.5)
+                                    * **Strings (`str`)**: Sequences of characters (e.g., "Hello", 'world')
+                                    * **Booleans (`bool`)**: Represents truth values (`True`, `False`)
+                                    * **Lists (`list`)**: Ordered, mutable collections (e.g., [1, 2, 3], ["a", "b",
+                                    "c"])
+                                    * **Tuples (`tuple`)**: Ordered, immutable collections (e.g., (1, 2, 3), ("a", "b",
+                                    "c"))
+                                    * **Sets (`set`)**: Unordered collections of unique elements (e.g., {1, 2, 3}, {"a",
+                                    "b"})
+                                    * **Dictionaries (`dict`)**: Collections of key-value pairs (e.g., {"name": "Alice",
+                                    "age":
+                                    30})
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-8"
+                                aria-expanded="false" aria-controls="question-8">
+                                What is pass in Python?
+                            </div>
+                            <div class="collapse" id="question-8">
+                                <div class="card card-body">
+                                    `pass` is a placeholder statement in Python. It does nothing when executed. It's
+                                    often used
+                                    to fill in empty blocks of code temporarily to avoid syntax errors.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-9"
+                                aria-expanded="false" aria-controls="question-9">
+                                What are modules and packages in Python?
+                            </div>
+                            <div class="collapse" id="question-9">
+                                <div class="card card-body">
+                                    * **Modules:** A Python file (with the `.py` extension) containing Python code that
+                                    can be
+                                    imported and used in other Python scripts or modules.
+                                    * **Packages:** A collection of related modules organized hierarchically within a
+                                    directory.
+                                    Packages allow for better organization and modularity of code.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-10"
+                                aria-expanded="false" aria-controls="question-10">
+                                What are global, protected and private attributes in Python?
+                            </div>
+                            <div class="collapse" id="question-10">
+                                <div class="card card-body">
+                                    * **Global Attributes:** Variables declared outside any class or function have
+                                    global scope
+                                    and can be accessed from anywhere in the program.
+                                    * **Protected Attributes:** Attributes prefixed with a single underscore (`_`) are
+                                    considered protected. They are intended for internal use within the class and its
+                                    subclasses. While they can be accessed from outside the class, it is discouraged.
+                                    * **Private Attributes:** Attributes prefixed with a double underscore (`__`) are
+                                    considered
+                                    private. They are not directly accessible from outside the class. However, they can
+                                    be
+                                    accessed indirectly using name mangling (e.g., `_ClassName__attributeName`).
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-11"
+                                aria-expanded="false" aria-controls="question-11">
+                                What is the use of self in Python?
+                            </div>
+                            <div class="collapse" id="question-11">
+                                <div class="card card-body">
+                                    `self` is a convention used in Python's object-oriented programming. It refers to
+                                    the
+                                    instance of the class itself within a method. It's used to access the object's
+                                    attributes
+                                    and methods.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-12"
+                                aria-expanded="false" aria-controls="question-12">
+                                What is __init__?
+                            </div>
+                            <div class="collapse" id="question-12">
+                                <div class="card card-body">
+                                    `__init__` is a special method in Python classes called the constructor. It's
+                                    automatically
+                                    called when an object of the class is created. It's used to initialize the object's
+                                    attributes with initial values.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-13"
+                                aria-expanded="false" aria-controls="question-13">
+                                What are break, continue and pass in Python?
+                            </div>
+                            <div class="collapse" id="question-13">
+                                <div class="card card-body">
+                                    * **break:** Immediately exits the current loop (for, while) and transfers control
+                                    to the
+                                    statement after the loop.
+                                    * **continue:** Skips the current iteration of the loop and moves to the next
+                                    iteration.
+                                    * **pass:** A placeholder statement that does nothing. It's often used to maintain
+                                    the
+                                    correct syntax where a statement is required but no action is needed.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-14"
+                                aria-expanded="false" aria-controls="question-14">
+                                What are unit tests in Python?
+                            </div>
+                            <div class="collapse" id="question-14">
+                                <div class="card card-body">
+                                    Unit tests are small, isolated tests that verify the correctness of individual units
+                                    of code
+                                    (e.g., functions, methods, classes). They help ensure that each part of the code
+                                    works as
+                                    expected and improve code quality and maintainability.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-15"
+                                aria-expanded="false" aria-controls="question-15">
+                                What is docstring in Python?
+                            </div>
+                            <div class="collapse" id="question-15">
+                                <div class="card card-body">
+                                    A docstring is a string literal that appears as the first statement within a module,
+                                    function, class, or method definition. It's used to document the purpose, usage, and
+                                    parameters of the code element. Docstrings are accessible through the `__doc__`
+                                    attribute.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-16"
+                                aria-expanded="false" aria-controls="question-16">
+                                What is slicing in Python?
+                            </div>
+                            <div class="collapse" id="question-16">
+                                <div class="card card-body">
+                                    Slicing is a mechanism used to extract a portion of a sequence (like lists, strings,
+                                    tuples)
+                                    using indices. It's done using the colon (`:`) operator. For example,
+                                    `my_list[start:end:step]` extracts elements from `start` index to `end-1` index with
+                                    a step
+                                    size of `step`.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-17"
+                                aria-expanded="false" aria-controls="question-17">
+                                Explain how can you make a Python Script executable on Unix?
+                            </div>
+                            <div class="collapse" id="question-17">
+                                <div class="card card-body">
+                                    1. **Create a shebang:** Add `#!/usr/bin/env python3` (or the path to your Python
+                                    interpreter) as the first line of your Python script.
+                                    2. **Make the script executable:** Use `chmod +x <script_name>.py` in the terminal
+                                        to make
+                                        the script executable.
+                                        3. **Run the script:** Execute the script directly from the terminal using `./
+                                        <script_name>.py`.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-18"
+                                aria-expanded="false" aria-controls="question-18">
+                                What is the difference between Python Arrays and lists?
+                            </div>
+                            <div class="collapse" id="question-18">
+                                <div class="card card-body">
+                                    * **Arrays:**
+                                    - Provided by the `array` module.
+                                    - Designed to store elements of the same data type (e.g., all integers, all floats).
+                                    - Generally more memory-efficient for storing homogeneous data.
+                                    * **Lists:**
+                                    - More general-purpose.
+                                    - Can store elements of different data types within a single list.
+                                    - More flexible but may consume more memory compared to arrays for homogeneous data.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="tab-pane fade" id="intermediate" role="tabpanel" aria-labelledby="intermediate-tab">
+                <ol>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                How is memory managed in Python?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                What are Python namespaces? Why are they used?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                What is Scope Resolution in Python?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                What are decorators in Python?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                What are Dict and List comprehensions?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                What is lambda in Python? Why is it used?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                How do you copy an object in Python?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                What is the difference between xrange and range in Python?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                What is pickling and unpickling?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                What are generators in Python?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                What is PYTHONPATH in Python?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                What is the use of help() and dir() functions?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                What is the difference between .py and .pyc files?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                How Python is interpreted?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                How are arguments passed by value or by reference in python?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                What are iterators in Python?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                Explain how to delete a file in Python?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                Explain split() and join() functions in Python?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                What does *args and **kwargs mean?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section">
+                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
+                                aria-expanded="false" aria-controls="question-1">
+                                What are negative indexes and why are they used?
+                            </div>
+                            <div class="collapse" id="question-1">
+                                <div class="card card-body">
+                                    ---
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                </ol>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <p>&copy; 2025 Python Interview Prep. All rights reserved.</p>
+        <a href="https://www.scaler.com/event/machine-learning-basics-in-under-20-mins/" target="_blank">Join our
+            Masterclass</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

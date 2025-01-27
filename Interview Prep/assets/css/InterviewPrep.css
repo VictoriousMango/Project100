@@ -1,0 +1,149 @@
+/* Root Variables */
+:root {
+    --color1: #0a0a0f; /* Deep Space Black */
+    --color2: #f0f0f0; /* Off-White */
+    --color3: #ff4500; /* Bright Orange */
+    --color4: #00ffff; /* Cyan */
+    --color5: #ff0054; /* Neon Star Pink */
+    --metallic-silver: #c0c0c0; /* Metallic Silver */
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: var(--color2); /* Off-White */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    /* overflow: hidden; */
+    position: relative;
+    /* animation: backgroundCycle 20s infinite; */
+    background: url('../img/InterviewPrep_1.jpeg') no-repeat center center fixed;
+    /* overflow-y: scroll; */
+}
+
+.navbar {
+    height: max-content;
+    border: 5px dashed;
+    width: 100%;
+    padding-left: 30px;
+    backdrop-filter: blur(100px);
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+}
+
+ul {
+    list-style: none;
+}
+.navbar__Item {
+    color: var(--color3); /* Bright Orange */
+    width: max-content;
+}
+
+
+/* Card Container */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-gap: 30px;
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+    margin-top: 15%;
+}
+
+/* Cards */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+    color: var(--color1); /* Deep Space Black */
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s, box-shadow 0.2s ease-in-out;
+    position: relative;
+    z-index: 2;
+    border: 3px solid var(--metallic-silver);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.6);
+    filter: brightness(1.5);
+}
+
+/* Content Display */
+.content-display {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color1); /* Deep Space Black */
+    border-radius: 12px;
+    padding: 20px;
+    width: 70%;
+    height: 70%;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    z-index: 100;
+}
+
+.content-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.back-btn {
+    background: var(--color3); /* Bright Orange */
+    color: var(--color1); /* Deep Space Black */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 101;
+}
+
+.back-btn:hover {
+    background: var(--color2); /* Off-White */
+    color: var(--color3); /* Bright Orange */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 200px);
+    }
+    .content-display {
+        display: none;
+        position: fixed;
+        top: 10%;
+        left: 5%;
+        transform: translate(-5%, -5%);
+        background: var(--color1); /* Deep Space Black */
+        border-radius: 12px;
+        padding: 20px;
+        width: 70%;
+        height: 70%;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
+        text-align: center;
+        z-index: 100;
+    }
+}
