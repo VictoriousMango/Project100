@@ -26,6 +26,10 @@ body {
     overflow: hidden;
 }
 
+.info {
+    color: #c6f8f8;
+}
+
 /* Navbar */
 .navbar {
     position: fixed;
@@ -222,8 +226,9 @@ a {
 }
 
 .cardIndex.active {
-    height: 1px;
+    /* height: 10px; */
     border: 3px solid #00FFFF;
+    transition: ease-in-out 0.3s;
 }
 
 /* Responsive Adjustments for Card Footer */
