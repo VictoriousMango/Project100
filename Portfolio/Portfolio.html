@@ -14,116 +14,36 @@
         <nav>
             <div class="brand">Additya's Portfolio</div>
             <ul>
-                <li><a href="#hero" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#resume" class="nav-link">Resume</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="./Portfolio.html" class="nav-link active">Home</a></li>
+                <li><a href="./pages/About.html" class="nav-link">About</a></li>
+                <li><a href="./pages/Projects.html" class="nav-link">Projects</a></li>
+                <li><a href="./pages/Resume.html" class="nav-link">Resume</a></li>
+                <li><a href="./pages/Contacts.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
 
         <!-- Content Sections -->
         <div class="content">
             <section id="hero" class="section active">
-                <h1>Welcome to My Portfolio</h1>
-                <p>Crafting digital experiences with passion and precision.</p>
-            </section>
-
-            <section id="about" class="section">
-                <h1>About Me</h1>
-                <p>Hi! I'm Additya, a passionate developer with expertise in web technologies.</p>
-            </section>
-
-            <section id="projects" class="section">
-                <h1>Projects</h1>
-                <p>Showcasing my best work in web development, AI, and creative coding.</p>
-            </section>
-
-            <section id="resume" class="section">
-                <div class="container">
-                    <!-- Header Section -->
-                    <header class="header">
-                        <h1>John Doe</h1>
-                        <p>Software Engineer | john.doe@example.com | (123) 456-7890 | linkedin.com/in/johndoe</p>
-                    </header>
-
-                    <div class="resume-content">
-                        <!-- Left Column -->
-                        <div class="left-column">
-                            <!-- Profile Section -->
-                            <section class="profile card">
-                                <h2>Profile</h2>
-                                <p>
-                                    A results-driven software engineer with 5+ years of experience in developing
-                                    scalable web
-                                    applications, working in fast-paced environments, and leading technical teams.
-                                </p>
-                            </section>
-
-                            <!-- Skills Section -->
-                            <section class="skills card">
-                                <h2>Skills</h2>
-                                <ul class="resume__ul">
-                                    <li>Programming: JavaScript, Python, Java, C++</li>
-                                    <li>Frameworks: React, Node.js, Django</li>
-                                    <li>Tools: Git, Docker, AWS, Jenkins</li>
-                                    <li>Soft Skills: Problem Solving, Leadership, Collaboration</li>
-                                </ul>
-                            </section>
-
-                            <!-- Certifications Section -->
-                            <section class="certifications card">
-                                <h2>Certifications</h2>
-                                <ul class="resume__ul">
-                                    <li>Certified Kubernetes Administrator (CKA)</li>
-                                    <li>AWS Certified Solutions Architect</li>
-                                    <li>Scrum Master Certified (SMC)</li>
-                                </ul>
-                            </section>
-                        </div>
-
-                        <!-- Right Column -->
-                        <div class="right-column">
-                            <!-- Experience Section -->
-                            <section class="experience card">
-                                <h2>Experience</h2>
-                                <div>
-                                    <h3>Senior Software Engineer</h3>
-                                    <p>TechCorp, San Francisco, CA | 2020 - Present</p>
-                                    <ul class="resume__ul">
-                                        <li>Developed scalable microservices that increased system reliability by 25%.
-                                        </li>
-                                        <li>Mentored a team of 5 junior engineers, improving team efficiency.</li>
-                                        <li>Collaborated with cross-functional teams to design and deliver projects on
-                                            time.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h3>Software Engineer</h3>
-                                    <p>CodeSolutions, New York, NY | 2017 - 2020</p>
-                                    <ul class="resume__ul">
-                                        <li>Designed RESTful APIs, reducing client response time by 40%.</li>
-                                        <li>Optimized database queries, improving application performance.</li>
-                                    </ul>
-                                </div>
-                            </section>
-
-                            <!-- Education Section -->
-                            <section class="education card">
-                                <h2>Education</h2>
-                                <p>Bachelor of Science in Computer Science</p>
-                                <p>University of California, Berkeley | 2013 - 2017</p>
-                            </section>
-                        </div>
+                <h1><u>Hi, I am Additya</u></h1>
+                <div class="hero__container">
+                    <div class="hero__left">
+                        <img src="./assets/img/Additya_PassportSizePhoto_2024.jpg" alt="">
                     </div>
+                    <div class="hero__right">
+                        <p><span id="element"></span></p>
+                    </div>
+                    
                 </div>
-            </section>
-
-            <section id="contact" class="section">
-                <h1>Contact Me</h1>
-                <p>Email: additya@example.com</p>
-                <p>LinkedIn: linkedin.com/in/additya</p>
-                <p>GitHub: github.com/additya</p>
+                <div class="hero__skills">
+                    <div class="hero__skill-card">Web Developer</div>
+                    <div class="hero__skill-card">Python Developer</div>
+                    <div class="hero__skill-card">Flask Developer</div>
+                    <div class="hero__skill-card">Streamlit Developer</div>
+                    <div class="hero__skill-card">Business Analyst</div>
+                    <div class="hero__skill-card">ML Engineer</div>
+                    <div class="hero__skill-card">Data Scientist</div>
+                </div>
             </section>
         </div>
     </div>
@@ -134,7 +54,16 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="./assets/js/Portfolio.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ["I'm a <b>BTech</b> in <i><u>Computer Science Engineering</u></i> graduate with <b>Minors</b> in <i><u>Business Analytics</u></i>, driven by a passion for innovation across fields. With a blend of technical expertise and business insight, I excel at crafting solutions from machine learning models to dynamic web applications. Having experience working as..."],
+            typeSpeed: 15,
+            loop: false,
+            backSpeed: 25,
+            backDelay: 2000
+        });
+    </script>
 </body>
 
 </html>
