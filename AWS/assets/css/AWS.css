@@ -20,7 +20,7 @@ body {
     /* overflow: hidden; */
     position: relative;
     /* animation: backgroundCycle 20s infinite; */
-    background: url('../img/GuidedWave.jpeg') no-repeat center center fixed;
+    background: url('../img/AWS.jpeg') no-repeat center center fixed;
     background-size: cover;
     /* overflow-y: scroll; */
 }

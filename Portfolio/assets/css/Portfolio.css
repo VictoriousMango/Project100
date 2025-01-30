@@ -1,6 +1,6 @@
 /* Root Variables */
 :root {
-    /* Portfolio Theme Colors */
+    /* Portfolio Theme Colors (Default for Screen) */
     --bg-color: #121212; /* Deep Black */
     --text-color: #f5c518; /* Rich Gold */
     --secondary-text: #c4a000; /* Deeper Gold */
@@ -10,13 +10,20 @@
     --border-color: #8d6c09; /* Muted Gold */
     --nav-grey: #cccccc; /* Light Gray */
 
-    /* Resume Theme Colors */
-    --resume-bg: #f7f9fc; /* Light Gray */
-    --resume-card-bg: #ffffff; /* White */
-    --resume-text: #333333; /* Dark Gray */
-    --resume-accent: #0078d4; /* Formal Blue */
-    --resume-border: #cccccc; /* Light Gray */
+    /* Resume Theme (Active for Both Screen & Print) */
+    --resume-bg: #121212; /* Deep Black */
+    --resume-card-bg: #1e1e1e; /* Dark Gray */
+    --resume-text: #f5c518; /* Gold Text */
+    --resume-accent: #4B0082; /* Royal Cosmos Purple */
+    --resume-border: #8d6c09; /* Muted Gold */
     --hover-scale: 1.05;
+
+    /* Resume Theme for Print Mode (Only Applied in Print) */
+    --print-bg: #f7f9fc; /* Light Gray */
+    --print-card-bg: #ffffff; /* White */
+    --print-text: #333333; /* Dark Gray */
+    --print-accent: #0078d4; /* Formal Blue */
+    --print-border: #cccccc; /* Light Gray */
 }
 
 /* General Reset */
@@ -192,7 +199,7 @@ nav ul li {
 
 /* Resume Container */
 .container {
-    max-width: 900px;
+    width: inherit;
     margin: 0 auto;
     background-color: var(--card-bg);
     padding: 20px;
@@ -285,31 +292,73 @@ footer {
     margin-top: 50px;
 }
 
-/* Print-Friendly Styles */
+/* ✨ PRINT-FRIENDLY STYLES ✨ */
 @media print {
+    /* Switch to Resume Theme in Print Mode */
     :root {
-        --text-color: #333333;
-    }
-    body {
-        background-color: #ffffff;
+        --bg-color: var(--print-bg);
+        --text-color: var(--print-text);
+        --card-bg: var(--print-card-bg);
+        --resume-bg: var(--print-bg);
+        --resume-card-bg: var(--print-card-bg);
+        --resume-text: var(--print-text);
+        --resume-accent: var(--print-accent);
+        --resume-border: var(--print-border);
     }
 
-    nav {
-        display: none;
+    .section.active {
+        width: 100%;
     }
 
+    /* Hide Navbar & Footer */
+    nav,
     footer {
         display: none;
     }
 
-    .card {
-        box-shadow: none;
-        border: none;
-        transform: none;
-    }
-
+    /* Remove Hover Effects & Neon Glow */
+    .card,
     .card:hover {
         transform: none;
         box-shadow: none;
+        border: 0px;
+    }
+
+    /* Reset Layout for Full-Width Printing */
+    .resume-content {
+        display: flex;
+        flex-direction: row;
+        width: 100%; /* Full width */
+        padding: 10px; /* Reduced padding */
+    }
+
+    /* Ensure Resume Container Uses Full Page */
+    #resume {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        padding: 0px;
+    }
+    .container {
+        /* max-width: 100%; */
+        width: inherit; /* Full width */
+        padding: 10px; /* Reduce excessive padding */
+        padding-top: 50px;
+        box-shadow: none;
+        /* background-color: red; */
+    }
+
+    /* Adjust Text for Printing */
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+        color: rgb(65, 64, 64);
+    }
+
+    .card h2 {
+        border-bottom: 2px solid var(--resume-border);
     }
 }

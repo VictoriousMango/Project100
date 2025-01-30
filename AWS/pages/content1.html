@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS Service - Cloud Computing Basics</title>
+  <link rel="stylesheet" href="../assets/css/content.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>Cloud Computing</h1>
+  </header>
+
+  <section class="content">
+    <div class="section">
+      <h2>Overview</h2>
+      <ul>
+        <li><b>Typical Flow of Data:</b> User <--> Internet <--> Server</li>
+        <li><b>Server is Composed of</b><i> (Aspect of Compute, Memory, Storage, Network): </i>
+          <ol>
+            <li>CPU, Ram</li>
+            <li>Storage: Data</li>
+            <li>Database: Store Data in a Structured Way</li>
+            <li>Network: Routers, Switch, DNS Server</li>
+          </ol>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="section">
+      <h2>IT Terminologies</h2>
+      <ul>
+        <li><b>Network: </b>Cables, Routers, and Servers contected to each other.</li>
+        <li><b>Router: </b>A Networking device that forwards data packets between computer networks. </li>
+        <li><b>Switch: </b>Takes a packet and sends it to the correct server/client on the network.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Problem with Traditional IT</h2>
+      <ul>
+        <li>Pay for the rent for the data center.</li>
+        <li>Pay for Power Supply, COoling , Maintenance</li>
+        <li>Adding and replacing hardware takes time.</li>
+        <li>Limited Scaling.</li>
+        <li>Requires 24/7 for monitoring the infrastructure.</li>
+        <li>How to deal with Disaster?</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>What is Cloud Computing</h2>
+      <ul>
+        <li>Cloud Computing is the <b><u>on-demand delivery</u></b> of compute power, database storage, aplicatins, and
+          other IT resources</li>
+        <li>Through a cloud services platform with <b><u>pay-as-you-go pricing</u></b></li>
+        <li>YOu can access as many resources as you need, <b><u>almost instantly</u></b></li>
+        <li>Simple way to access <b><u>servers, storage, databases</u></b> and a set of <b><u>application
+              services</u></b> over the internet.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Cloud Deployment Models</h2>
+      <table>
+        <tr>
+          <th>Private Cloud</th>
+          <th>Public Cloud</th>
+          <th>Hybrid Cloud</th>
+        </tr>
+        <tr>
+          <!-- Private Cloud -->
+          <td>Cloud Services used by a single organization, not exposed to the public.</td>
+          <!-- Public Cloud -->
+          <td>Cloud resources owned and operated by a third-party cloud service provider delivered over the internet.
+          </td>
+          <!-- Hybrid Cloud -->
+          <td>Keep some servers on premises and extend some capabilities ot the Cloud</td>
+        </tr>
+        <tr>
+          <!-- Private Cloud -->
+          <td>Complete Control</td>
+          <!-- Public Cloud -->
+          <td>6 Advantages of Cloud Computing.</td>
+          <!-- Hybrid Cloud -->
+          <td>Control over sensitive assets in your private infrastructure</td>
+        </tr>
+        <tr>
+          <!-- Private Cloud -->
+          <td>Security for sensitive applications</td>
+          <!-- Public Cloud -->
+          <td></td>
+          <!-- Hybrid Cloud -->
+          <td>Flexibility and cost-effectiveness of the public cloud.</td>
+        </tr>
+        <tr>
+          <!-- Private Cloud -->
+          <td>Meet Specific business needs</td>
+          <!-- Public Cloud -->
+          <td></td>
+          <!-- Hybrid Cloud -->
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>5 Chracterstics of Cloud Computing</h2>
+      <ul>
+        <li>On-demand Self Service</li>
+        <li>Broad Network Access</li>
+        <li>Multi-tenancy and Resource Pooling</li>
+        <li>Rapid Elasticity and Scalability</li>
+        <li>Measure Service</li>
+      </ul>
+    </div>
+
+    <div class="sectoin">
+      <h2>6 Advantages of Cloud Computing</h2>
+      <ol>
+        <li>Trade Capital Expense(CAPEX) for operational expense(OPEX).</li>
+        <li>Benifit from massive economies of scale.</li>
+        <li>Stop guessing capacity</li>
+        <li>Increase speed and agility</li>
+        <li>Stop spending money running and maintaining data centers.</li>
+        <li>Go global in minutes</li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <h2>Problems solved by the Cloud</h2>
+      <ul>
+        <li>Flexibility</li>
+        <li>Cost-Effectiveness</li>
+        <li>Scalability</li>
+        <li>Elasticity</li>
+        <li>High-availability and Fault-tolerance</li>
+        <li>Agility</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Types of Cloud Computing</h2>
+      <ul>
+        <li>
+          <b>IAAS:</b>
+          <ul>
+            <li>Provide building blocks for cloud IT</li>
+            <li>Provide networking, computers, data storage space</li>
+            <li>Highest level of flexibility</li>
+            <li>Easy parallel with traditional on-premises IT</li>
+            <li>EG: Amazon EC2, GCP, Azure, Rackspace, Digital Ocean, Linode</li>
+          </ul>
+        </li>
+        <li>
+          <b>PAAS:</b>
+          <ul>
+            <li>Removes the need for you organization to manage the underlying infrastructure</li>
+            <li>Focus on the deployment and management of your applications</li>
+            <li>Elastic Beanstalk(AWS)</li>
+            <li>EG: Heroku, Google App Engine(GCP), Windows Azure(Microsoft)</li>
+          </ul>
+        </li>
+        <li>
+          <b>SAAS:</b>
+          <ul>
+            <li>Completed producted that is run and managed by the service provider.</li>
+            <li>EG: Rekognition for ML(AWS), Gmail, Dropbox, Zoom</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="legend">
+        <button style="background-color:red; color: white;" disabled>Managed By You</button>
+        <button style="background-color:green; color: white;" disabled>Managed By Cloud</button>
+      </div>
+      <table>
+        <tr>
+          <th>On-premises</th>
+          <th>IAAS</th>
+          <th>PAAS</th>
+          <th>SAAS</th>
+        </tr>
+        <tr>
+          <td style="background-color: red; color:white;">Applications</td>
+          <td style="background-color: red; color:white;">Applications</td>
+          <td style="background-color: red; color:white;">Applications</td>
+          <td style="background-color: green; color:white;">Applications</td>
+        </tr>
+        <tr>
+          <td style="background-color: red; color:white;">Data</td>
+          <td style="background-color: red; color:white;">Data</td>
+          <td style="background-color: red; color:white;">Data</td>
+          <td style="background-color: green; color:white;">Data</td>
+        </tr>
+        <tr>
+          <td style="background-color: red; color:white;">Runtime</td>
+          <td style="background-color: red; color:white;">Runtime</td>
+          <td style="background-color: green; color:white;">Runtime</td>
+          <td style="background-color: green; color:white;">Runtime</td>
+        </tr>
+        <tr>
+          <td style="background-color: red; color:white;">Middleware</td>
+          <td style="background-color: red; color:white;">Middleware</td>
+          <td style="background-color: green; color:white;">Middleware</td>
+          <td style="background-color: green; color:white;">Middleware</td>
+        </tr>
+        <tr>
+          <td style="background-color: red; color:white;">OS</td>
+          <td style="background-color: red; color:white;">OS</td>
+          <td style="background-color: green; color:white;">OS</td>
+          <td style="background-color: green; color:white;">OS</td>
+        </tr>
+        <tr>
+          <td style="background-color: red; color:white;">Virtualization</td>
+          <td style="background-color: green; color:white;">Virtualization</td>
+          <td style="background-color: green; color:white;">Virtualization</td>
+          <td style="background-color: green; color:white;">Virtualization</td>
+        </tr>
+        <tr>
+          <td style="background-color: red; color:white;">Servers</td>
+          <td style="background-color: green; color:white;">Servers</td>
+          <td style="background-color: green; color:white;">Servers</td>
+          <td style="background-color: green; color:white;">Servers</td>
+        </tr>
+        <tr>
+          <td style="background-color: red; color:white;">Storage</td>
+          <td style="background-color: green; color:white;">Storage</td>
+          <td style="background-color: green; color:white;">Storage</td>
+          <td style="background-color: green; color:white;">Storage</td>
+        </tr>
+        <tr>
+          <td style="background-color: red; color:white;">Networking</td>
+          <td style="background-color: green; color:white;">Networking</td>
+          <td style="background-color: green; color:white;">Networking</td>
+          <td style="background-color: green; color:white;">Networking</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Pricing of the CLoud - Quick Overview</h2>
+      <p>AWS has 3 pricing fundamentals, following the pay-as-you-go pricing model</p>
+      <ul>
+        <li><b>Compute: </b>Oay for the compute time.</li>
+        <li><b>Storage: </b>Pay for data stored in the Cloud.</li></li>
+        <li><b>Networking: </b>Data Transfer Out of the Cloud. Data transfer IN is free.</li>
+    </div>
+
+    <div class="section">
+      <h2>AWS GLobal infrastructure</h2>
+      <ul>
+        <li>AWS Regions</li>
+        <li>AWS Availability Zones</li>
+        <li>AWS Data Centers</li>
+        <li>AWS Edge Locations / Points of Presence</li>
+      </ul>
+      <a href="https://aws.amazon.com/about-aws/global-infrastructure/?p=ngi&loc=1" target="_blank">AWS Infrastructure Visualization</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <a href="../pages/content1.html" target="_blank">Cloud Computing</a>
+  </footer>
+</body>
+
+</html>

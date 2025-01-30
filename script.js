@@ -13,6 +13,8 @@ const cardDetails = {
     'Guided Wave Communication': 'Explore the principles of guided wave communication systems.',
     'Python 100': 'Learn Python programming from scratch with this beginner-friendly content.',
     "Interview Preparation" : "Prepare for your next interview with our comprehensive content.",
+    "Portfolio": "Trying new feature in the portfolio section",
+    "Optical System Design Analysis": "Explore the principles of optical system design analysis."
 };
 
 // Function to change active card
