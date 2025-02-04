@@ -4,18 +4,19 @@
     --bg-color: #121212; /* Deep Black */
     --text-color: #f5c518; /* Rich Gold */
     --secondary-text: #c4a000; /* Deeper Gold */
-    --accent-color: #4B0082; /* Royal Cosmos Purple */
+    --accent-color: #6A0DAD; /* Lightened Royal Cosmos Purple */
     --card-bg: #1e1e1e; /* Dark Gray */
     --hover-glow: 0 0 15px var(--text-color), 0 0 30px var(--accent-color);
     --border-color: #8d6c09; /* Muted Gold */
     --nav-grey: #cccccc; /* Light Gray */
 
     /* Resume Theme (Active for Both Screen & Print) */
-    --resume-bg: #121212; /* Deep Black */
-    --resume-card-bg: #1e1e1e; /* Dark Gray */
-    --resume-text: #f5c518; /* Gold Text */
-    --resume-accent: #4B0082; /* Royal Cosmos Purple */
-    --resume-border: #8d6c09; /* Muted Gold */
+    --resume-bg: #f7f9fc; /* Deep Black */
+    --resume-card-bg: #ffffff; /* Dark Gray */
+    --resume-text: #333333; /* Gold Text */
+    --resume-accent: #0078d4; /* Royal Cosmos Purple */
+    --resume-border: #cccccc; /* Muted Gold */
+    --resume-hover-glow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
     --hover-scale: 1.005;
 
     /* Resume Theme for Print Mode (Only Applied in Print) */
@@ -139,12 +140,13 @@ nav ul li {
     margin-top: 10px;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     width: inherit;
     height: inherit;
 }
 .hero__left {
     height: inherit;
-    width: 40%;
+    /* width: 40%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,19 +155,30 @@ nav ul li {
 .hero__left img {
     mix-blend-mode: light;
     box-shadow: var(--hover-glow);
+    height: 90%;
 }
 .hero__right {
-    width: 50%;
+    /* width: 50%; */
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
+    margin-left: 2%;
+}
+#element {
+    display:block;
+    /* justify-content: left; */
 }
 
 .hero__skills {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    /* justify-content: center; */
     gap: 20px;
     margin-top: 50px;
+    width: 50%;
+    overflow-x: scroll;
+    scrollbar-width: None;
 }
 .hero__skill-card {
     background: var(--card-bg);
@@ -194,14 +207,20 @@ nav ul li {
 /* Resume Section */
 #resume {
     background-color: var(--bg-color);
+    color: var(--resume-text);
     /* padding: 30px; */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Resume Container */
 .container {
     width: inherit;
     margin: 0 auto;
-    background-color: var(--card-bg);
+    background-color: var(--resume-card-bg);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -215,12 +234,12 @@ nav ul li {
 
 .header h1 {
     font-size: 2.5rem;
-    color: var(--text-color);
+    color: var(--resume-accent);
 }
 
 .header p {
     font-size: 1rem;
-    color: var(--secondary-text);
+    color: var(--resume-text);
 }
 
 /* Two-Column Resume Layout */
@@ -239,7 +258,7 @@ nav ul li {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: var(--card-bg);
+    /* background-color: var(--resume-card-bg); */
 }
 
 /* Right Column */
@@ -252,8 +271,8 @@ nav ul li {
 
 /* Resume Card */
 .card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
+    background-color: var(--resume-card-bg);
+    border: 1px solid var(--resume-border);
     border-radius: 10px;
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -263,15 +282,15 @@ nav ul li {
 /* Hover Effect */
 .card:hover {
     transform: scale(var(--hover-scale));
-    box-shadow: var(--hover-glow);
+    box-shadow: var(--resume-hover-glow);
 }
 
 /* Section Headings */
 .card h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: var(--text-color);
-    border-bottom: 2px solid var(--border-color);
+    color: var(--resume-accent);
+    border-bottom: 2px solid var(--resume-border);
     padding-bottom: 5px;
 }
 
@@ -283,7 +302,7 @@ nav ul li {
 
 .resume__ul::before {
     /* content: "• "; */
-    color: var(--text-color);
+    color: var(--resume-text);
     font-weight: bold;
 }
 
@@ -371,5 +390,20 @@ footer {
 
     .card h2 {
         border-bottom: 2px solid var(--resume-border);
+    }
+}
+
+@media (max-width: 600px) {
+    .main {
+        flex-direction: column;
+        /* align-items:s; */
+    }
+    nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: row;
+        overflow-x: auto;
     }
 }
