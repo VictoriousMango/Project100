@@ -16,7 +16,7 @@
     --resume-text: #f5c518; /* Gold Text */
     --resume-accent: #4B0082; /* Royal Cosmos Purple */
     --resume-border: #8d6c09; /* Muted Gold */
-    --hover-scale: 1.05;
+    --hover-scale: 1.005;
 
     /* Resume Theme for Print Mode (Only Applied in Print) */
     --print-bg: #f7f9fc; /* Light Gray */
@@ -194,7 +194,7 @@ nav ul li {
 /* Resume Section */
 #resume {
     background-color: var(--bg-color);
-    padding: 30px;
+    /* padding: 30px; */
 }
 
 /* Resume Container */
@@ -202,7 +202,7 @@ nav ul li {
     width: inherit;
     margin: 0 auto;
     background-color: var(--card-bg);
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -226,7 +226,11 @@ nav ul li {
 /* Two-Column Resume Layout */
 .resume-content {
     display: flex;
+    flex-direction: row;
     gap: 20px;
+    height: 65vh;
+    overflow: auto;
+    scrollbar-width: none;
 }
 
 /* Left Column */
@@ -278,7 +282,7 @@ nav ul li {
 }
 
 .resume__ul::before {
-    content: "• ";
+    /* content: "• "; */
     color: var(--text-color);
     font-weight: bold;
 }
@@ -319,9 +323,11 @@ footer {
     /* Remove Hover Effects & Neon Glow */
     .card,
     .card:hover {
+        height:auto;
         transform: none;
         box-shadow: none;
         border: 0px;
+        background-color: inherit;
     }
 
     /* Reset Layout for Full-Width Printing */
@@ -329,7 +335,9 @@ footer {
         display: flex;
         flex-direction: row;
         width: 100%; /* Full width */
-        padding: 10px; /* Reduced padding */
+        height: 100vh;
+        justify-content:start;
+        gap: 0px;
     }
 
     /* Ensure Resume Container Uses Full Page */
@@ -347,6 +355,9 @@ footer {
         box-shadow: none;
         /* background-color: red; */
     }
+    /* .left-column {
+        border-right: ;
+    } */
 
     /* Adjust Text for Printing */
     .header h1 {
