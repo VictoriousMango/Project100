@@ -1,0 +1,72 @@
+:root {
+    /* Background & Surfaces */
+    --background-dark: #0A0F1F;  /* Deep Space Blue */
+    --panel-surface: #141A2C;  /* Dark Steel Blue */
+    --panel-border: #1F2D46;  /* Muted Metallic Blue */
+
+    /* Hologram & Glow Effects */
+    --hologram-primary: #00E6FF;  /* Neon Cyan (Main Hologram Color) */
+    --hologram-secondary: #009EFF;  /* Electric Blue */
+    --hologram-glow: rgba(0, 230, 255, 0.7); /* Soft Cyan Glow */
+
+    /* Text Colors */
+    --text-primary: #E0F7FF;  /* Soft White-Blue */
+    --text-secondary: #8BA8C6;  /* Muted Sky Blue */
+    --text-normal: #B0C5E0;  /* Neutral Cool Gray */
+    --text-active: #00E6FF;  /* Same as Hologram Primary */
+    --text-hover: #FFA500;  /* Cyberpunk Orange Accent */
+
+    /* Shadows & Glows */
+    --shadow-color: rgba(0, 0, 0, 0.7);  /* Deep Black Shadows */
+    --glow-intense: rgba(0, 230, 255, 0.9);  /* Strong Cyan Glow */
+    --glow-soft: rgba(0, 230, 255, 0.3);  /* Subtle Glow */
+
+    /* Borders & Accents */
+    --border-color: #00BFFF;  /* Bright Neon Blue */
+    --accent-color: #FFA500;  /* Sci-Fi Orange */
+
+    --hologram-border-radii: 25px;
+    --padding: 20px;
+}
+
+body {
+    background-image: url("../img/background.jpeg");
+    background-size: cover;
+
+    height: inherit;
+    width: inherit;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+nav {
+    background-color: rgba(rgb(var(--hologram-primary)), 0.5);
+    border-radius: var(--hologram-border-radii);
+    padding: var(--padding);
+    display: flex;
+    flex-direction: row;
+    color: var(--text-primary);
+}
+
+nav h1 {
+    width: 25%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-grow: 1;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: text-decoration 0.3s ease-in-out;
+}
+nav ul li a:hover {
+    color: var(--text-hover);
+    text-decoration: underline;
+}

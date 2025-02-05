@@ -67,6 +67,8 @@ nav {
 .content {
     width: 70%;
     height: 100%;
+    overflow: auto;
+    scrollbar-width: none;
 }
 
 .brand {

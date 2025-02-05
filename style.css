@@ -211,6 +211,7 @@ a {
 
 .bar {
     width: 100%;
+    height: max-content;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -223,13 +224,34 @@ a {
     width: auto;
     flex-grow: 1; /* Ensure each cardIndex takes up equal space */
     margin: 0 5px; /* Add some margin between cardIndex elements */
+    height: 100%;
+}
+
+.cardIndex p {
+    opacity: 0;
+}
+
+.cardIndex:hover p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .cardIndex.active {
-    /* height: 10px; */
     border: 3px solid #00FFFF;
-    transition: ease-in-out 0.3s;
+    transition: border 0.3s ease-in-out;
 }
+
+.cardIndex.active p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
 
 /* Responsive Adjustments for Card Footer */
 @media (max-width: 768px) {
