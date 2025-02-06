@@ -65,6 +65,8 @@ p {
 
 .section {
   margin-bottom: 40px;
+  overflow-x: auto;
+  border-bottom: 1px solid #333;
 }
 
 /* Footer */
@@ -80,6 +82,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+
 
 /* Styling for responsiveness */
 @media (max-width: 768px) {

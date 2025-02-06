@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Learning Basics</title>
+    <link rel="stylesheet" href="../assets/css/content.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Deep Learning Basics</h1>
+    </header>
+
+    <section class="content">
+        <div class="section">
+            <h2>Introduction</h2>
+            <p>Deep learning is a subset of machine learning inspired by the human brain. It uses artificial neural
+                networks for representation learning and extracting high-level features from data.</p>
+        </div>
+
+        <div class="section">
+            <h2>Linear Models in Deep Learning</h2>
+            <ul>
+                <li><b><u>Linear Regression:</u></b><br>\(f(x) = w_0 + w_1x^{(1)} + w_2x^{(2)} + ... + w_nx^{(n)}\)
+                </li><br>
+                <li><b><u>Linear Models of Regression:</u></b><br>\(f(x) = w_0 + w_1\phi_1(X) + w_2\phi_2(X) + ... +
+                    w_m\phi_m(X)\) </li><br>
+                <li><b><u>Linear Models of Classification:</u></b><br> \( f(x) = h(w_0 + w_1\phi_1(x) + w_2\phi_2(x) +
+                    ... + w_M\phi_M(x)) \), where
+                    h is an activation function.</li><br>
+                <ul>
+                    <li><i><u>Perceptron:</u></i><br> \( f(x) = \text{sgn}(w^T x + b) \)</li><br>
+                    <li><i><u>Logistic Regression:</u></i> \( f(x) = \frac{1}{1 + e^{-W^TX}} \)</li>
+                </ul>
+
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Perceptron</h2>
+            <h3>=>Given Data : <br>
+                : : : :>\( \{(x_1, y_1),(x_2, y_2). . .(x_N, y_N)\} \) <br>
+                : : : :>\( x_i ∈ R^{n}, y_i ∈ \{1, -1\} \) <br>
+                => Binary Classification Problem <br>
+                => Decision Boundary: <i>Hyperplane</i>
+            </h3><br>
+            <ul>
+                <li>
+                    <b><u>Decision Boundary</u></b><br>
+                    \( W^TX_i + W_0 = 0 \) <br>
+                </li>
+                <li>
+                    <b><u>Prediction Boundary</u></b>
+                    <ul>
+                        <li>\( f(x) = \text{sgn}(W^T X_i + W_0) \)</li>
+                        <li>
+                            \(
+                            f(x_{i}) =
+                            \begin{cases}
+                            1, & \text{if } w^T x_i + w_0 \geq 0 \\
+                            -1, & \text{otherwise}
+                            \end{cases}
+                            \)
+                        </li>
+                    </ul>
+                <li>Separable Data</li>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Intorduction to Signum Function</h2>
+            <ul style="list-style: '-->';">
+                <li>The signum function extracts the sign of a real number x.</li>
+                <li>It is commonly used in mathematics to determine if a number is positive, negative, or zero</li>
+                <li>The signum function is defined as <br>
+                    \(
+                    \text{sgn}(x) =
+                    \begin{cases}
+                    1, & \text{if } x > 0 \\
+                    0, & \text{if } x = 0 \\
+                    -1, & \text{if } x < 0 \end{cases} \)
+                </li>
+                <li>In many practical implementations, to avoid the output being zero, the case x = 0 is often defined to resolve to one of the binaries, typically sign(0) = 1</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Cost Function</h2>
+            <ul>
+                <li>Given a training set, how to choose the value of w'iS</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Neural Networks and Architecture</h2>
+            <p>Neural networks extend linear models and consist of multiple layers for hierarchical feature extraction.
+            </p>
+            <ul>
+                <li>Feedforward Neural Networks (FNNs)</li>
+                <li>Convolutional Neural Networks (CNNs)</li>
+                <li>Recurrent Neural Networks (RNNs)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Cost Function and Optimization</h2>
+            <ul>
+                <li>Loss Functions:
+                    <ul>
+                        <li>Mean Squared Error (MSE)</li>
+                        <li>Hinge Loss</li>
+                        <li>Cross Entropy Loss</li>
+                    </ul>
+                </li>
+                <li>Optimization Algorithms:
+                    <ul>
+                        <li>Gradient Descent</li>
+                        <li>Stochastic Gradient Descent (SGD)</li>
+                        <li>Adam Optimizer</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <a href="../pages/content4.html" target="_blank">Deep Learning Basics</a>
+        <br>
+        <!-- <a href="https://youtu.be/fHF22Wxuyw4?si=JsKb0Zia68W1iOE4" target="_blank">Inspiration</a> -->
+    </footer>
+</body>
+
+</html>
