@@ -49,7 +49,7 @@ body {
 .header p {
   font-size: 1.2rem;
   font-weight: 300;
-  color: var(--secondary-color);
+  color: var(--background-color);
 }
 
 /* Section Styles */
@@ -89,7 +89,7 @@ body {
 
 .section p {
   font-size: 1.1rem;
-  color: var(--secondary-color);
+  color: var(--background-color);
 }
 
 .section ul, .section ol {
@@ -99,7 +99,7 @@ body {
 
 .section ul li, .section ol li {
   font-size: 1.1rem;
-  color: var(--primary-color);
+  color: var(--background-color);
   margin-bottom: 5px;
 }
 
