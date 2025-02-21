@@ -3,90 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experiment 1: Modes in Optical Fiber</title>
-  <link rel="stylesheet" href="../assets/css/content.css"> <!-- Link your CSS file here -->
+  <title>Numerical Aperture Experiment Report</title>
+  <link rel="stylesheet" href="../assets/css/content.css">
 </head>
 <body>
 
   <header>
-    <h1>Experiment 1: Modes in Optical Fiber</h1>
+    <h1>Numerical Aperture Experiment Report</h1>
   </header>
 
   <main class="content">
     <section class="section" id="aim">
       <h2>Aim</h2>
-      <p>To study the output modes of a single-mode fiber with the change of input polarization.</p>
+      <p>The objective of this experiment is to estimate the Numerical Aperture of a 1 mm diameter plastic fibre at 632 nm.</p>
     </section>
 
-    <section class="section" id="apparatus">
-      <h2>Apparatus</h2>
-      <p>The equipment and materials required for the experiment are:</p>
+    <section class="section" id="materials">
+      <h2>Materials Required</h2>
       <ul>
-        <li>He-Ne Laser Source</li>
-        <li>Mirrors</li>
-        <li>Beam Splitters</li>
-        <li>Wave Plates</li>
-        <li>Objective Lens</li>
-        <li>CCD (Charge-Coupled Device)</li>
-        <li>Single-mode Optical Fibers</li>
+        <li>Optical Fibre</li>
+        <li>He-Ne 632 nm Laser</li>
+        <li>Numerical Aperture Measurement Unit</li>
       </ul>
     </section>
 
     <section class="section" id="theory">
       <h2>Theory</h2>
-      <p>Optical fibers can guide light through their core by total internal reflection. A single-mode fiber supports only one mode of light propagation, typically the fundamental mode, due to its small core diameter. The polarization of light affects the mode structure and intensity distribution at the output of the fiber.</p>
-      <p>Changing the input polarization modifies the orientation of the electric field, resulting in varying output modes that can be observed using a CCD.</p>
+      <p>Numerical Aperture (NA) of a fibre is a measure of the acceptance angle of light in the fibre. Light launched at angles greater than this maximum acceptance angle does not get coupled to propagating modes in the fibre and does not reach the receiver at the other end. The Numerical Aperture is useful for computing optical power coupling between an optical source and fibre, from fibre to photodetector, and between two fibres.</p>
+      <p><strong>Numerical Aperture Formula:</strong></p>
+      <p class="center">NA = n sin θ<sub>max</sub></p>
+      <p>Where n is the refractive index of the surrounding medium. For air, n = 1.</p>
     </section>
 
     <section class="section" id="procedure">
       <h2>Procedure</h2>
-      <p>Follow these steps to perform the experiment:</p>
       <ol>
-        <li>Set up the He-Ne laser as the light source and direct its beam using mirrors and beam splitters.</li>
-        <li>Pass the beam through wave plates to control the input polarization.</li>
-        <li>Focus the light into a single-mode fiber using an objective lens.</li>
-        <li>Connect the output of the fiber to a CCD to observe the modes.</li>
-        <li>Gradually vary the input polarization using the wave plates and note the changes in the output mode patterns.</li>
+        <li>Setup the experiment as shown in the figure.</li>
+        <li>Ensure that the cut planes of the optical fibre are perpendicular to its axis.</li>
+        <li>Insert one end of the fibre into the Numerical Aperture measurement unit.</li>
+        <li>Adjust the fibre such that its tip is from the screen and ensure the cut end is parallel to the measurement unit.</li>
+        <li>Gently tighten the screw to hold the fibre in place.</li>
+        <li>Connect the other end of the fibre to the laser, ensuring light emerges at the other end.</li>
+        <li>Measure the diameter of the spot size in both directions.</li>
+        <li>Change the height (d) of the fibre from the measurement unit and repeat the measurements.</li>
       </ol>
     </section>
 
     <section class="section" id="observations">
       <h2>Observations</h2>
-      <p>Record the changes in output modes as the input polarization is varied. Use a table for clarity:</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Input Polarization (Angle)</th>
-            <th>Observed Mode Pattern</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>0°</td>
-            <td>Fundamental Mode</td>
-          </tr>
-          <tr>
-            <td>45°</td>
-            <td>Elliptical Mode</td>
-          </tr>
-          <tr>
-            <td>90°</td>
-            <td>Linear Mode (Orthogonal)</td>
-          </tr>
-        </tbody>
-      </table>
+      <div style="text-align: center;">
+        <img src="../assets/img/content2_1.png" alt="Experimental Setup" style="width: 100%;">
+        <p>Figure 1: Experimental Obervations</p>
+        <br>
+          <div style="display: flex; flex-direction: row; justify-content: space-around;">
+            <div>
+              <img src="../assets/img/content2_2.png" alt="Observations" style="width: 70%;">
+              <p>Figure 2: Graphical Analysis of Spot Size</p>
+            </div>
+            <div>
+              <img src="../assets/img/content2_3.png" alt="Enter Caption" style="width: 70%;">
+              <p>Figure 3: Comparision of Numerical Aperture and Acceptance Angler, with respect to distance from screen</p>
+            </div>
+        </div>
+      </div>
     </section>
 
-    <section class="section" id="conclusion">
-      <h2>Conclusion/Results</h2>
-      <p>The experiment demonstrated that the output modes of a single-mode fiber depend on the input polarization. By varying the polarization angle, different mode patterns were observed, highlighting the relationship between polarization and fiber modes.</p>
+    <section class="section" id="result">
+      <h2>Result</h2>
+      <p>The average numerical aperture (NA) is calculated as <strong>0.454</strong>.</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; Guided Wave Optics Lab Report. <a href="../pages/content1.html" target="_blank">Open in New Tab</a></p>
-    <p style="padding-left: 70%;">Additya Akash Mishra</p>
-    <p style="padding-left: 77.5%;">SC24M156</p>
+    <a href="../pages/content2.html" target="_blank">&copy; Guided Wave Optics Lab Report.</a>
+    <p>Additya Akash Mishra</p>
+    <p>SC24M156</p>
   </footer>
 
 </body>
