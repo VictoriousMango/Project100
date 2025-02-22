@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Futuristic Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #00ffcc;
+            --secondary-color: #00b3b3;
+            --background-color: #0a0f1d;
+            --text-color: #ffffff;
+            --card-bg-color: #141a2b;
+            --hover-color: #00ffaa;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 220px;
+            padding: 20px;
+            background: var(--card-bg-color);
+            box-shadow: 0 0 20px var(--primary-color);
+            overflow-y: auto;
+        }
+
+        .sidebar h1 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+        }
+
+        .sidebar nav a {
+            display: block;
+            color: var(--text-color);
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .sidebar nav a:hover {
+            background: var(--hover-color);
+            color: #000;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #1f2640;
+            color: var(--text-color);
+            font-size: 1em;
+            outline: none;
+            box-shadow: 0 0 10px var(--secondary-color);
+        }
+
+        .section-card {
+            background: var(--card-bg-color);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px var(--primary-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            
+        }
+
+        .section-card:hover {
+            /* transform: scale(1.05); */
+            box-shadow: 0 0 25px var(--hover-color);
+        }
+
+        .section-card .hover-content {
+            display: none;
+            background: var(--card-bg-color);
+            color: var(--text-color);
+            border-radius: 8px;
+            padding: 15px;
+            box-sizing: border-box;
+            /* text-align: center; */
+            animation: fadeIn 0.5s;
+        }
+
+        .section-card:hover .hover-content {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 180px;
+            }
+
+            .sidebar h1 {
+                font-size: 1.5em;
+            }
+
+            .section-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Welcome to My Hub</h1>
+        <nav>
+            <a href="#job-portals">Job Portals</a>
+            <a href="#cold-emails">Cold Emails & Messages</a>
+            <a href="#product-careers">Product Careers</a>
+            <a href="#service-careers">Service Careers</a>
+            <a href="#consulting-careers">Consulting Careers</a>
+            <a href="#goals">Goals</a>
+            <a href="#skills">Skills & Resources</a>
+            <a href="#test-resources">Test Resources</a>
+            <a href="#research">Research Resources</a>
+            <a href="#community">Community Links</a>
+            <a href="#news">News & Updates</a>
+            <a href="#daily-essentials">Daily Essentials</a>
+        </nav>
+    </div>
+    <div class="main-content">
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search...">
+        </div>
+        <section id="job-portals" class="section-card">Job Portals
+            <div class="hover-content">
+            <ul>
+                <li><a href="https://rac.gov.in/index.php?lang=en&id=0">RAC: DRDO</a></li>
+                <li><a href="https://upsconline.gov.in/upsc/OTRP/index.php">UPSC Conducted Exams</a></li>
+        </div>
+        </section>
+        <section id="cold-emails" class="section-card">Cold Emails & Messages
+            <div class="hover-content">
+                <a href="./pages/messageTemplate.html">Go To Cold Emails Section</a>
+            </div>
+        </section>
+        <section id="product-careers" class="section-card">Product Careers</section>
+        <section id="service-careers" class="section-card">Service Careers</section>
+        <section id="consulting-careers" class="section-card">Consulting Careers</section>
+        <section id="goals" class="section-card">Goals
+            <div class="hover-content">
+                <a href="./pages/goals.html">Go To Goals Section</a>
+            </div>
+        </section>
+        <section id="skills" class="section-card">Skills & Resources</section>
+        <section id="test-resources" class="section-card">Test Resources</section>
+        <section id="research" class="section-card">Research Resources</section>
+        <section id="community" class="section-card">Community Links</section>
+        <section id="news" class="section-card">News & Updates</section>
+        <section id="daily-essentials" class="section-card">Daily Essentials</section>
+    </div>
+    <script>
+        const searchInput = document.getElementById('search');
+        const sectionCards = document.querySelectorAll('.section-card');
+
+        searchInput.addEventListener('input', () => {
+            const query = searchInput.value.toLowerCase();
+            sectionCards.forEach(card => {
+                const content = card.textContent.toLowerCase();
+                card.style.display = content.includes(query) ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

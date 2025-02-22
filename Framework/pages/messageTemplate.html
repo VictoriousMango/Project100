@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Emails and Messages</title>
+    <style>
+        :root {
+            --primary-color: #00ffcc;
+            --background-color: #0a0f1d;
+            --text-color: #ffffff;
+            --card-bg-color: #141a2b;
+            --hover-color: #00ffaa;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .password-container {
+            background: var(--card-bg-color);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px var(--primary-color);
+            width: 400px;
+            text-align: center;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            width: 80%;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: var(--primary-color);
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: var(--hover-color);
+        }
+
+        .content-container {
+            display: none;
+            text-align: center;
+        }
+
+        .email-card {
+            background: var(--card-bg-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 0 20px var(--primary-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .email-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px var(--hover-color);
+        }
+
+        .back-button {
+            display: block;
+            margin: 20px auto 0;
+            text-decoration: none;
+            color: #000;
+            background: var(--primary-color);
+            padding: 10px;
+            border-radius: 8px;
+            width: 150px;
+            text-align: center;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: var(--hover-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="password-container" id="password-container">
+        <h1>Enter Password</h1>
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <div class="content-container" id="content-container">
+        <h1>Cold Emails and Messages</h1>
+        <div class="email-card">Networking Email: Introduce yourself and express interest</div>
+        <div class="email-card">Job Application Email: Highlight skills and experiences</div>
+        <div class="email-card">Follow-up Email: Politely remind and show enthusiasm</div>
+        <a href="../Framework.html" class="back-button">← Back</a>
+    </div>
+
+    <script>
+        const correctPassword = "yourPassword";
+
+        function checkPassword() {
+            const input = document.getElementById("password").value;
+            if (input === correctPassword) {
+                document.getElementById("password-container").style.display = "none";
+                document.getElementById("content-container").style.display = "block";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
