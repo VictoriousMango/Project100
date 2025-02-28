@@ -1,76 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experiment 2: Voice Communication System</title>
-  <link rel="stylesheet" href="../assets/css/content.css"> <!-- Link your CSS file here -->
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment 2: Voice Communication System</title>
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <!-- Link your CSS file here -->
+  </head>
+  <body>
+    <header>
+      <h1>Voice Communication System Experiment Report</h1>
+    </header>
 
-  <header>
-    <h1>Experiment 2: Voice Communication System</h1>
-  </header>
+    <main class="content">
+      <section class="section" id="aim">
+        <h2>Aim</h2>
+        <p>
+          To transmit an audio signal through an optical fiber and reproduce the
+          audio signal using a speaker.
+        </p>
+      </section>
 
-  <main class="content">
-    <section class="section" id="aim">
-      <h2>Aim</h2>
-      <p>To transmit an audio signal through an optical fiber and reproduce the audio signal using a speaker.</p>
-    </section>
+      <section class="section" id="apparatus">
+        <h2>Apparatus</h2>
+        <p>The equipment and materials required for the experiment are:</p>
+        <ul>
+          <li>LED Fiber Coupler</li>
+          <li>Detector Fiber Coupler</li>
+          <li>Optical Fiber</li>
+          <li>Microphone</li>
+          <li>Speaker</li>
+          <li>Communication Box</li>
+          <li>Photo Transistor</li>
+        </ul>
+      </section>
 
-    <section class="section" id="apparatus">
-      <h2>Apparatus</h2>
-      <p>The equipment and materials required for the experiment are:</p>
-      <ul>
-        <li>LED Fiber Coupler</li>
-        <li>Detector Fiber Coupler</li>
-        <li>Optical Fiber</li>
-        <li>Microphone</li>
-        <li>Speaker</li>
-        <li>Communication Box</li>
-        <li>Photo Transistor</li>
-      </ul>
-    </section>
+      <section class="section" id="theory">
+        <h2>Theory</h2>
+        <p>
+          Optical fibers are used in communication systems to transmit data,
+          including audio signals, over long distances with minimal loss. An
+          audio signal is converted into an optical signal using an LED. This
+          optical signal travels through the fiber and is then converted back
+          into an electrical signal at the receiver using a detector. The
+          electrical signal is amplified and played back through a speaker to
+          reproduce the audio.
+        </p>
 
-    <section class="section" id="theory">
-      <h2>Theory</h2>
-      <p>Optical fibers are used in communication systems to transmit data, including audio signals, over long distances with minimal loss. An audio signal is converted into an optical signal using an LED. This optical signal travels through the fiber and is then converted back into an electrical signal at the receiver using a detector. The electrical signal is amplified and played back through a speaker to reproduce the audio.</p>
-    </section>
+       <img src="../assets/img/content3_1.png" alt="" style="width: 100%;">
+      </section>
 
-    <section class="section" id="procedure">
-      <h2>Procedure</h2>
-      <p>Follow these steps to perform the experiment:</p>
-      <ol>
-        <li>Connect the microphone to the communication box to capture the audio signal.</li>
-        <li>Transmit the audio signal to the LED fiber coupler, which converts the electrical signal into an optical signal.</li>
-        <li>Pass the optical signal through the optical fiber to the detector fiber coupler.</li>
-        <li>The detector converts the optical signal back into an electrical signal.</li>
-        <li>Amplify the electrical signal using the communication box and connect it to a speaker.</li>
-        <li>Observe the reproduced audio signal from the speaker and compare it with the original audio signal.</li>
-      </ol>
-    </section>
+      <section class="section" id="procedure">
+        <h2>Procedure</h2>
+        <p>Follow these steps to perform the experiment:</p>
+        <ol>
+          <li>
+            Connect the microphone to the communication box to capture the audio
+            signal.
+          </li>
+          <li>
+            Transmit the audio signal to the LED fiber coupler, which converts
+            the electrical signal into an optical signal.
+          </li>
+          <li>
+            Pass the optical signal through the optical fiber to the detector
+            fiber coupler.
+          </li>
+          <li>
+            The detector converts the optical signal back into an electrical
+            signal.
+          </li>
+          <li>
+            Amplify the electrical signal using the communication box and
+            connect it to a speaker.
+          </li>
+          <li>
+            Observe the reproduced audio signal from the speaker and compare it
+            with the original audio signal.
+          </li>
+        </ol>
+      </section>
 
-    <section class="section" id="observations">
-      <h2>Observations</h2>
-      <p>Record the following observations:</p>
-      <ul>
-        <li>Quality of the transmitted audio signal.</li>
-        <li>Signal-to-noise ratio (if applicable).</li>
-        <li>Any distortions in the reproduced audio signal.</li>
-      </ul>
-    </section>
+      <section class="section" id="observations">
+        <h2>Observations</h2>
+        <table border="1">
+          <tr>
+            <th>S.no</th>
+            <th>Frequency Provided</th>
+            <th>Frequency detected from Input</th>
+            <th>Frequency Detected From Speaker</th>
+            <th>Presence of Noise</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>310</td>
+            <td>311</td>
+            <td>311</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>350</td>
+            <td>349</td>
+            <td>349</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>400</td>
+            <td>398</td>
+            <td>398</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>450</td>
+            <td>451</td>
+            <td>451</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>500</td>
+            <td>498</td>
+            <td>498</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>550</td>
+            <td>551</td>
+            <td>551</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>600</td>
+            <td>598</td>
+            <td>598</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>700</td>
+            <td>697</td>
+            <td>697</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>800</td>
+            <td>797</td>
+            <td>797</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>900</td>
+            <td>902</td>
+            <td>902</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>1000</td>
+            <td>996</td>
+            <td>996</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>2000</td>
+            <td>1992</td>
+            <td>1992</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>3000</td>
+            <td>3000</td>
+            <td>3000</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>4000</td>
+            <td>3984</td>
+            <td>3984</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>5000</td>
+            <td>5016</td>
+            <td>5016</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>6000</td>
+            <td>6000</td>
+            <td>6000</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>7000</td>
+            <td>7031</td>
+            <td>7031</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>8000</td>
+            <td>7969</td>
+            <td>7969</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>9000</td>
+            <td>9000</td>
+            <td>9000</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>10000</td>
+            <td>10031</td>
+            <td>10031</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>11000</td>
+            <td>10969</td>
+            <td>10969</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>12000</td>
+            <td>12000</td>
+            <td>12000</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>13000</td>
+            <td>13031</td>
+            <td>13031</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>14000</td>
+            <td>13969</td>
+            <td>13969</td>
+            <td>with noise</td>
+          </tr>
+          <tr>
+            <td>25</td>
+            <td>13500</td>
+            <td>13500</td>
+            <td>13500</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>26</td>
+            <td>13750</td>
+            <td>13781</td>
+            <td>13781</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>27</td>
+            <td>13875</td>
+            <td>13875</td>
+            <td>13875</td>
+            <td>with noise</td>
+          </tr>
+          <tr>
+            <td>28</td>
+            <td>300</td>
+            <td>299</td>
+            <td>299</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>29</td>
+            <td>250</td>
+            <td>249</td>
+            <td>498</td>
+            <td>with noise</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>275</td>
+            <td>275</td>
+            <td>551</td>
+            <td>with noise</td>
+          </tr>
+          <tr>
+            <td>31</td>
+            <td>288</td>
+            <td>287</td>
+            <td>287</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>32</td>
+            <td>282</td>
+            <td>281</td>
+            <td>281</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>33</td>
+            <td>278</td>
+            <td>278</td>
+            <td>278</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>34</td>
+            <td>277</td>
+            <td>278</td>
+            <td>278</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>35</td>
+            <td>276</td>
+            <td>275</td>
+            <td>275</td>
+            <td></td>
+          </tr>
+        </table>
+      </section>
 
-    <section class="section" id="conclusion">
-      <h2>Conclusion/Results</h2>
-      <p>The experiment demonstrated successful transmission of an audio signal through an optical fiber and its reproduction using a speaker. The quality of the reproduced signal depends on the efficiency of the LED, detector, and optical fiber used in the setup.</p>
-    </section>
-  </main>
+      <section class="section" id="conclusion">
+        <h2>Conclusion/Results</h2>
+        <p>
+          The experiment demonstrated successful transmission of an audio signal
+          through an optical fiber and its reproduction using a speaker. The
+          quality of the reproduced signal depends on the efficiency of the LED,
+          detector, and optical fiber used in the setup.
+        </p>
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; Guided Wave Optics Lab Report. <a href="../pages/content1.html" target="_blank">Open in New Tab</a></p>
-    <p style="padding-left: 70%;">Additya Akash Mishra</p>
-    <p style="padding-left: 77.5%;">SC24M156</p>
-  </footer>
-
-</body>
+    <footer>
+      <a href="../pages/content3.html" target="_blank"
+        >&copy; Guided Wave Optics Lab Report.</a
+      >
+      <p style="padding-left: 70%">Additya Akash Mishra</p>
+      <p style="padding-left: 77.5%">SC24M156</p>
+    </footer>
+  </body>
 </html>
