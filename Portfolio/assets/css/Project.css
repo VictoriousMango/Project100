@@ -1,0 +1,17 @@
+#project {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Add this line to give gap between distinct rows */
+}
+
+.project__card{
+    width: 30%;
+}
+img {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
