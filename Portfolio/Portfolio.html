@@ -26,13 +26,14 @@
         <div class="content">
             <section id="hero" class="section active">
                 <h1><u>Hi, I am Additya</u></h1>
+                <h3 style="display: flex; flex-direction: row; justify-content: center; align-items: center;"> Having experience working as : <div id="hero__skills"></div></h3>
                 <div class="hero__container">
                     <div class="hero__left">
                         <img src="./assets/img/Additya_PassportSizePhoto_2024.jpg" alt="">
                     </div>
                     <div class="hero__right">
                         <p><span id="element"></span></p>
-                        <div class="hero__skills">
+                        <!-- <div class="hero__skills">
                             <div class="hero__skill-card">Web Developer</div>
                             <div class="hero__skill-card">Python Developer</div>
                             <div class="hero__skill-card">Flask Developer</div>
@@ -40,7 +41,7 @@
                             <div class="hero__skill-card">Business Analyst</div>
                             <div class="hero__skill-card">ML Engineer</div>
                             <div class="hero__skill-card">Data Scientist</div>
-                        </div>
+                        </div> -->
                     </div>
                     
                 </div>
@@ -57,9 +58,16 @@
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-            strings: ["I'm a <b>BTech</b> in <i><u>Computer Science Engineering</u></i> graduate with <b>Minors</b> in <i><u>Business Analytics</u></i>, driven by a passion for innovation across fields. With a blend of technical expertise and business insight, I excel at crafting solutions from machine learning models to dynamic web applications. Having experience working as..."],
+            strings: ["I'm a <b>BTech</b> in <i><u>Computer Science Engineering</u></i> graduate with <b>Minors</b> in <i><u>Business Analytics</u></i>, driven by a passion for innovation across fields. With a blend of technical expertise and business insight, I excel at crafting solutions from machine learning models to dynamic web applications."],
             typeSpeed: 15,
             loop: false,
+            backSpeed: 25,
+            backDelay: 2000
+        });
+        var typed = new Typed('#hero__skills', {
+            strings: ["Web Developer", "Python Developer", "Flask Developer", "Streamlit Developer", "Business Analyst", "ML Engineer", "Data Scientist"],
+            typeSpeed: 15,
+            loop: true,
             backSpeed: 25,
             backDelay: 2000
         });

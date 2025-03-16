@@ -1,140 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Additya's Portfolio</title>
-    <link rel="stylesheet" href="../assets/css/Portfolio.css">
-</head>
+    <link rel="stylesheet" href="../assets/css/Portfolio.css" />
+    <link rel="stylesheet" href="../assets/css/Project.css" />
+  </head>
 
-<body>
+  <body>
     <div class="main">
-        <!-- Navigation Bar -->
-        <nav>
-            <div class="brand">Additya's Portfolio</div>
-            <ul>
-                <li><a href="../Portfolio.html" class="nav-link">Home</a></li>
-                <li><a href="./About.html" class="nav-link">About</a></li>
-                <li><a href="./Projects.html" class="nav-link active">Projects</a></li>
-                <li><a href="./Resume.html" class="nav-link">Resume</a></li>
-                <li><a href="./Contacts.html" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
+      <!-- Navigation Bar -->
+      <nav>
+        <div class="brand">Additya's Portfolio</div>
+        <ul>
+          <li><a href="../Portfolio.html" class="nav-link">Home</a></li>
+          <li><a href="./About.html" class="nav-link">About</a></li>
+          <li>
+            <a href="./Projects.html" class="nav-link active">Projects</a>
+          </li>
+          <li><a href="./Resume.html" class="nav-link">Resume</a></li>
+          <li><a href="./Contacts.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
 
         <!-- Content Sections -->
         <div class="content">
-            <section id="hero" class="section active">
-                <h1>Welcome to My Portfolio</h1>
-                <p>Crafting digital experiences with passion and precision.</p>
-            </section>
-
-            <section id="about" class="section">
-                <h1>About Me</h1>
-                <p>Hi! I'm Additya, a passionate developer with expertise in web technologies.</p>
-            </section>
-
-            <section id="projects" class="section">
-                <h1>Projects</h1>
-                <p>Showcasing my best work in web development, AI, and creative coding.</p>
-            </section>
-
-            <section id="resume" class="section">
-                <div class="container">
-                    <!-- Header Section -->
-                    <header class="header">
-                        <h1>John Doe</h1>
-                        <p>Software Engineer | john.doe@example.com | (123) 456-7890 | linkedin.com/in/johndoe</p>
-                    </header>
-
-                    <div class="resume-content">
-                        <!-- Left Column -->
-                        <div class="left-column">
-                            <!-- Profile Section -->
-                            <section class="profile card">
-                                <h2>Profile</h2>
-                                <p>
-                                    A results-driven software engineer with 5+ years of experience in developing
-                                    scalable web
-                                    applications, working in fast-paced environments, and leading technical teams.
-                                </p>
-                            </section>
-
-                            <!-- Skills Section -->
-                            <section class="skills card">
-                                <h2>Skills</h2>
-                                <ul class="resume__ul">
-                                    <li>Programming: JavaScript, Python, Java, C++</li>
-                                    <li>Frameworks: React, Node.js, Django</li>
-                                    <li>Tools: Git, Docker, AWS, Jenkins</li>
-                                    <li>Soft Skills: Problem Solving, Leadership, Collaboration</li>
-                                </ul>
-                            </section>
-
-                            <!-- Certifications Section -->
-                            <section class="certifications card">
-                                <h2>Certifications</h2>
-                                <ul class="resume__ul">
-                                    <li>Certified Kubernetes Administrator (CKA)</li>
-                                    <li>AWS Certified Solutions Architect</li>
-                                    <li>Scrum Master Certified (SMC)</li>
-                                </ul>
-                            </section>
-                        </div>
-
-                        <!-- Right Column -->
-                        <div class="right-column">
-                            <!-- Experience Section -->
-                            <section class="experience card">
-                                <h2>Experience</h2>
-                                <div>
-                                    <h3>Senior Software Engineer</h3>
-                                    <p>TechCorp, San Francisco, CA | 2020 - Present</p>
-                                    <ul class="resume__ul">
-                                        <li>Developed scalable microservices that increased system reliability by 25%.
-                                        </li>
-                                        <li>Mentored a team of 5 junior engineers, improving team efficiency.</li>
-                                        <li>Collaborated with cross-functional teams to design and deliver projects on
-                                            time.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h3>Software Engineer</h3>
-                                    <p>CodeSolutions, New York, NY | 2017 - 2020</p>
-                                    <ul class="resume__ul">
-                                        <li>Designed RESTful APIs, reducing client response time by 40%.</li>
-                                        <li>Optimized database queries, improving application performance.</li>
-                                    </ul>
-                                </div>
-                            </section>
-
-                            <!-- Education Section -->
-                            <section class="education card">
-                                <h2>Education</h2>
-                                <p>Bachelor of Science in Computer Science</p>
-                                <p>University of California, Berkeley | 2013 - 2017</p>
-                            </section>
+            <div class="content__skills">
+                <div class="row" id="skillsList">
+                    <div class="col">
+                        <div class="card__skills">
+                            card
                         </div>
                     </div>
+                    
                 </div>
-            </section>
+            </div>
+            <div class="content__projects">
+                    <div class="project__card">
+                        <div class="project__card-left">
+                        <img
+                            src="https://github.com/VictoriousMango/cartogram_questionaire/blob/main/WelcomePage.gif?raw=true"
+                            alt=""
+                        />
+                        <h3 class="project__card-title">Cartogram Assessment</h3>
+                        </div>
+                        <div class="project__card-right">
+                        <p class="project__card-description">
+                            <ul>
+                                <li>
+                                    Developed an interactive web application to assess the suitability of various
+                                    cartogram
+                                    types for spatial data presentation.
+                                </li>
+                                <li>
+                                    Utilized Python and Streamlit for deployment and user interaction.
+                                </li>
+                                <li>
+                                    Stored assessment data in a No-SQL database (Deta) for efficient retrieval and
+                                    management.
+                                </li>
+                                <li>
+                                    Designed atomic, modular components to independently generate questions and map
+                                    visuals.
+                                </li>
+                            </ul>
+                        </p>
+                        </div>
+                    </div>
+                    <div class="project__card">
+                        <div class="project__card-left">
+                        <img
+                            src="https://github.com/VictoriousMango/Portfolio/blob/main/assets/CCA.png?raw=true"
+                            alt=""
+                        />
+                        <h3 class="project__card-title">Customer Churn Analysis</h3>
+                        </div>
+                        <div class="project__card-right">
+                        <p class="project__card-description">
+                            <ul>
+                                <li>
+                                    Developed customer churn prediction software using Flask, Python, Bootstrap, Jinja
+                                    Template Engine, and CSS.
+                                </li>
+                                <li>
+                                    Integrated dynamic model selection, allowing users to choose between Random Forest,
+                                    Linear Regression, Logistic Regression, and SVM.
+                                </li>
+                                <li>
+                                    Enabled flexibility in defining the predicted and predictor variables for customized
+                                    analysis.
+                                </li>
+                                <li>
+                                    Analyzes customer behavior and usage patterns to help businesses reduce churn and
+                                    boost customer loyalty.
+                                </li>
+                                <li>
+                                    Provides businesses with actionable insights for targeted marketing and customer
+                                    retention strategies
+                                </li>
+                            </ul>
+                        </p>
+                        </div>
+                    </div>
+                    <div class="project__card">
+                        <div class="project__card-left">
+                        <img
+                            src="https://github.com/VictoriousMango/Portfolio/blob/main/assets/CCA.png?raw=true"
+                            alt=""
+                        />
+                        <h3 class="project__card-title">Project 100</h3>
+                        </div>
+                        <div class="project__card-right">
+                        <p class="project__card-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                            nec purus nec nunc tincidunt aliquam. Nullam nec purus nec nunc
+                            tincidunt aliquam.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="project__card">
+                        <div class="project__card-left">
+                        <img
+                            src="https://github.com/VictoriousMango/Portfolio/blob/main/assets/CCA.png?raw=true"
+                            alt=""
+                        />
+                        <h3 class="project__card-title">Understanding Data</h3>
+                        </div>
+                        <div class="project__card-right">
+                        <p class="project__card-description">
+                            A project showcasing various data analysis and visualization techniques using Python, HTML, CSS, Docker, and Shell scripting.
 
-            <section id="contact" class="section">
-                <h1>Contact Me</h1>
-                <p>Email: additya@example.com</p>
-                <p>LinkedIn: linkedin.com/in/additya</p>
-                <p>GitHub: github.com/additya</p>
-            </section>
+Data Cleaning and Preprocessing
+Data Analysis
+Data Visualization
+Docker Containerization
+Shell Scripting for Automation
+                        </p>
+                        </div>
+                    </div>
+            </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Additya. All Rights Reserved.</p>
+      <p>© 2025 Additya. All Rights Reserved.</p>
     </footer>
 
     <!-- JavaScript -->
     <script src="./assets/js/Portfolio.js"></script>
-</body>
+    <script src="../assets/js/project.js"></script>
+    <script>
+        skills = {
+            "Cartogram Assessment":{
+                "Back-End": ["Python"],
+                "Database": ["Deta", "No-SQL"],
+                "Front-End": ["Streamlit"],
+                "Cloud Services": ["Google Collab"]
+            },
+            "Customer Churn Analysis": {
+                "Back-End": ["Python"],
+                "Front-End": ["HTML", "CSS", "Bootstrap"],
+                "Machine Learning": ["Random Forest", "Linear Regression"], //, "Logistic Regression", "SVM"
+                "Frameworks": ["Flask"]
+            },
+            "Understanding Data" : {
+                "Back-End": ["Python", "Flask"],
+                "Front-End": ["HTML", "CSS", "Bootstrap"],
+                "Pre-Processing" : ["Correlation", "Multicollinearity Assessment"],
+                "Machine Learning" : ["Random Forest", "Decision Trees", "Linear Regression"]
+            },
+        }
+      document.addEventListener("DOMContentLoaded", () => {
+        const projectCards = document.querySelectorAll(".project__card");
+        
 
+        projectCards.forEach((card) => {
+          card.addEventListener("click", () => {
+            // Remove active class from all cards
+            projectCards.forEach((c) => c.classList.remove("active"));
+            document.getElementById("skillsList").innerHTML = "";
+            // Add active class to the clicked card
+            const cardLeft = card.querySelector(".project__card-left");
+            const cardTitle = cardLeft.querySelector(".project__card-title").innerText;
+            // Adding From Previous PRoject
+            for (cardName in skills[cardTitle]) {
+                skillContent = "";
+                for (skill in skills[cardTitle][cardName]) {
+                    skillContent += `<li>${skills[cardTitle][cardName][skill]}</li>`
+
+                }
+
+                let skillCard=`<div class="col"><div class="card__skills"><h5 class="card-title"> ${cardName}</h5><hr><div class="card-body">${skillContent}</div></div></div>`
+                document.getElementById("skillsList").innerHTML += skillCard;
+            }
+            card.classList.add("active");
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
