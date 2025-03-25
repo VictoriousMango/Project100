@@ -1,161 +1,267 @@
-/* Root Variables for Neon and Aesthetic Design */
-:root {
-  --background-color: #0d1117; /* Midnight Navy */
-  --primary-color: #e6e6e6; /* Soft White */
-  --secondary-color: #8b949e; /* Subtle Gray */
-  --highlight-color: #00ff7f; /* Neon Green */
-  --accent-color: #009dff; /* Neon Blue */
-  --footer-bg: #161b22; /* Darker Midnight */
-  --footer-text: #c9d1d9; /* Soft Grayish White */
-  --card-bg: #21262d; /* Card Background */
-  --neon-glow: 0 0 15px var(--highlight-color), 0 0 30px var(--highlight-color);
-  --neon-border: 2px solid var(--highlight-color);
-}
-
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
-
 body {
-  background-color: var(--background-color);
-  color: var(--primary-color);
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+    background: #f4f4f4;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
 }
 
-/* Header Styles */
 .header {
-  background-color: var(--footer-bg);
-  color: var(--footer-text);
-  text-align: center;
-  padding: 20px;
-  border-bottom: var(--neon-border);
-  box-shadow: var(--neon-glow);
+    background: linear-gradient(135deg, #007acc, #00d4ff);
+    color: #fff;
 }
 
-.header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  color: var(--highlight-color);
-  text-shadow: 0 0 10px var(--highlight-color), 0 0 20px var(--highlight-color);
+.nav-tabs .nav-link {
+    transition: all 0.3s ease;
 }
 
-.header p {
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: var(--background-color);
-}
-
-/* Section Styles */
-.content {
-  padding: 30px;
-  max-width: 900px;
-  margin: 0 auto;
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link.active {
+    background: #007acc;
+    color: #fff;
+    transform: scale(1.05);
 }
 
 .section {
-  background-color: var(--card-bg);
-  margin-bottom: 20px;
-  border-radius: 10px;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* border: var(--neon-border); */
+    margin-bottom: 1rem;
 }
 
 .question {
-  height: 100%;
-  width: 100%;
-  cursor: pointer;
-  color: var(--primary-color);
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
 }
 
-.section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px var(--highlight-color), 0 0 40px var(--highlight-color);
+.question:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
 }
 
-.section h2 {
-  font-size: 2rem;
-  color: var(--highlight-color);
-  margin-bottom: 10px;
-  text-shadow: 0 0 10px var(--highlight-color);
+.card-body {
+    background: #fff;
+    border: 1px solid #ddd;
+    animation: bounceIn 0.5s ease;
 }
 
-.section p {
-  font-size: 1.1rem;
-  color: var(--background-color);
+.run-code {
+    transition: transform 0.3s ease;
 }
 
-.section ul, .section ol {
-  padding-left: 20px;
-  margin-top: 10px;
+.run-code:hover {
+    transform: scale(1.1);
+    animation: pulse 1s infinite;
 }
 
-.section ul li, .section ol li {
-  font-size: 1.1rem;
-  color: var(--background-color);
-  margin-bottom: 5px;
+.output {
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.section a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: color 0.3s;
+.output.visible {
+    opacity: 1;
 }
 
-.section a:hover {
-  color: var(--highlight-color);
-  text-shadow: 0 0 10px var(--highlight-color);
+/* Animations */
+@keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
-/* Footer Styles */
-.footer {
-  background-color: var(--footer-bg);
-  color: var(--footer-text);
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  box-shadow: 0 -5px 15px var(--footer-bg);
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.footer p {
-  margin-bottom: 10px;
-  font-size: 1rem;
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
-.footer a {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+@keyframes bounceIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    60% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
 }
 
-.footer a:hover {
-  color: var(--highlight-color);
-  text-shadow: 0 0 10px var(--highlight-color);
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
-/* Responsive Design */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-down { animation: slideDown 0.8s ease-out; }
+.animate-fade-in { animation: fadeIn 1s ease forwards; }
+.animate-slide-up { animation: slideUp 0.6s ease forwards; }
+.animate-fade-in-up { animation: fadeInUp 1s ease forwards; }
+
+/* Responsive */
 @media (max-width: 768px) {
-  .header h1 {
-    font-size: 2.5rem;
-  }
+    .nav-tabs { flex-direction: column; }
+    .nav-item { width: 100%; }
+}
 
-  .header p {
-    font-size: 1rem;
-  }
+table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #25a0fe;
+    animation: fadeIn 1s ease forwards;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 
+                0 4px 6px rgba(0, 0, 0, 0.05);
+    /* transform: perspective(1000px) rotateX(5deg); */
+    /* transform-style: preserve-3d; */
+}
 
-  .section h2 {
-    font-size: 1.8rem;
-  }
+th {
+    background: linear-gradient(135deg, #007acc, #00d4ff);
+    color: #fff;
+    padding: 1rem;
+    text-align: left;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.2),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateZ(10px);
+}
 
-  .section p, .section ul li, .section ol li {
-    font-size: 1rem;
-  }
+tr {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.08),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.04);
+    transform: translateZ(5px);
+    background: linear-gradient(to bottom, #e6f3fa, #d1e8f5);
+    position: relative;
+    overflow: hidden;
+}
+
+td:hover {
+    background: linear-gradient(to bottom, #b3e0f2, #99d4ed);
+    transform: translateZ(10px) scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+                inset 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+td::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.2) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: translateZ(2px);
+}
+
+td:hover::before {
+    opacity: 1;
+}
+
+tr:hover {
+    background: #e9ecef;
+    transform: translateX(5px) translateZ(15px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Code Snippet Container */
+pre {
+    color: #fff;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2),
+                inset 0 2px 4px rgba(255, 255, 255, 0.05);
+    border: 1px solid #2e4374;
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+pre:hover {
+    color: #fff;
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25),
+                inset 0 2px 4px rgba(255, 255, 255, 0.08);
+}
+
+/* Code Element Styling */
+code {
+    color: #fff;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    color: #e0e7ff;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Add a subtle overlay effect */
+pre::before {
+    color: #fff;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(0, 122, 204, 0.1), transparent 70%);
+    opacity: 0.3;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+pre:hover::before {
+    color: #fff;
+    opacity: 0.5;
+}
+
+/* Enhance Prism.js default styles */
+pre[class*="language-"] {
+    color: #fff;
+    padding-top: 2rem;
+    position: relative;
+}
+
+pre[class*="language-"]::after {
+    color: #fff;
+    content: 'Python';
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    background: #007acc;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    pre {
+        color: #fff;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    pre[class*="language-"]::after {
+        color: #fff;
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
 }

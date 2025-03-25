@@ -1,230 +1,779 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OOPs Interview Prep</title>
-    <link rel="stylesheet" href="../assets/css/content.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-
-<body>
-    <header class="header text-center bg-light py-4">
-        <h1>Object Oriented Programming</h1>
-        <p>A Pogramming Paradigm</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOPs in Python Hub</title>
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      integrity="sha512-tN7Ec6ZG25xS7X+ warehouse+V+QBqs7uP8wK7rw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header text-center bg-light py-4 animate-slide-down">
+      <h1>Implementing OOPs Using Python</h1>
+      <!-- <p>A Comprehensive Guide with Examples</p> -->
+      <!-- <p><strong>Date:</strong> March 24, 2025</p> -->
     </header>
 
     <section class="content container mt-4">
-        <ul class="nav nav-tabs" id="difficultyTabs" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="beginner-tab" data-bs-toggle="tab" data-bs-target="#beginner" type="button"
-                    role="tab" aria-controls="beginner" aria-selected="true">Beginner</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="intermediate-tab" data-bs-toggle="tab" data-bs-target="#intermediate" type="button"
-                    role="tab" aria-controls="intermediate" aria-selected="false">Intermediate</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="professional-tab" data-bs-toggle="tab" data-bs-target="#professional" type="button"
-                    role="tab" aria-controls="professional" aria-selected="false">Professional</button>
-            </li>
-        </ul>
+      <ul class="nav nav-tabs" id="sectionTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="concepts-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#concepts"
+            type="button"
+            role="tab"
+            aria-controls="concepts"
+            aria-selected="true"
+          >
+            Concepts
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="solved-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#solved"
+            type="button"
+            role="tab"
+            aria-controls="solved"
+            aria-selected="false"
+          >
+            Solved Problems
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="practice-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#practice"
+            type="button"
+            role="tab"
+            aria-controls="practice"
+            aria-selected="false"
+          >
+            Practice Problems
+          </button>
+        </li>
+      </ul>
 
-        <div class="tab-content mt-4" id="difficultyTabContent">
+      <div class="tab-content mt-4" id="sectionTabContent">
+        <!-- Concepts Tab -->
+        <div
+          class="tab-pane fade show active"
+          id="concepts"
+          role="tabpanel"
+          aria-labelledby="concepts-tab"
+        >
+          <ol class="accordion-list">
+            <!-- What is OOPs -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-1"
+                  aria-expanded="false"
+                  aria-controls="concept-1"
+                >
+                  What is Object Oriented Programming
+                </div>
+                <div class="collapse" id="concept-1">
+                  <div class="card card-body">
+                    <p>
+                      A programming paradigm based on the concept of "objects",
+                      which can contain data in the form of fields (attributes)
+                      and code in the form of procedures (methods).
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Class and Object -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-2"
+                  aria-expanded="false"
+                  aria-controls="concept-2"
+                >
+                  Class and Object
+                </div>
+                <div class="collapse" id="concept-2">
+                  <div class="card card-body">
+                    <p>
+                      A class is a blueprint for creating objects.
+                      It defines: <ul>
+                        <li>Attributes, values or Member variables</li>
+                        <li>Behaviour, Methods, Member Functions </li>
+                      </ul>
+                    </p>
+                    <pre><code class="language-python">class ClassName:
+    def __init__(self):
+        self.attribute = "value"
+obj = ClassName()</code></pre>
+                    <!-- <pre><code class="language-python">class Car:
+    def __init__(self):
+        self.__speed = 0
+    def set_speed(self, speed):
+        self.__speed = speed
+    def get_speed(self):
+        return self.__speed
+car = Car()
+car.set_speed(100)
+print(car.get_speed())</code></pre> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Access Specifiers -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-3"
+                  aria-expanded="false"
+                  aria-controls="concept-3"
+                >
+                  Access Specifiers
+                </div>
+                <div class="collapse" id="concept-3">
+                  <div class="card card-body">
+                    <p>
+                      <table>
+                        <tr>
+                          <th>Access Name</th>
+                          <th>Syntax</th>
+                          <th>Significance</th>
+                          <th>Code Example</th>
+                        </tr>
+                        <tr>
+                          <td>Public</td>
+                          <td>nameVar</td>
+                          <td>Accessible and modifiable inside as well as outside the class</td>
+                          <td>
+                            <pre><code class="language-python">class Public:
+def __init__(self):
+    self.name = "John"  # Public attribute
 
-            <template id="question-template">
-                <li>
-                    <div class="section">
-                        <div class="question" data-bs-toggle="collapse" data-bs-target="" aria-expanded="false"
-                            aria-controls="">
-                            </div>
-                        <div class="collapse" id="">
-                            <div class="card card-body">
-                                </div>
+def display_name(self):
+    print(self.name)  # Public method
+
+obj = Public()
+obj.display_name()  # Accessible
+print(obj.name)  # Accessible</code></pre>
+                          
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Protected</td>
+                          <td>_nameVar</td>
+                          <td><ul>
+                            <li>Accessible and modifiable inside the class.</li>
+                            <li>Responsible coders don't access or modify it from outside the class.</li>
+                          </ul></td>
+                          <td><pre><code class="language-python">class Protected:
+  def __init__(self):
+      self._age = 30  # Protected attribute
+
+class Subclass(Protected):
+  def display_age(self):
+      print(self._age)  # Accessible in subclass
+
+obj = Subclass()
+obj.display_age()</code></pre></td>
+                          
+                        </tr>
+                        <tr>
+                          <td>Private</td>
+                          <td>__nameVar</td>
+                          <td>Accessible and modifiable only inside the class.</td>
+                          <td><pre><code class="language-python">class Private:
+  def __init__(self):
+      self.__salary = 50000  # Private attribute
+
+  def salary(self):
+      return self.__salary  # Access through public method
+
+obj = Private()
+print(obj.salary())  # Works
+#print(obj.__salary)  # Raises AttributeError</code></pre></td>
+                        </tr>
+                      </table>
+                    </p>
+                    <!-- <pre><code class="language-python">class Car:
+    def __init__(self):
+        self.__speed = 0
+    def set_speed(self, speed):
+        self.__speed = speed
+    def get_speed(self):
+        return self.__speed
+car = Car()
+car.set_speed(100)
+print(car.get_speed())</code></pre> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Constructor -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-4"
+                  aria-expanded="false"
+                  aria-controls="concept-4"
+                >
+                  Constructor
+                </div>
+                <div class="collapse" id="concept-4">
+                  <div class="card card-body">
+                    <p>
+                      A special Member Function, which is called everytime a a new object of this class is instanciated. In Python it is "__init__" function, which is a constructor, that it is called everytime a new object is being created.
+                      <ul>
+                        <li><strong>Default Constructor:</strong> Default constructor is the constructor which doesn’t take any argument. It has no parameters.</li>
+                        <li><strong>Parameterized Constructor:</strong> A constructor is called Parameterized Constructor when it accepts a specific number of parameters.</li>
+                        <li><strong>Copy Constructor:</strong> A copy constructor is a member function which initializes an object using another object of the same class.</li>
+                      </ul>
+                      Following are the characterstics of Constructor in python: <ul>
+                        <li><strong>Name:</strong> __init__</li>
+                        <li>No return statement or return type is required</li>
+                        <li><strong>Automatic Invcation: </strong> It is called whenever a new object of this class is created.</li>                        
+                      </ul>
+                    </p>
+                    <!-- <pre><code class="language-python">class Car:
+    def __init__(self):
+        self.__speed = 0
+    def set_speed(self, speed):
+        self.__speed = speed
+    def get_speed(self):
+        return self.__speed
+car = Car()
+car.set_speed(100)
+print(car.get_speed())</code></pre> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Deconstructor -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-5"
+                  aria-expanded="false"
+                  aria-controls="concept-5"
+                >
+                Deconstructor
+                </div>
+                <div class="collapse" id="concept-5">
+                  <div class="card card-body">
+                    <p>
+                      <ul>
+                        <li>A special Member Function, which are called when an object gets destroyed.</li>
+                        <li>In Python, destructors are not needed as much as in C++ because Python has a garbage collector that handles memory management automatically. </li>
+                        <li>The __del__() method is a known as a destructor method in Python. It is called when all references to the object have been deleted i.e when an object is garbage collected. </li>
+                      </ul>
+                      
+                    </p>
+                    <pre><code class="language-python"># Python program to illustrate destructor
+                      class Employee:
+                      
+                          # Initializing
+                          def __init__(self):
+                              print('Employee created.')
+                      
+                          # Deleting (Calling destructor)
+                          def __del__(self):
+                              print('Destructor called, Employee deleted.')
+                      
+                      obj = Employee()
+                      del obj</code></pre>
+                    <!-- <pre><code class="language-python">class Car:
+    def __init__(self):
+        self.__speed = 0
+    def set_speed(self, speed):
+        self.__speed = speed
+    def get_speed(self):
+        return self.__speed
+car = Car()
+car.set_speed(100)
+print(car.get_speed())</code></pre> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Main Features of OOPs -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-6"
+                  aria-expanded="false"
+                  aria-controls="concept-6"
+                >
+                Main Features of OOPs
+                </div>
+                <div class="collapse" id="concept-6">
+                  <div class="card card-body">
+                    <p>
+                      <ol>
+                        <li><strong>Encapsulation</strong></li>
+                        <li><strong>Inheritance</strong></li>
+                        <li><strong>Data Abstraction</strong></li>
+                        <li><strong>Polymorphism</strong></li>
+                      </ol>                     
+                    </p>
+                    <!-- <pre><code class="language-python">class Car:
+    def __init__(self):
+        self.__speed = 0
+    def set_speed(self, speed):
+        self.__speed = speed
+    def get_speed(self):
+        return self.__speed
+car = Car()
+car.set_speed(100)
+print(car.get_speed())</code></pre> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Encapsulaion -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-7"
+                  aria-expanded="false"
+                  aria-controls="concept-7"
+                >
+                Encapsulation
+                </div>
+                <div class="collapse" id="concept-7">
+                  <div class="card card-body">
+                    
+                    <p>
+                      Wrapping up of data and functions in a single unit.
+                      In our case it Is class, which encapsulates the attributes and member functions of its objects.
+                      <div class="row" style="justify-content: center; align-items: center;">
+                        <div class="col">
+                          Advantages: <ul>
+                        <li>Increased security of data.</li>
+                        <li>Encapsulation allows access to a level without revealing the complex details below that level.</li>
+                        <li>It reduces human errors.</li>
+                        <li>Makes the application easier to understand.</li>
+                      </ul>   
                         </div>
+                        <div class="col">
+                          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230501154755/Encapsulation-in-Python.webp" alt="">
+                        </div>
+                      </div>
+                                      
+                    </p>
+                    <!-- <pre><code class="language-python">class Car:
+    def __init__(self):
+        self.__speed = 0
+    def set_speed(self, speed):
+        self.__speed = speed
+    def get_speed(self):
+        return self.__speed
+car = Car()
+car.set_speed(100)
+print(car.get_speed())</code></pre> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Inheritance -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-8"
+                  aria-expanded="false"
+                  aria-controls="concept-8"
+                >
+                Inheritance
+                </div>
+                <div class="collapse" id="concept-8">
+                  <div class="card card-body">
+                    <p> 
+                      <strong>Inheritance</strong> allows us to define a class that inherits all the methods and properties from another class. 
+                      Types of Inheritance: <ul>
+                        <li><strong>Single Inheritance: </strong>A child class inherits from one parent class.</li>
+                        <li><strong>Multiple Inheritance: </strong>A child class inherits from more than one parent class.</li>
+                        <li><strong>Multilevel Inheritance: </strong>A class is derived from a class which is also derived from another class.</li>
+                        <li><strong>Hierarchical Inheritance: </strong>Multiple classes inherit from a single parent class.</li>
+                        <li><strong>Hybrid Inheritance: </strong>A combination of more than one type of inheritance.</li>
+                        </ul>         
+                    </p>
+                    <pre><code class="language-python"># 1. Single Inheritance
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+class Employee(Person):  # Employee inherits from Person
+    def __init__(self, name, salary):
+        super().__init__(name)
+        self.salary = salary
+
+# Single Inheritance
+emp = Employee("John", 40000)
+print(emp.name, emp.salary)
+</code></pre><pre><code class="language-python"># 2. Multiple Inheritance
+class Job:
+    def __init__(self, salary):
+        self.salary = salary
+
+class EmployeePersonJob(Employee, Job):  # Inherits from both Employee and Job
+    def __init__(self, name, salary):
+        Employee.__init__(self, name, salary)  # Initialize Employee
+        Job.__init__(self, salary)            # Initialize Job
+
+# Multiple Inheritance
+emp2 = EmployeePersonJob("Alice", 50000)
+print(emp2.name, emp2.salary)
+</code></pre><pre><code class="language-python"># 3. Multilevel Inheritance
+class Manager(EmployeePersonJob):  # Inherits from EmployeePersonJob
+    def __init__(self, name, salary, department):
+        EmployeePersonJob.__init__(self, name, salary)  # Explicitly initialize EmployeePersonJob
+        self.department = department
+
+# Multilevel Inheritance
+mgr = Manager("Bob", 60000, "HR")
+print(mgr.name, mgr.salary, mgr.department)
+</code></pre><pre><code class="language-python"># 4. Hierarchical Inheritance
+class AssistantManager(EmployeePersonJob):  # Inherits from EmployeePersonJob
+    def __init__(self, name, salary, team_size):
+        EmployeePersonJob.__init__(self, name, salary)  # Explicitly initialize EmployeePersonJob
+        self.team_size = team_size
+
+# Hierarchical Inheritance
+asst_mgr = AssistantManager("Charlie", 45000, 10)
+print(asst_mgr.name, asst_mgr.salary, asst_mgr.team_size)
+</code></pre><pre><code class="language-python"># 5. Hybrid Inheritance (Multiple + Multilevel)
+class SeniorManager(Manager, AssistantManager):  # Inherits from both Manager and AssistantManager
+    def __init__(self, name, salary, department, team_size):
+        Manager.__init__(self, name, salary, department)        # Initialize Manager
+        AssistantManager.__init__(self, name, salary, team_size)  # Initialize AssistantManager
+
+# Hybrid Inheritance
+sen_mgr = SeniorManager("David", 70000, "Finance", 20)
+print(sen_mgr.name, sen_mgr.salary, sen_mgr.department, sen_mgr.team_size)
+</code></pre>
+                    <!-- <pre><code class="language-python">class Car:
+    def __init__(self):
+        self.__speed = 0
+    def set_speed(self, speed):
+        self.__speed = speed
+    def get_speed(self):
+        return self.__speed
+car = Car()
+car.set_speed(100)
+print(car.get_speed())</code></pre> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Data Abstraction -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-9"
+                  aria-expanded="false"
+                  aria-controls="concept-9"
+                >
+                Data Abstraction
+                </div>
+                <div class="collapse" id="concept-9">
+                  <div class="card card-body">
+                    <p>
+                      <ul>
+                        <li>Hiding the complex implementation details while exposing only essential information and functionalities to users.</li>
+                        <li>In Python, we can achieve data abstraction by using abstract classes and abstract classes can be created using abc (abstract base class) module and abstractmethod of abc module.</li>
+                      </ul>                   
+                    </p>
+                    <pre><code class="language-python"># Import required modules
+from abc import ABC, abstractmethod
+
+# Create Abstract base class
+class Car(ABC):
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+    
+    # Create abstract method      
+    @abstractmethod
+    def printDetails(self):
+        pass
+  
+    # Create concrete method
+    def accelerate(self):
+        print("Speed up ...")
+  
+    def break_applied(self):
+        print("Car stopped")
+
+# Create a child class
+class Hatchback(Car):
+    def printDetails(self):
+        print("Brand:", self.brand)
+        print("Model:", self.model)
+        print("Year:", self.year)
+  
+    def sunroof(self):
+        print("Not having this feature")
+
+# Create a child class
+class Suv(Car):
+    def printDetails(self):
+        print("Brand:", self.brand)
+        print("Model:", self.model)
+        print("Year:", self.year)
+  
+    def sunroof(self):
+        print("Available")
+
+# Create an instance of the Hatchback class
+car1 = Hatchback("Maruti", "Alto", "2022")
+
+# Call methods
+car1.printDetails()
+car1.accelerate()
+car1.sunroof()
+                      </code></pre>
+                    <!-- <pre><code class="language-python">class Car:
+    def __init__(self):
+        self.__speed = 0
+    def set_speed(self, speed):
+        self.__speed = speed
+    def get_speed(self):
+        return self.__speed
+car = Car()
+car.set_speed(100)
+print(car.get_speed())</code></pre> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Polymorphism -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-10"
+                  aria-expanded="false"
+                  aria-controls="concept-10"
+                >
+                Polymorphism
+                </div>
+                <div class="collapse" id="concept-10">
+                  <div class="card card-body">
+                    <p>
+                      <ul>
+                        <li>allows entities like functions, methods or operators to behave differently based on the type of data they are handling.</li>
+                        <li>Derived from Greek, the term literally means “many forms”.</li>
+                        <li>Python's dynamic typing and duck typing make it inherently polymorphic. Functions, operators and even built-in objects like loops exhibit polymorphic behavior.</li>
+                      </ul>                
+                    </p>
+                    <div class="row" style="justify-content: center; align-items: center;">
+                      <div class="col">
+                        <h3><u>Types of Polymorphism</u></h3>
+                        <ol>
+                        <li>
+                          <strong>Compile-time Polymorphism</strong>
+                          <ul>
+                            <li>Found in statically typed languages like Java or C++, where the behavior of a function or operator is resolved during the program’s compilation phase.</li>
+                            <li>Examples include method overloading and operator overloading, where multiple functions or operators can share the same name but perform different tasks based on the context.</li>
+                            <li>In Python, which is dynamically typed, compile-time polymorphism is not natively supported. Instead, Python uses techniques like dynamic typing and duck typing to achieve similar flexibility.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <strong>Runtime Polymorphism</strong>
+                          <ul>
+                            <li>Occurs when the behavior of a method is determined at runtime based on the type of the object.</li>
+                            <li>In Python, this is achieved through method overriding: a child class can redefine a method from its parent class to provide its own specific implementation.</li>
+                            <li>Python’s dynamic nature allows it to excel at runtime polymorphism, enabling flexible and adaptable code.</li>
+                          </ul>
+                        </li>
+                      </ol></div>
+                      <div class="col"><pre><code class="language-python">class Shape:
+    def area(self):
+        return "Undefined"
+
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius ** 2
+
+shapes = [Rectangle(2, 3), Circle(5)]
+for shape in shapes:
+    print(f"Area: {shape.area()}")
+                  
+                      </code></pre></div>
                     </div>
-                </li>
-            </template>
-
-
-            <div class="tab-pane fade show active" id="beginner" role="tabpanel" aria-labelledby="beginner-tab">
-                <ol id="beginner-questions-list">
-                    <li>
-                        <div class="section">
-                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-1"
-                                aria-expanded="false" aria-controls="question-1">
-                                What is need for OOPs?
-                            </div>
-                            <div class="collapse" id="question-1">
-                                <div class="card card-body">
-                                    <ul>
-                                        <li>Helps in easy understanding of the software, without knowing the complex implementation behind it</li>
-                                        <li>Increases readibility, maintainability, and maintainability of the code</li>
-                                        <li>Big softwares can be easily written and managed using OOPs</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="section">
-                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-2"
-                                aria-expanded="false" aria-controls="question-2">
-                                What are some major Object Oriented Programming languages ?
-                            </div>
-                            <div class="collapse" id="question-2">
-                                <div class="card card-body">
-                                    <ul>
-                                        <li>Java</li>
-                                        <li>C++</li>
-                                        <li>Javascript</li>
-                                        <li>Python</li>
-                                        <li>PHP</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="section">
-                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-3"
-                                aria-expanded="false" aria-controls="question-3">
-                                What are Programming Paradigms other than OOPs ?
-                            </div>
-                            <div class="collapse" id="question-3">
-                                <div class="card card-body">
-                                    <ul>
-                                        <li>Imperative Programming Paradigm</li>
-                                        <ul>
-                                            <li>Procedural Programming Paradigm</li>
-                                            <li>Object Programming Paradigm</li>
-                                            <li>Parallel Programming</li>
-                                        </ul>
-                                        <li>Declarative Programming Paradigm</li>
-                                        <ul>
-                                            <li>Logical Programming Paradigm</li>
-                                            <li>Functional Programming Paradigm</li>
-                                            <li>Database Programming Paradigm</li>
-                                        </ul>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="section">
-                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-4"
-                                aria-expanded="false" aria-controls="question-4">
-                                What is meant by structured programming ?
-                            </div>
-                            <div class="collapse" id="question-4">
-                                <div class="card card-body">
-                                    <p>
-                                        Refers to the method of programming which consists of a completely structured control flow. This structure strictly refers to block contain set of rules governing the program.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="section">
-                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-5"
-                                aria-expanded="false" aria-controls="question-5">
-                                What are the main feature of OOPs?
-                            </div>
-                            <div class="collapse" id="question-5">
-                                <div class="card card-body">
-                                    <ul>
-                                        <li>Encapsulation</li>
-                                        <li>Abstraction</li>
-                                        <li>Inheritance</li>
-                                        <li>Polymorphism</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="section">
-                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-6"
-                                aria-expanded="false" aria-controls="question-6">
-                                What are some advantages of useing OOPs ?
-                            </div>
-                            <div class="collapse" id="question-6">
-                                <div class="card card-body">
-                                    <ul>
-                                        <li>Helpful in solving complex level problems</li>
-                                        <li>Complex programs can be handeled, created and maintained easily</li>
-                                        <li>Reduces redundancy</li>
-                                        <li>Hides background details</li>
-                                        <li>It is based on bottom-up approach</li>
-                                        <li>Polymorphism offers a lot of flexibility</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="section">
-                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-7"
-                                aria-expanded="false" aria-controls="question-7">
-                                What is OOPs so popular ?
-                            </div>
-                            <div class="collapse" id="question-7">
-                                <div class="card card-body">
-                                    <p>I considered better style of programming as:</p>
-                                    <ul>
-                                        <li>Helps in making complex codes</li>
-                                        <li>Easy maintainability, reuseablity and readibility of complex codes.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="section">
-                            <div class="question" data-bs-toggle="collapse" data-bs-target="#question-8"
-                                aria-expanded="false" aria-controls="question-8">
-                                What is meant by the term OOPs ?
-                            </div>
-                            <div class="collapse" id="question-8">
-                                <div class="card card-body">
-                                    <ul>
-                                        <li>It refers to Object Oriented Programming.</li>
-                                        <li>A programming paradigm that is defined using objects, which are refered to as real life entities, which have certain attributes and behaviour.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ol>
-            </div>
-
-            <div class="tab-pane fade" id="intermediate" role="tabpanel" aria-labelledby="intermediate-tab">
-                <ol id="intermediate-questions-list">
-                </ol>
-            </div>
-
-            <div class="tab-pane fade" id="professional" role="tabpanel" aria-labelledby="professional-tab">
-                <ol id="professional-questions-list">
-                </ol>
-            </div>
+                    
+                    <!-- <pre><code class="language-python">class Car:
+    def __init__(self):
+        self.__speed = 0
+    def set_speed(self, speed):
+        self.__speed = speed
+    def get_speed(self):
+        return self.__speed
+car = Car()
+car.set_speed(100)
+print(car.get_speed())</code></pre> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Add Inheritance, Polymorphism, Abstraction similarly -->
+          </ol>
         </div>
+
+        <!-- Solved Problems Tab -->
+        <div
+          class="tab-pane fade"
+          id="solved"
+          role="tabpanel"
+          aria-labelledby="solved-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#solved-1"
+                  aria-expanded="false"
+                  aria-controls="solved-1"
+                >
+                  Bank Account
+                </div>
+                <div class="collapse" id="solved-1">
+                  <div class="card card-body">
+                    <p>
+                      Create a <code>BankAccount</code> class with deposit and
+                      withdraw methods.
+                    </p>
+                    <pre><code class="language-python">class BankAccount:
+    def __init__(self, balance=0):
+        self.__balance = balance
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+    def withdraw(self, amount):
+        if amount <= self.__balance:
+            self.__balance -= amount
+    def get_balance(self):
+        return self.__balance
+acc = BankAccount(1000)
+acc.deposit(500)
+acc.withdraw(200)
+print(acc.get_balance())</code></pre>
+                    <button class="btn btn-success run-code">Run Code</button>
+                    <div class="output mt-2">Output: 1300</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Add 9 more solved problems similarly -->
+          </ol>
+        </div>
+
+        <!-- Practice Problems Tab -->
+        <div
+          class="tab-pane fade"
+          id="practice"
+          role="tabpanel"
+          aria-labelledby="practice-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#practice-1"
+                  aria-expanded="false"
+                  aria-controls="practice-1"
+                >
+                  Person Class
+                </div>
+                <div class="collapse" id="practice-1">
+                  <div class="card card-body">
+                    <p>
+                      Create a <code>Person</code> class with name, age, and a
+                      method to check if adult (age >= 18).
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Add 9 more practice problems similarly -->
+          </ol>
+        </div>
+      </div>
     </section>
 
-    <footer class="footer bg-light text-center py-4 mt-4">
-        <a href="./content2.html" target="_blank"><p>&copy; 2025 Python Interview Prep. All rights reserved.</p></a>
+    <footer class="footer bg-light text-center py-4 mt-4 animate-fade-in-up">
+      <a href="./content2.html" target="_blank" style="text-decoration: none;"><p>OOPs using Python</p></a>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
-    
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+      integrity="sha512-7aW6NgQSU/VEpXJtr7MtwbPGL+H20QkBqBbsRG2FnU70a+KA4SdFH1U0NTNA3sIQ6nG/ScbUkg+Y3K8qoQSvEvQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script src="../assets/js/content.js"></script>
+  </body>
 </html>
