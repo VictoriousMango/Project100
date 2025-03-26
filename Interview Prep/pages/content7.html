@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git and GitHub Hub</title>
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      integrity="sha512-tN7Ec6ZG25xS7X+warehouse+V+QBqs7uP8wK7rw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header text-center bg-light py-4 animate-slide-down">
+      <h1>Git and GitHub</h1>
+    </header>
+
+    <section class="content container mt-4">
+      <ul class="nav nav-tabs" id="sectionTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="concepts-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#concepts"
+            type="button"
+            role="tab"
+            aria-controls="concepts"
+            aria-selected="true"
+          >
+            Concepts
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="solved-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#solved"
+            type="button"
+            role="tab"
+            aria-controls="solved"
+            aria-selected="false"
+          >
+            Solved Problems
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="practice-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#practice"
+            type="button"
+            role="tab"
+            aria-controls="practice"
+            aria-selected="false"
+          >
+            Practice Problems
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content mt-4" id="sectionTabContent">
+        <!-- Concepts Tab -->
+        <div
+          class="tab-pane fade show active"
+          id="concepts"
+          role="tabpanel"
+          aria-labelledby="concepts-tab"
+        >
+          <ol class="accordion-list">
+            <!-- What is Git -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-1"
+                  aria-expanded="false"
+                  aria-controls="concept-1"
+                >
+                  What is Git
+                </div>
+                <div class="collapse" id="concept-1">
+                  <div class="card card-body">
+                    <p>
+                      Git is a distributed version control system that tracks changes in source code during software development. It allows multiple developers to collaborate on a project, manage versions, and revert changes if needed.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- What is GitHub -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-2"
+                  aria-expanded="false"
+                  aria-controls="concept-2"
+                >
+                  What is GitHub
+                </div>
+                <div class="collapse" id="concept-2">
+                  <div class="card card-body">
+                    <p>
+                      GitHub is a platform built on top of Git that provides hosting for Git repositories, collaboration tools (e.g., pull requests, issues), and additional features like CI/CD integration.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Initializing a Repository -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-3"
+                  aria-expanded="false"
+                  aria-controls="concept-3"
+                >
+                  Initializing a Repository
+                </div>
+                <div class="collapse" id="concept-3">
+                  <div class="card card-body">
+                    <p>
+                      A Git repository is initialized to start tracking files in a directory. This creates a hidden `.git` folder to store version history.
+                    </p>
+                    <pre><code class="language-bash">git init</code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Staging and Committing -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-4"
+                  aria-expanded="false"
+                  aria-controls="concept-4"
+                >
+                  Staging and Committing
+                </div>
+                <div class="collapse" id="concept-4">
+                  <div class="card card-body">
+                    <p>
+                      Staging prepares files to be committed, and committing saves a snapshot of those changes to the repository’s history.
+                    </p>
+                    <pre><code class="language-bash">git add .  # Stage all changes
+git commit -m "Initial commit"  # Commit with a message</code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Branching -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-5"
+                  aria-expanded="false"
+                  aria-controls="concept-5"
+                >
+                  Branching
+                </div>
+                <div class="collapse" id="concept-5">
+                  <div class="card card-body">
+                    <p>
+                      Branching allows you to create separate lines of development within the same repository. The default branch is typically `main`.
+                    </p>
+                    <pre><code class="language-bash">git branch feature  # Create a new branch
+git checkout feature  # Switch to the branch
+# Or combine: git checkout -b feature</code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Merging -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-6"
+                  aria-expanded="false"
+                  aria-controls="concept-6"
+                >
+                  Merging
+                </div>
+                <div class="collapse" id="concept-6">
+                  <div class="card card-body">
+                    <p>
+                      Merging integrates changes from one branch into another, combining their histories.
+                    </p>
+                    <pre><code class="language-bash">git checkout main  # Switch to main branch
+git merge feature  # Merge feature branch into main</code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Remote Repositories -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-7"
+                  aria-expanded="false"
+                  aria-controls="concept-7"
+                >
+                  Remote Repositories
+                </div>
+                <div class="collapse" id="concept-7">
+                  <div class="card card-body">
+                    <p>
+                      Remote repositories (e.g., on GitHub) allow you to store and share your Git repository online. Common commands include pushing and pulling changes.
+                    </p>
+                    <pre><code class="language-bash">git remote add origin https://github.com/user/repo.git  # Link to remote
+git push -u origin main  # Push to remote
+git pull origin main  # Pull from remote</code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Pull Requests -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-8"
+                  aria-expanded="false"
+                  aria-controls="concept-8"
+                >
+                  Pull Requests
+                </div>
+                <div class="collapse" id="concept-8">
+                  <div class="card card-body">
+                    <p>
+                      A GitHub feature that allows you to propose changes from one branch to another (e.g., from a feature branch to `main`). It facilitates code review and collaboration.
+                    </p>
+                    <p><em>(Performed via GitHub UI, not a Git command)</em></p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Rebasing -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-9"
+                  aria-expanded="false"
+                  aria-controls="concept-9"
+                >
+                  Rebasing
+                </div>
+                <div class="collapse" id="concept-9">
+                  <div class="card card-body">
+                    <p>
+                      Rebasing rewrites commit history by moving or combining a branch onto another, creating a linear history as an alternative to merging.
+                    </p>
+                    <pre><code class="language-bash">git checkout feature  # Switch to feature branch
+git rebase main  # Rebase feature onto main</code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Git Stash -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-10"
+                  aria-expanded="false"
+                  aria-controls="concept-10"
+                >
+                  Git Stash
+                </div>
+                <div class="collapse" id="concept-10">
+                  <div class="card card-body">
+                    <p>
+                      Temporarily saves uncommitted changes so you can switch branches or perform other tasks, then reapply them later.
+                    </p>
+                    <pre><code class="language-bash">git stash  # Save changes
+git stash pop  # Reapply stashed changes</code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Solved Problems Tab -->
+        <div
+          class="tab-pane fade"
+          id="solved"
+          role="tabpanel"
+          aria-labelledby="solved-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#solved-1"
+                  aria-expanded="false"
+                  aria-controls="solved-1"
+                >
+                  Create and Push a Repository
+                </div>
+                <div class="collapse" id="solved-1">
+                  <div class="card card-body">
+                    <p>
+                      Initialize a Git repository, add a file, commit it, and push it to GitHub.
+                    </p>
+                    <pre><code class="language-bash">git init
+echo "Hello World" > README.md
+git add README.md
+git commit -m "Add README"
+git remote add origin https://github.com/user/repo.git
+git push -u origin main</code></pre>
+                    <div class="output mt-2">Output: Repository created and pushed to GitHub</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Practice Problems Tab -->
+        <div
+          class="tab-pane fade"
+          id="practice"
+          role="tabpanel"
+          aria-labelledby="practice-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#practice-1"
+                  aria-expanded="false"
+                  aria-controls="practice-1"
+                >
+                  Resolve a Merge Conflict
+                </div>
+                <div class="collapse" id="practice-1">
+                  <div class="card card-body">
+                    <p>
+                      Simulate a merge conflict between two branches and resolve it manually.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer bg-light text-center py-4 mt-4 animate-fade-in-up">
+      <a href="./content2.html" target="_blank" style="text-decoration: none;"><p>Git and GitHub</p></a>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+      integrity="sha512-7aW6NgQSU/VEpXJtr7MtwbPGL+H20QkBqBbsRG2FnU70a+KA4SdFH1U0NTNA3sIQ6nG/ScbUkg+Y3K8qoQSvEvQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script src="../assets/js/content.js"></script>
+  </body>
+</html>

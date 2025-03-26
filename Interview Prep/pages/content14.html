@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Large Language Models (LLMs) Hub</title>
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      integrity="sha512-tN7Ec6ZG25xS7X+warehouse+V+QBqs7uP8wK7rw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header text-center bg-light py-4 animate-slide-down">
+      <h1>Large Language Models (LLMs)</h1>
+    </header>
+
+    <section class="content container mt-4">
+      <ul class="nav nav-tabs" id="sectionTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="concepts-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#concepts"
+            type="button"
+            role="tab"
+            aria-controls="concepts"
+            aria-selected="true"
+          >
+            Concepts
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="solved-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#solved"
+            type="button"
+            role="tab"
+            aria-controls="solved"
+            aria-selected="false"
+          >
+            Solved Problems
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="practice-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#practice"
+            type="button"
+            role="tab"
+            aria-controls="practice"
+            aria-selected="false"
+          >
+            Practice Problems
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content mt-4" id="sectionTabContent">
+        <!-- Concepts Tab -->
+        <div
+          class="tab-pane fade show active"
+          id="concepts"
+          role="tabpanel"
+          aria-labelledby="concepts-tab"
+        >
+          <ol class="accordion-list">
+            <!-- What are LLMs -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-1"
+                  aria-expanded="false"
+                  aria-controls="concept-1"
+                >
+                  What are Large Language Models (LLMs)
+                </div>
+                <div class="collapse" id="concept-1">
+                  <div class="card card-body">
+                    <p>
+                      Large Language Models (LLMs) are advanced AI models trained on massive text datasets to understand and generate human-like language. Examples include GPT, BERT, and LLaMA, used for tasks like text generation, translation, and question answering.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Transformers Architecture -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-2"
+                  aria-expanded="false"
+                  aria-controls="concept-2"
+                >
+                  Transformers Architecture
+                </div>
+                <div class="collapse" id="concept-2">
+                  <div class="card card-body">
+                    <p>
+                      LLMs are typically based on the Transformer architecture, which uses self-attention mechanisms to process input sequences in parallel, enabling efficient handling of long-range dependencies in text.
+                    </p>
+                    <p>Key components: Encoder (e.g., BERT), Decoder (e.g., GPT), Attention Layers</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Pretraining and Fine-Tuning -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-3"
+                  aria-expanded="false"
+                  aria-controls="concept-3"
+                >
+                  Pretraining and Fine-Tuning
+                </div>
+                <div class="collapse" id="concept-3">
+                  <div class="card card-body">
+                    <p>
+                      LLMs are pretrained on large, general datasets (e.g., Wikipedia) to learn language patterns, then fine-tuned on specific tasks (e.g., sentiment analysis) with smaller, labeled datasets.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Tokenization -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-4"
+                  aria-expanded="false"
+                  aria-controls="concept-4"
+                >
+                  Tokenization
+                </div>
+                <div class="collapse" id="concept-4">
+                  <div class="card card-body">
+                    <p>
+                      Tokenization converts text into smaller units (tokens) that the model can process, using techniques like WordPiece or Byte-Pair Encoding (BPE).
+                    </p>
+                    <pre><code class="language-python">from transformers import BertTokenizer
+
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+tokens = tokenizer.tokenize("Hello, world!")
+print(tokens)  # ['hello', ',', 'world', '!']
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Text Generation -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-5"
+                  aria-expanded="false"
+                  aria-controls="concept-5"
+                >
+                  Text Generation
+                </div>
+                <div class="collapse" id="concept-5">
+                  <div class="card card-body">
+                    <p>
+                      LLMs can generate coherent text based on a prompt, often using autoregressive models like GPT.
+                    </p>
+                    <pre><code class="language-python">from transformers import GPT2Tokenizer, GPT2LMHeadModel
+
+tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+model = GPT2LMHeadModel.from_pretrained('gpt2')
+input_ids = tokenizer.encode("Once upon a time", return_tensors='pt')
+output = model.generate(input_ids, max_length=50)
+print(tokenizer.decode(output[0], skip_special_tokens=True))
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Text Classification -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-6"
+                  aria-expanded="false"
+                  aria-controls="concept-6"
+                >
+                  Text Classification
+                </div>
+                <div class="collapse" id="concept-6">
+                  <div class="card card-body">
+                    <p>
+                      LLMs can classify text (e.g., sentiment analysis) by fine-tuning on labeled data, leveraging their understanding of context.
+                    </p>
+                    <pre><code class="language-python">from transformers import pipeline
+
+classifier = pipeline('sentiment-analysis', model='distilbert-base-uncased-finetuned-sst-2-english')
+result = classifier("I love this product!")
+print(result)  # [{'label': 'POSITIVE', 'score': 0.9998}]
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Embeddings -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-7"
+                  aria-expanded="false"
+                  aria-controls="concept-7"
+                >
+                  Embeddings
+                </div>
+                <div class="collapse" id="concept-7">
+                  <div class="card card-body">
+                    <p>
+                      LLMs generate embeddings—dense vector representations of text—that capture semantic meaning, useful for tasks like similarity search.
+                    </p>
+                    <pre><code class="language-python">from transformers import BertTokenizer, BertModel
+import torch
+
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model = BertModel.from_pretrained('bert-base-uncased')
+inputs = tokenizer("Hello world", return_tensors="pt")
+outputs = model(**inputs)
+embeddings = outputs.last_hidden_state
+print(embeddings.shape)  # [1, sequence_length, 768]
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Prompt Engineering -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-8"
+                  aria-expanded="false"
+                  aria-controls="concept-8"
+                >
+                  Prompt Engineering
+                </div>
+                <div class="collapse" id="concept-8">
+                  <div class="card card-body">
+                    <p>
+                      Prompt engineering involves crafting input prompts to guide LLMs toward desired outputs without retraining, leveraging their zero-shot or few-shot learning capabilities.
+                    </p>
+                    <p>Example Prompt: "Translate to French: 'Hello, how are you?'" → "Bonjour, comment vas-tu ?"</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Limitations and Challenges -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-9"
+                  aria-expanded="false"
+                  aria-controls="concept-9"
+                >
+                  Limitations and Challenges
+                </div>
+                <div class="collapse" id="concept-9">
+                  <div class="card card-body">
+                    <p>
+                      LLMs face challenges like bias in training data, high computational costs, hallucination (generating incorrect facts), and ethical concerns.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Solved Problems Tab -->
+        <div
+          class="tab-pane fade"
+          id="solved"
+          role="tabpanel"
+          aria-labelledby="solved-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#solved-1"
+                  aria-expanded="false"
+                  aria-controls="solved-1"
+                >
+                  Sentiment Analysis with LLM
+                </div>
+                <div class="collapse" id="solved-1">
+                  <div class="card card-body">
+                    <p>
+                      Use a pretrained LLM to classify the sentiment of a given text.
+                    </p>
+                    <pre><code class="language-python">from transformers import pipeline
+
+classifier = pipeline('sentiment-analysis', model='distilbert-base-uncased-finetuned-sst-2-english')
+text = "This movie is amazing!"
+result = classifier(text)
+print(result)  # [{'label': 'POSITIVE', 'score': 0.9999}]
+                    </code></pre>
+                    <button class="btn btn-success run-code">Run Code</button>
+                    <div class="output mt-2">Output: [{'label': 'POSITIVE', 'score': 0.9999}]</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Practice Problems Tab -->
+        <div
+          class="tab-pane fade"
+          id="practice"
+          role="tabpanel"
+          aria-labelledby="practice-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#practice-1"
+                  aria-expanded="false"
+                  aria-controls="practice-1"
+                >
+                  Text Summarization
+                </div>
+                <div class="collapse" id="practice-1">
+                  <div class="card card-body">
+                    <p>
+                      Use an LLM to summarize a long paragraph into a concise sentence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer bg-light text-center py-4 mt-4 animate-fade-in-up">
+      <a href="./content2.html" target="_blank" style="text-decoration: none;"><p>Large Language Models</p></a>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+      integrity="sha512-7aW6NgQSU/VEpXJtr7MtwbPGL+H20QkBqBbsRG2FnU70a+KA4SdFH1U0NTNA3sIQ6nG/ScbUkg+Y3K8qoQSvEvQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script src="../assets/js/content.js"></script>
+  </body>
+</html>

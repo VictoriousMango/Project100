@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algorithms in Python Hub</title>
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      integrity="sha512-tN7Ec6ZG25xS7X+warehouse+V+QBqs7uP8wK7rw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header text-center bg-light py-4 animate-slide-down">
+      <h1>Algorithms in Python</h1>
+    </header>
+
+    <section class="content container mt-4">
+      <ul class="nav nav-tabs" id="sectionTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="concepts-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#concepts"
+            type="button"
+            role="tab"
+            aria-controls="concepts"
+            aria-selected="true"
+          >
+            Concepts
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="solved-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#solved"
+            type="button"
+            role="tab"
+            aria-controls="solved"
+            aria-selected="false"
+          >
+            Solved Problems
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="practice-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#practice"
+            type="button"
+            role="tab"
+            aria-controls="practice"
+            aria-selected="false"
+          >
+            Practice Problems
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content mt-4" id="sectionTabContent">
+        <!-- Concepts Tab -->
+        <div
+          class="tab-pane fade show active"
+          id="concepts"
+          role="tabpanel"
+          aria-labelledby="concepts-tab"
+        >
+          <ol class="accordion-list">
+            <!-- What are Algorithms -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-1"
+                  aria-expanded="false"
+                  aria-controls="concept-1"
+                >
+                  What are Algorithms
+                </div>
+                <div class="collapse" id="concept-1">
+                  <div class="card card-body">
+                    <p>
+                      An algorithm is a step-by-step procedure or set of rules to solve a problem or perform a task. In Python, algorithms are implemented using functions, loops, and data structures to optimize efficiency and correctness.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Linear Search -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-2"
+                  aria-expanded="false"
+                  aria-controls="concept-2"
+                >
+                  Linear Search
+                </div>
+                <div class="collapse" id="concept-2">
+                  <div class="card card-body">
+                    <p>
+                      A simple search algorithm that checks each element in a list sequentially until a match is found or the list is exhausted. Time complexity: O(n).
+                    </p>
+                    <pre><code class="language-python">def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1
+
+arr = [2, 5, 8, 12, 16]
+print(linear_search(arr, 8))  # Output: 2
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Binary Search -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-3"
+                  aria-expanded="false"
+                  aria-controls="concept-3"
+                >
+                  Binary Search
+                </div>
+                <div class="collapse" id="concept-3">
+                  <div class="card card-body">
+                    <p>
+                      An efficient search algorithm for sorted lists that repeatedly divides the search interval in half. Time complexity: O(log n).
+                    </p>
+                    <pre><code class="language-python">def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+
+arr = [2, 5, 8, 12, 16]
+print(binary_search(arr, 12))  # Output: 3
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Bubble Sort -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-4"
+                  aria-expanded="false"
+                  aria-controls="concept-4"
+                >
+                  Bubble Sort
+                </div>
+                <div class="collapse" id="concept-4">
+                  <div class="card card-body">
+                    <p>
+                      A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. Time complexity: O(n²).
+                    </p>
+                    <pre><code class="language-python">def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
+
+arr = [64, 34, 25, 12, 22]
+print(bubble_sort(arr))  # Output: [12, 22, 25, 34, 64]
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Merge Sort -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-5"
+                  aria-expanded="false"
+                  aria-controls="concept-5"
+                >
+                  Merge Sort
+                </div>
+                <div class="collapse" id="concept-5">
+                  <div class="card card-body">
+                    <p>
+                      A divide-and-conquer sorting algorithm that splits the list into halves, recursively sorts them, and merges the sorted halves. Time complexity: O(n log n).
+                    </p>
+                    <pre><code class="language-python">def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+    return merge(left, right)
+
+def merge(left, right):
+    result = []
+    i = j = 0
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result
+
+arr = [38, 27, 43, 3, 9]
+print(merge_sort(arr))  # Output: [3, 9, 27, 38, 43]
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Quick Sort -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-6"
+                  aria-expanded="false"
+                  aria-controls="concept-6"
+                >
+                  Quick Sort
+                </div>
+                <div class="collapse" id="concept-6">
+                  <div class="card card-body">
+                    <p>
+                      A divide-and-conquer sorting algorithm that selects a pivot and partitions the list around it. Average time complexity: O(n log n).
+                    </p>
+                    <pre><code class="language-python">def quick_sort(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+        quick_sort(arr, low, pi - 1)
+        quick_sort(arr, pi + 1, high)
+    return arr
+
+def partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    for j in range(low, high):
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
+
+arr = [10, 7, 8, 9, 1]
+print(quick_sort(arr, 0, len(arr) - 1))  # Output: [1, 7, 8, 9, 10]
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Depth-First Search (DFS) -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-7"
+                  aria-expanded="false"
+                  aria-controls="concept-7"
+                >
+                  Depth-First Search (DFS)
+                </div>
+                <div class="collapse" id="concept-7">
+                  <div class="card card-body">
+                    <p>
+                      A graph traversal algorithm that explores as far as possible along each branch before backtracking. Can be implemented recursively or with a stack.
+                    </p>
+                    <pre><code class="language-python">def dfs(graph, node, visited=None):
+    if visited is None:
+        visited = set()
+    visited.add(node)
+    print(node, end=" ")
+    for neighbor in graph[node]:
+        if neighbor not in visited:
+            dfs(graph, neighbor, visited)
+
+graph = {
+    'A': ['B', 'C'],
+    'B': ['A', 'D', 'E'],
+    'C': ['A', 'F'],
+    'D': ['B'],
+    'E': ['B', 'F'],
+    'F': ['C', 'E']
+}
+dfs(graph, 'A')  # Output: A B D E F C
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Breadth-First Search (BFS) -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-8"
+                  aria-expanded="false"
+                  aria-controls="concept-8"
+                >
+                  Breadth-First Search (BFS)
+                </div>
+                <div class="collapse" id="concept-8">
+                  <div class="card card-body">
+                    <p>
+                      A graph traversal algorithm that explores all neighbors at the present depth before moving to nodes at the next depth level. Uses a queue.
+                    </p>
+                    <pre><code class="language-python">from collections import deque
+
+def bfs(graph, start):
+    visited = set()
+    queue = deque([start])
+    visited.add(start)
+    while queue:
+        node = queue.popleft()
+        print(node, end=" ")
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append(neighbor)
+
+graph = {
+    'A': ['B', 'C'],
+    'B': ['A', 'D', 'E'],
+    'C': ['A', 'F'],
+    'D': ['B'],
+    'E': ['B', 'F'],
+    'F': ['C', 'E']
+}
+bfs(graph, 'A')  # Output: A B C D E F
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Solved Problems Tab -->
+        <div
+          class="tab-pane fade"
+          id="solved"
+          role="tabpanel"
+          aria-labelledby="solved-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#solved-1"
+                  aria-expanded="false"
+                  aria-controls="solved-1"
+                >
+                  Find Maximum Element
+                </div>
+                <div class="collapse" id="solved-1">
+                  <div class="card card-body">
+                    <p>
+                      Write a function to find the maximum element in a list using linear search.
+                    </p>
+                    <pre><code class="language-python">def find_max(arr):
+    max_val = arr[0]
+    for i in range(1, len(arr)):
+        if arr[i] > max_val:
+            max_val = arr[i]
+    return max_val
+
+arr = [4, 2, 9, 7, 5]
+print(find_max(arr))  # Output: 9
+                    </code></pre>
+                    <button class="btn btn-success run-code">Run Code</button>
+                    <div class="output mt-2">Output: 9</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Practice Problems Tab -->
+        <div
+          class="tab-pane fade"
+          id="practice"
+          role="tabpanel"
+          aria-labelledby="practice-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#practice-1"
+                  aria-expanded="false"
+                  aria-controls="practice-1"
+                >
+                  Implement Insertion Sort
+                </div>
+                <div class="collapse" id="practice-1">
+                  <div class="card card-body">
+                    <p>
+                      Create a function to sort a list using the Insertion Sort algorithm.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer bg-light text-center py-4 mt-4 animate-fade-in-up">
+      <a href="./content2.html" target="_blank" style="text-decoration: none;"><p>Algorithms in Python - Page 2</p></a>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+      integrity="sha512-7aW6NgQSU/VEpXJtr7MtwbPGL+H20QkBqBbsRG2FnU70a+KA4SdFH1U0NTNA3sIQ6nG/ScbUkg+Y3K8qoQSvEvQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script src="../assets/js/content.js"></script>
+  </body>
+</html>
