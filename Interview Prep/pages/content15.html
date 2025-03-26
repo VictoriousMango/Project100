@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agentic AI Hub</title>
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      integrity="sha512-tN7Ec6ZG25xS7X+warehouse+V+QBqs7uP8wK7rw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header text-center bg-light py-4 animate-slide-down">
+      <h1>Agentic AI</h1>
+    </header>
+
+    <section class="content container mt-4">
+      <ul class="nav nav-tabs" id="sectionTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="concepts-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#concepts"
+            type="button"
+            role="tab"
+            aria-controls="concepts"
+            aria-selected="true"
+          >
+            Concepts
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="solved-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#solved"
+            type="button"
+            role="tab"
+            aria-controls="solved"
+            aria-selected="false"
+          >
+            Solved Problems
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="practice-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#practice"
+            type="button"
+            role="tab"
+            aria-controls="practice"
+            aria-selected="false"
+          >
+            Practice Problems
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content mt-4" id="sectionTabContent">
+        <!-- Concepts Tab -->
+        <div
+          class="tab-pane fade show active"
+          id="concepts"
+          role="tabpanel"
+          aria-labelledby="concepts-tab"
+        >
+          <ol class="accordion-list">
+            <!-- What is Agentic AI -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-1"
+                  aria-expanded="false"
+                  aria-controls="concept-1"
+                >
+                  What is Agentic AI
+                </div>
+                <div class="collapse" id="concept-1">
+                  <div class="card card-body">
+                    <p>
+                      Agentic AI refers to autonomous AI systems that can reason, plan, and act independently to achieve specific goals. Unlike traditional AI, agentic systems exhibit agency—making decisions and interacting with their environment proactively.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Autonomous Agents -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-2"
+                  aria-expanded="false"
+                  aria-controls="concept-2"
+                >
+                  Autonomous Agents
+                </div>
+                <div class="collapse" id="concept-2">
+                  <div class="card card-body">
+                    <p>
+                      Autonomous agents are entities that perceive their environment, make decisions, and take actions without human intervention. Examples include chatbots, robotic process automation, and AI assistants.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Goal-Directed Behavior -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-3"
+                  aria-expanded="false"
+                  aria-controls="concept-3"
+                >
+                  Goal-Directed Behavior
+                </div>
+                <div class="collapse" id="concept-3">
+                  <div class="card card-body">
+                    <p>
+                      Agentic AI systems are designed to pursue specific objectives, using reasoning and planning to determine the best course of action.
+                    </p>
+                    <p>Example: An AI scheduling meetings by optimizing participant availability.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Reasoning and Decision-Making -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-4"
+                  aria-expanded="false"
+                  aria-controls="concept-4"
+                >
+                  Reasoning and Decision-Making
+                </div>
+                <div class="collapse" id="concept-4">
+                  <div class="card card-body">
+                    <p>
+                      Agentic AI employs reasoning (e.g., logical deduction, probabilistic inference) to make decisions, often leveraging LLMs or rule-based systems.
+                    </p>
+                    <pre><code class="language-python">from langchain.agents import initialize_agent, Tool
+from langchain.llms import OpenAI
+
+llm = OpenAI(api_key="your-api-key")
+tools = [Tool(name="Calculator", func=lambda x: eval(x), description="Performs basic math")]
+agent = initialize_agent(tools, llm, agent_type="zero-shot-react-description")
+response = agent.run("What is 5 + 3?")
+print(response)  # "8"
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Tools and Environment Interaction -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-5"
+                  aria-expanded="false"
+                  aria-controls="concept-5"
+                >
+                  Tools and Environment Interaction
+                </div>
+                <div class="collapse" id="concept-5">
+                  <div class="card card-body">
+                    <p>
+                      Agents use tools (e.g., APIs, databases) to interact with their environment, extending their capabilities beyond language processing.
+                    </p>
+                    <pre><code class="language-python">from langchain.agents import initialize_agent, Tool
+from langchain.llms import OpenAI
+
+def search_web(query):
+    return f"Searching for {query}"
+
+llm = OpenAI(api_key="your-api-key")
+tools = [Tool(name="Search", func=search_web, description="Searches the web")]
+agent = initialize_agent(tools, llm, agent_type="zero-shot-react-description")
+response = agent.run("Find information about Agentic AI")
+print(response)
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Memory and Context -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-6"
+                  aria-expanded="false"
+                  aria-controls="concept-6"
+                >
+                  Memory and Context
+                </div>
+                <div class="collapse" id="concept-6">
+                  <div class="card card-body">
+                    <p>
+                      Agents maintain memory (short-term or long-term) to retain context across interactions, improving coherence and decision-making.
+                    </p>
+                    <pre><code class="language-python">from langchain.memory import ConversationBufferMemory
+from langchain.chains import ConversationChain
+from langchain.llms import OpenAI
+
+llm = OpenAI(api_key="your-api-key")
+memory = ConversationBufferMemory()
+conversation = ConversationChain(llm=llm, memory=memory)
+conversation.run("My name is Alice")
+print(conversation.run("What’s my name?"))  # "Alice"
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Planning and Multi-Step Reasoning -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-7"
+                  aria-expanded="false"
+                  aria-controls="concept-7"
+                >
+                  Planning and Multi-Step Reasoning
+                </div>
+                <div class="collapse" id="concept-7">
+                  <div class="card card-body">
+                    <p>
+                      Agentic AI can break complex tasks into steps, planning a sequence of actions to achieve a goal.
+                    </p>
+                    <p>Example: Booking a trip involves searching flights, hotels, and coordinating dates.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Reinforcement Learning in Agents -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-8"
+                  aria-expanded="false"
+                  aria-controls="concept-8"
+                >
+                  Reinforcement Learning in Agents
+                </div>
+                <div class="collapse" id="concept-8">
+                  <div class="card card-body">
+                    <p>
+                      Some agents use reinforcement learning (RL) to optimize actions based on rewards, learning from trial and error in dynamic environments.
+                    </p>
+                    <p><em>(Conceptual; RL frameworks like Gym can be integrated)</em></p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Challenges of Agentic AI -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-9"
+                  aria-expanded="false"
+                  aria-controls="concept-9"
+                >
+                  Challenges of Agentic AI
+                </div>
+                <div class="collapse" id="concept-9">
+                  <div class="card card-body">
+                    <p>
+                      Challenges include ensuring safety, managing unpredictability, ethical implications, and aligning agent goals with human intent.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Solved Problems Tab -->
+        <div
+          class="tab-pane fade"
+          id="solved"
+          role="tabpanel"
+          aria-labelledby="solved-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#solved-1"
+                  aria-expanded="false"
+                  aria-controls="solved-1"
+                >
+                  Simple Math Agent
+                </div>
+                <div class="collapse" id="solved-1">
+                  <div class="card card-body">
+                    <p>
+                      Create an agent that uses a calculator tool to solve a math problem.
+                    </p>
+                    <pre><code class="language-python">from langchain.agents import initialize_agent, Tool
+from langchain.llms import OpenAI
+
+llm = OpenAI(api_key="your-api-key")
+tools = [Tool(name="Calculator", func=lambda x: eval(x), description="Performs basic math")]
+agent = initialize_agent(tools, llm, agent_type="zero-shot-react-description")
+response = agent.run("What is 10 * 5?")
+print(response)  # "50"
+                    </code></pre>
+                    <button class="btn btn-success run-code">Run Code</button>
+                    <div class="output mt-2">Output: "50"</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Practice Problems Tab -->
+        <div
+          class="tab-pane fade"
+          id="practice"
+          role="tabpanel"
+          aria-labelledby="practice-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#practice-1"
+                  aria-expanded="false"
+                  aria-controls="practice-1"
+                >
+                  Task Planning Agent
+                </div>
+                <div class="collapse" id="practice-1">
+                  <div class="card card-body">
+                    <p>
+                      Build an agent that plans a multi-step task, such as organizing a meeting, using tools for calendar lookup and email drafting.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer bg-light text-center py-4 mt-4 animate-fade-in-up">
+      <a href="./content2.html" target="_blank" style="text-decoration: none;"><p>Agentic AI</p></a>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+      integrity="sha512-7aW6NgQSU/VEpXJtr7MtwbPGL+H20QkBqBbsRG2FnU70a+KA4SdFH1U0NTNA3sIQ6nG/ScbUkg+Y3K8qoQSvEvQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script src="../assets/js/content.js"></script>
+  </body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deep Learning Hub</title>
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      integrity="sha512-tN7Ec6ZG25xS7X+warehouse+V+QBqs7uP8wK7rw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header text-center bg-light py-4 animate-slide-down">
+      <h1>Deep Learning</h1>
+    </header>
+
+    <section class="content container mt-4">
+      <ul class="nav nav-tabs" id="sectionTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="concepts-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#concepts"
+            type="button"
+            role="tab"
+            aria-controls="concepts"
+            aria-selected="true"
+          >
+            Concepts
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="solved-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#solved"
+            type="button"
+            role="tab"
+            aria-controls="solved"
+            aria-selected="false"
+          >
+            Solved Problems
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="practice-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#practice"
+            type="button"
+            role="tab"
+            aria-controls="practice"
+            aria-selected="false"
+          >
+            Practice Problems
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="projects-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#projects"
+            type="button"
+            role="tab"
+            aria-controls="projects"
+            aria-selected="false"
+          >
+            Project Ideas
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content mt-4" id="sectionTabContent">
+        <!-- Concepts Tab -->
+        <div
+          class="tab-pane fade show active"
+          id="concepts"
+          role="tabpanel"
+          aria-labelledby="concepts-tab"
+        >
+          <ol class="accordion-list">
+            <!-- What is Deep Learning -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-1"
+                  aria-expanded="false"
+                  aria-controls="concept-1"
+                >
+                  What is Deep Learning
+                </div>
+                <div class="collapse" id="concept-1">
+                  <div class="card card-body">
+                    <p>
+                      Deep Learning is a subset of machine learning that uses neural networks with multiple layers to model complex patterns in data, excelling in tasks like image recognition, NLP, and more.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Neural Networks -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-2"
+                  aria-expanded="false"
+                  aria-controls="concept-2"
+                >
+                  Neural Networks
+                </div>
+                <div class="collapse" id="concept-2">
+                  <div class="card card-body">
+                    <p>
+                      Neural networks are computational models inspired by the human brain, consisting of layers of interconnected nodes (neurons) that process input data through weights and activation functions.
+                    </p>
+                    <pre><code class="language-python">from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+model = Sequential([
+    Dense(16, activation='relu', input_shape=(2,)),
+    Dense(1, activation='sigmoid')
+])
+model.compile(optimizer='adam', loss='binary_crossentropy')
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Activation Functions -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-3"
+                  aria-expanded="false"
+                  aria-controls="concept-3"
+                >
+                  Activation Functions
+                </div>
+                <div class="collapse" id="concept-3">
+                  <div class="card card-body">
+                    <p>
+                      Activation functions introduce non-linearity into neural networks, enabling them to learn complex patterns. Examples include ReLU, Sigmoid, and Tanh.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Backpropagation -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-4"
+                  aria-expanded="false"
+                  aria-controls="concept-4"
+                >
+                  Backpropagation
+                </div>
+                <div class="collapse" id="concept-4">
+                  <div class="card card-body">
+                    <p>
+                      Backpropagation is the algorithm used to train neural networks by calculating gradients of the loss function and updating weights via gradient descent.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Convolutional Neural Networks (CNNs) -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-5"
+                  aria-expanded="false"
+                  aria-controls="concept-5"
+                >
+                  Convolutional Neural Networks (CNNs)
+                </div>
+                <div class="collapse" id="concept-5">
+                  <div class="card card-body">
+                    <p>
+                      CNNs are specialized neural networks for processing grid-like data (e.g., images), using convolutional layers to extract spatial features.
+                    </p>
+                    <pre><code class="language-python">from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
+
+model = Sequential([
+    Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
+    MaxPooling2D((2, 2)),
+    Flatten(),
+    Dense(10, activation='softmax')
+])
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Recurrent Neural Networks (RNNs) -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-6"
+                  aria-expanded="false"
+                  aria-controls="concept-6"
+                >
+                  Recurrent Neural Networks (RNNs)
+                </div>
+                <div class="collapse" id="concept-6">
+                  <div class="card card-body">
+                    <p>
+                      RNNs are designed for sequential data (e.g., time series, text), using loops to maintain memory of previous inputs.
+                    </p>
+                    <pre><code class="language-python">from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import SimpleRNN, Dense
+
+model = Sequential([
+    SimpleRNN(50, activation='relu', input_shape=(10, 1)),
+    Dense(1)
+])
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Loss Functions -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-7"
+                  aria-expanded="false"
+                  aria-controls="concept-7"
+                >
+                  Loss Functions
+                </div>
+                <div class="collapse" id="concept-7">
+                  <div class="card card-body">
+                    <p>
+                      Loss functions measure the difference between predicted and actual outputs, guiding model optimization. Examples include Mean Squared Error (MSE) and Cross-Entropy.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Optimizers -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-8"
+                  aria-expanded="false"
+                  aria-controls="concept-8"
+                >
+                  Optimizers
+                </div>
+                <div class="collapse" id="concept-8">
+                  <div class="card card-body">
+                    <p>
+                      Optimizers adjust model weights during training to minimize the loss function. Popular choices include SGD, Adam, and RMSprop.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Overfitting and Regularization -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-9"
+                  aria-expanded="false"
+                  aria-controls="concept-9"
+                >
+                  Overfitting and Regularization
+                </div>
+                <div class="collapse" id="concept-9">
+                  <div class="card card-body">
+                    <p>
+                      Overfitting occurs when a model learns noise in the training data. Regularization techniques like Dropout and L2 regularization prevent this by adding constraints.
+                    </p>
+                    <pre><code class="language-python">from tensorflow.keras.layers import Dropout
+
+model = Sequential([
+    Dense(64, activation='relu', input_shape=(10,)),
+    Dropout(0.5),  # 50% dropout rate
+    Dense(1, activation='sigmoid')
+])
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Solved Problems Tab -->
+        <div
+          class="tab-pane fade"
+          id="solved"
+          role="tabpanel"
+          aria-labelledby="solved-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#solved-1"
+                  aria-expanded="false"
+                  aria-controls="solved-1"
+                >
+                  Binary Classification with a Neural Network
+                </div>
+                <div class="collapse" id="solved-1">
+                  <div class="card card-body">
+                    <p>
+                      Build and train a simple neural network to classify data into two categories.
+                    </p>
+                    <pre><code class="language-python">import numpy as np
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+# Synthetic data
+X = np.random.random((100, 2))
+y = (X[:, 0] + X[:, 1] > 1).astype(int)
+
+# Model
+model = Sequential([
+    Dense(16, activation='relu', input_shape=(2,)),
+    Dense(1, activation='sigmoid')
+])
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Train
+model.fit(X, y, epochs=10, batch_size=10, verbose=0)
+loss, accuracy = model.evaluate(X, y, verbose=0)
+print(f"Accuracy: {accuracy:.4f}")
+                    </code></pre>
+                    <button class="btn btn-success run-code">Run Code</button>
+                    <div class="output mt-2">Output: Accuracy: ~0.9 (varies)</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Practice Problems Tab -->
+        <div
+          class="tab-pane fade"
+          id="practice"
+          role="tabpanel"
+          aria-labelledby="practice-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#practice-1"
+                  aria-expanded="false"
+                  aria-controls="practice-1"
+                >
+                  Image Classification with CNN
+                </div>
+                <div class="collapse" id="practice-1">
+                  <div class="card card-body">
+                    <p>
+                      Build a CNN to classify images from the MNIST dataset (handwritten digits).
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#practice-2"
+                  aria-expanded="false"
+                  aria-controls="practice-2"
+                >
+                  Time Series Prediction with RNN
+                </div>
+                <div class="collapse" id="practice-2">
+                  <div class="card card-body">
+                    <p>
+                      Use an RNN to predict the next value in a synthetic time series (e.g., sine wave).
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Project Ideas Tab -->
+        <div
+          class="tab-pane fade"
+          id="projects"
+          role="tabpanel"
+          aria-labelledby="projects-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#project-1"
+                  aria-expanded="false"
+                  aria-controls="project-1"
+                >
+                  Handwritten Digit Recognition
+                </div>
+                <div class="collapse" id="project-1">
+                  <div class="card card-body">
+                    <p>
+                      Build a CNN to recognize handwritten digits using the MNIST dataset, then create a simple web app to test it with user-drawn digits.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#project-2"
+                  aria-expanded="false"
+                  aria-controls="project-2"
+                >
+                  Sentiment Analysis on Social Media
+                </div>
+                <div class="collapse" id="project-2">
+                  <div class="card card-body">
+                    <p>
+                      Train an RNN or Transformer model to classify sentiment (positive/negative) from tweets or reviews, integrating real-time data from an API.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#project-3"
+                  aria-expanded="false"
+                  aria-controls="project-3"
+                >
+                  Object Detection in Images
+                </div>
+                <div class="collapse" id="project-3">
+                  <div class="card card-body">
+                    <p>
+                      Implement a deep learning model (e.g., YOLO or Faster R-CNN) to detect and classify objects in images, using a dataset like COCO.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer bg-light text-center py-4 mt-4 animate-fade-in-up">
+      <a href="./content2.html" target="_blank" style="text-decoration: none;"><p>Deep Learning</p></a>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+      integrity="sha512-7aW6NgQSU/VEpXJtr7MtwbPGL+H20QkBqBbsRG2FnU70a+KA4SdFH1U0NTNA3sIQ6nG/ScbUkg+Y3K8qoQSvEvQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script src="../assets/js/content.js"></script>
+  </body>
+</html>

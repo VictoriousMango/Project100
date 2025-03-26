@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vector Databases Hub</title>
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      integrity="sha512-tN7Ec6ZG25xS7X+warehouse+V+QBqs7uP8wK7rw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header text-center bg-light py-4 animate-slide-down">
+      <h1>Vector Databases</h1>
+    </header>
+
+    <section class="content container mt-4">
+      <ul class="nav nav-tabs" id="sectionTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="intro-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#intro"
+            type="button"
+            role="tab"
+            aria-controls="intro"
+            aria-selected="true"
+          >
+            Intro
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="types-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#types"
+            type="button"
+            role="tab"
+            aria-controls="types"
+            aria-selected="false"
+          >
+            Different types of Vector Databases and its implementations
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content mt-4" id="sectionTabContent">
+        <!-- Intro Tab -->
+        <div
+          class="tab-pane fade show active"
+          id="intro"
+          role="tabpanel"
+          aria-labelledby="intro-tab"
+        >
+          <ol class="accordion-list">
+            <!-- What are Vector Databases -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#intro-1"
+                  aria-expanded="false"
+                  aria-controls="intro-1"
+                >
+                  What are Vector Databases
+                </div>
+                <div class="collapse" id="intro-1">
+                  <div class="card card-body">
+                    <p>
+                      Vector databases are specialized databases designed to store, manage, and query high-dimensional vectors (numerical representations of data). They excel at similarity search, enabling applications like recommendation systems, image recognition, and natural language processing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Why Use Vector Databases -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#intro-2"
+                  aria-expanded="false"
+                  aria-controls="intro-2"
+                >
+                  Why Use Vector Databases
+                </div>
+                <div class="collapse" id="intro-2">
+                  <div class="card card-body">
+                    <p>
+                      Vector databases are optimized for efficient similarity search (e.g., nearest neighbor search) over traditional databases, handling large-scale, unstructured data like embeddings from AI models with low latency.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- How Vector Databases Work -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#intro-3"
+                  aria-expanded="false"
+                  aria-controls="intro-3"
+                >
+                  How Vector Databases Work
+                </div>
+                <div class="collapse" id="intro-3">
+                  <div class="card card-body">
+                    <p>
+                      Vector databases store embeddings (vectors) and use indexing techniques (e.g., Approximate Nearest Neighbors, ANN) to quickly retrieve vectors similar to a query vector based on distance metrics like Euclidean or cosine similarity.
+                    </p>
+                    <pre><code class="language-python">import faiss
+import numpy as np
+
+# Example embeddings
+vectors = np.array([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]], dtype=np.float32)
+index = faiss.IndexFlatL2(2)  # L2 distance index
+index.add(vectors)  # Add vectors to index
+query = np.array([[2.0, 3.0]], dtype=np.float32)
+distances, indices = index.search(query, k=2)  # Find 2 nearest neighbors
+print(indices)  # [[0 1]]
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Applications of Vector Databases -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#intro-4"
+                  aria-expanded="false"
+                  aria-controls="intro-4"
+                >
+                  Applications of Vector Databases
+                </div>
+                <div class="collapse" id="intro-4">
+                  <div class="card card-body">
+                    <p>
+                      Common applications include semantic search, recommendation engines, image and video retrieval, anomaly detection, and supporting Retrieval-Augmented Generation (RAG) in AI systems.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Different types of Vector Databases and its implementations Tab -->
+        <div
+          class="tab-pane fade"
+          id="types"
+          role="tabpanel"
+          aria-labelledby="types-tab"
+        >
+          <ol class="accordion-list">
+            <!-- FAISS (Facebook AI Similarity Search) -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#type-1"
+                  aria-expanded="false"
+                  aria-controls="type-1"
+                >
+                  FAISS (Facebook AI Similarity Search)
+                </div>
+                <div class="collapse" id="type-1">
+                  <div class="card card-body">
+                    <p>
+                      FAISS is an open-source library for efficient similarity search and clustering of dense vectors, widely used for in-memory vector operations with support for GPU acceleration.
+                    </p>
+                    <pre><code class="language-python">import faiss
+import numpy as np
+
+# Create and populate index
+dimension = 4
+vectors = np.random.random((100, dimension)).astype('float32')
+index = faiss.IndexFlatL2(dimension)
+index.add(vectors)
+
+# Query
+query = np.random.random((1, dimension)).astype('float32')
+distances, indices = index.search(query, k=5)
+print(indices)  # Top 5 nearest neighbors
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Pinecone -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#type-2"
+                  aria-expanded="false"
+                  aria-controls="type-2"
+                >
+                  Pinecone
+                </div>
+                <div class="collapse" id="type-2">
+                  <div class="card card-body">
+                    <p>
+                      Pinecone is a managed vector database service designed for scalability and ease of use, offering cloud-based vector storage and querying with RESTful APIs.
+                    </p>
+                    <pre><code class="language-python">import pinecone
+from pinecone import Pinecone
+
+# Initialize Pinecone
+pc = Pinecone(api_key="your-api-key")
+index = pc.Index("example-index")
+
+# Upsert vectors
+vectors = [(str(i), [0.1 * i] * 8) for i in range(5)]
+index.upsert(vectors)
+
+# Query
+query_vector = [0.2] * 8
+results = index.query(vector=query_vector, top_k=3)
+print(results["matches"])  # Top 3 similar vectors
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Annoy (Approximate Nearest Neighbors Oh Yeah) -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#type-3"
+                  aria-expanded="false"
+                  aria-controls="type-3"
+                >
+                  Annoy (Approximate Nearest Neighbors Oh Yeah)
+                </div>
+                <div class="collapse" id="type-3">
+                  <div class="card card-body">
+                    <p>
+                      Annoy is a lightweight, memory-efficient library for approximate nearest neighbor search, ideal for small-scale or static datasets with tree-based indexing.
+                    </p>
+                    <pre><code class="language-python">from annoy import AnnoyIndex
+import numpy as np
+
+# Create index
+dimension = 3
+index = AnnoyIndex(dimension, 'euclidean')
+vectors = np.random.random((10, dimension))
+for i, vec in enumerate(vectors):
+    index.add_item(i, vec)
+index.build(10)  # 10 trees
+
+# Query
+query = np.random.random(dimension)
+neighbors = index.get_nns_by_vector(query, 3)
+print(neighbors)  # Top 3 nearest neighbors
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- HNSW (Hierarchical Navigable Small World) -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#type-4"
+                  aria-expanded="false"
+                  aria-controls="type-4"
+                >
+                  HNSW (Hierarchical Navigable Small World)
+                </div>
+                <div class="collapse" id="type-4">
+                  <div class="card card-body">
+                    <p>
+                      HNSW is an algorithm implemented in libraries like `nmslib` or `hnswlib`, offering high-performance similarity search with graph-based indexing for large datasets.
+                    </p>
+                    <pre><code class="language-python">import hnswlib
+import numpy as np
+
+# Create and populate index
+dimension = 5
+vectors = np.random.random((100, dimension)).astype('float32')
+index = hnswlib.Index(space='l2', dim=dimension)
+index.init_index(max_elements=100, ef_construction=200, M=16)
+index.add_items(vectors)
+
+# Query
+query = np.random.random(dimension).astype('float32')
+labels, distances = index.knn_query(query, k=3)
+print(labels)  # Top 3 nearest neighbors
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Elasticsearch with Vector Search -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#type-5"
+                  aria-expanded="false"
+                  aria-controls="type-5"
+                >
+                  Elasticsearch with Vector Search
+                </div>
+                <div class="collapse" id="type-5">
+                  <div class="card card-body">
+                    <p>
+                      Elasticsearch, traditionally a full-text search engine, supports vector search with dense vector fields, integrating keyword and similarity search.
+                    </p>
+                    <pre><code class="language-python">from elasticsearch import Elasticsearch
+
+es = Elasticsearch(["http://localhost:9200"])
+index_name = "vector_index"
+
+# Create index with vector field
+mapping = {
+    "mappings": {
+        "properties": {
+            "vector": {"type": "dense_vector", "dims": 3}
+        }
+    }
+}
+es.indices.create(index=index_name, body=mapping, ignore=400)
+
+# Index a vector
+doc = {"vector": [1.0, 2.0, 3.0]}
+es.index(index=index_name, id=1, body=doc)
+
+# Query
+query = {
+    "query": {
+        "script_score": {
+            "query": {"match_all": {}},
+            "script": {"source": "cosineSimilarity(params.query_vector, 'vector')", "params": {"query_vector": [1.1, 2.1, 3.1]}}
+        }
+    }
+}
+results = es.search(index=index_name, body=query)
+print(results["hits"]["hits"])
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer bg-light text-center py-4 mt-4 animate-fade-in-up">
+      <a href="./content2.html" target="_blank" style="text-decoration: none;"><p>Vector Databases</p></a>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+      integrity="sha512-7aW6NgQSU/VEpXJtr7MtwbPGL+H20QkBqBbsRG2FnU70a+KA4SdFH1U0NTNA3sIQ6nG/ScbUkg+Y3K8qoQSvEvQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script src="../assets/js/content.js"></script>
+  </body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linux Commands Hub</title>
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      integrity="sha512-tN7Ec6ZG25xS7X+warehouse+V+QBqs7uP8wK7rw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header text-center bg-light py-4 animate-slide-down">
+      <h1>Linux Commands</h1>
+    </header>
+
+    <section class="content container mt-4">
+      <ul class="nav nav-tabs" id="sectionTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="concepts-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#concepts"
+            type="button"
+            role="tab"
+            aria-controls="concepts"
+            aria-selected="true"
+          >
+            Concepts
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="solved-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#solved"
+            type="button"
+            role="tab"
+            aria-controls="solved"
+            aria-selected="false"
+          >
+            Solved Problems
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="practice-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#practice"
+            type="button"
+            role="tab"
+            aria-controls="practice"
+            aria-selected="false"
+          >
+            Practice Problems
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content mt-4" id="sectionTabContent">
+        <!-- Concepts Tab -->
+        <div
+          class="tab-pane fade show active"
+          id="concepts"
+          role="tabpanel"
+          aria-labelledby="concepts-tab"
+        >
+          <ol class="accordion-list">
+            <!-- What are Linux Commands -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-1"
+                  aria-expanded="false"
+                  aria-controls="concept-1"
+                >
+                  What are Linux Commands
+                </div>
+                <div class="collapse" id="concept-1">
+                  <div class="card card-body">
+                    <p>
+                      Linux commands are instructions given to a Linux operating system via a terminal or shell to perform specific tasks, such as file manipulation, system monitoring, or user management. They are executed in a command-line interface (CLI).
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- ls - dir -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-2"
+                  aria-expanded="false"
+                  aria-controls="concept-2"
+                >
+                  ls (dir equivalent)
+                </div>
+                <div class="collapse" id="concept-2">
+                  <div class="card card-body">
+                    <p>
+                      The `ls` command lists directory contents. In Linux, there is no direct `dir` command (like in Windows), but `ls` serves a similar purpose with options like `-l` for detailed listing and `-a` to show hidden files.
+                    </p>
+                    <pre><code class="language-bash">ls -l  # Detailed list of files
+ls -a  # Show all files, including hidden ones
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- cd - Navigation -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-3"
+                  aria-expanded="false"
+                  aria-controls="concept-3"
+                >
+                  cd (Change Directory)
+                </div>
+                <div class="collapse" id="concept-3">
+                  <div class="card card-body">
+                    <p>
+                      The `cd` command changes the current working directory. Use `cd ..` to move up one directory, `cd /path` to go to a specific directory, or `cd ~` to return to the home directory.
+                    </p>
+                    <pre><code class="language-bash">cd /home/user  # Move to /home/user
+cd ..          # Move up one level
+cd ~           # Go to home directory
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- pwd - Print Working Directory -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-4"
+                  aria-expanded="false"
+                  aria-controls="concept-4"
+                >
+                  pwd (Print Working Directory)
+                </div>
+                <div class="collapse" id="concept-4">
+                  <div class="card card-body">
+                    <p>
+                      The `pwd` command displays the full path of the current working directory.
+                    </p>
+                    <pre><code class="language-bash">/home/user  # Example output of pwd
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- mkdir - Make Directory -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-5"
+                  aria-expanded="false"
+                  aria-controls="concept-5"
+                >
+                  mkdir (Make Directory)
+                </div>
+                <div class="collapse" id="concept-5">
+                  <div class="card card-body">
+                    <p>
+                      The `mkdir` command creates a new directory. Use `-p` to create parent directories as needed.
+                    </p>
+                    <pre><code class="language-bash">mkdir my_folder          # Create a single directory
+mkdir -p parent/child    # Create nested directories
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- cp - Copy -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-6"
+                  aria-expanded="false"
+                  aria-controls="concept-6"
+                >
+                  cp (Copy)
+                </div>
+                <div class="collapse" id="concept-6">
+                  <div class="card card-body">
+                    <p>
+                      The `cp` command copies files or directories. Use `-r` to copy directories recursively.
+                    </p>
+                    <pre><code class="language-bash">cp file.txt file_copy.txt      # Copy a file
+cp -r folder/ new_folder/      # Copy a directory
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- mv - Move/Rename -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-7"
+                  aria-expanded="false"
+                  aria-controls="concept-7"
+                >
+                  mv (Move/Rename)
+                </div>
+                <div class="collapse" id="concept-7">
+                  <div class="card card-body">
+                    <p>
+                      The `mv` command moves or renames files and directories.
+                    </p>
+                    <pre><code class="language-bash">mv oldname.txt newname.txt    # Rename a file
+mv file.txt /home/user/       # Move a file to another directory
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- rm - Remove -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-8"
+                  aria-expanded="false"
+                  aria-controls="concept-8"
+                >
+                  rm (Remove)
+                </div>
+                <div class="collapse" id="concept-8">
+                  <div class="card card-body">
+                    <p>
+                      The `rm` command deletes files or directories. Use `-r` for recursive deletion and `-f` to force removal without prompting.
+                    </p>
+                    <pre><code class="language-bash">rm file.txt           # Remove a file
+rm -rf folder/        # Remove a directory and its contents
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- cat - Display File Content -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-9"
+                  aria-expanded="false"
+                  aria-controls="concept-9"
+                >
+                  cat (Concatenate and Display)
+                </div>
+                <div class="collapse" id="concept-9">
+                  <div class="card card-body">
+                    <p>
+                      The `cat` command displays the contents of a file or concatenates multiple files.
+                    </p>
+                    <pre><code class="language-bash">cat file.txt          # Display file content
+cat file1.txt file2.txt > combined.txt  # Concatenate files
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- grep - Search Text -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-10"
+                  aria-expanded="false"
+                  aria-controls="concept-10"
+                >
+                  grep (Search Text)
+                </div>
+                <div class="collapse" id="concept-10">
+                  <div class="card card-body">
+                    <p>
+                      The `grep` command searches for a pattern in files or input. Use `-i` for case-insensitive search and `-r` for recursive search in directories.
+                    </p>
+                    <pre><code class="language-bash">grep "error" log.txt      # Search for "error" in log.txt
+grep -r "TODO" /home/user # Recursively search for "TODO"
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Solved Problems Tab -->
+        <div
+          class="tab-pane fade"
+          id="solved"
+          role="tabpanel"
+          aria-labelledby="solved-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#solved-1"
+                  aria-expanded="false"
+                  aria-controls="solved-1"
+                >
+                  List and Count Files
+                </div>
+                <div class="collapse" id="solved-1">
+                  <div class="card card-body">
+                    <p>
+                      Use Linux commands to list all files in a directory and count them.
+                    </p>
+                    <pre><code class="language-bash">ls -l | wc -l  # List files and count lines (including header)
+                    </code></pre>
+                    <div class="output mt-2">Output: Number of files + 1 (for header)</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Practice Problems Tab -->
+        <div
+          class="tab-pane fade"
+          id="practice"
+          role="tabpanel"
+          aria-labelledby="practice-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#practice-1"
+                  aria-expanded="false"
+                  aria-controls="practice-1"
+                >
+                  Find Large Files
+                </div>
+                <div class="collapse" id="practice-1">
+                  <div class="card card-body">
+                    <p>
+                      Write a command to find files larger than 10MB in a directory.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer bg-light text-center py-4 mt-4 animate-fade-in-up">
+      <a href="./content2.html" target="_blank" style="text-decoration: none;"><p>Linux Commands</p></a>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+      integrity="sha512-7aW6NgQSU/VEpXJtr7MtwbPGL+H20QkBqBbsRG2FnU70a+KA4SdFH1U0NTNA3sIQ6nG/ScbUkg+Y3K8qoQSvEvQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script src="../assets/js/content.js"></script>
+  </body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operating Systems Hub</title>
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      integrity="sha512-tN7Ec6ZG25xS7X+warehouse+V+QBqs7uP8wK7rw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header text-center bg-light py-4 animate-slide-down">
+      <h1>Operating Systems</h1>
+    </header>
+
+    <section class="content container mt-4">
+      <ul class="nav nav-tabs" id="sectionTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="concepts-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#concepts"
+            type="button"
+            role="tab"
+            aria-controls="concepts"
+            aria-selected="true"
+          >
+            Concepts
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="solved-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#solved"
+            type="button"
+            role="tab"
+            aria-controls="solved"
+            aria-selected="false"
+          >
+            Solved Problems
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="practice-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#practice"
+            type="button"
+            role="tab"
+            aria-controls="practice"
+            aria-selected="false"
+          >
+            Practice Problems
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content mt-4" id="sectionTabContent">
+        <!-- Concepts Tab -->
+        <div
+          class="tab-pane fade show active"
+          id="concepts"
+          role="tabpanel"
+          aria-labelledby="concepts-tab"
+        >
+          <ol class="accordion-list">
+            <!-- What is an Operating System -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-1"
+                  aria-expanded="false"
+                  aria-controls="concept-1"
+                >
+                  What is an Operating System
+                </div>
+                <div class="collapse" id="concept-1">
+                  <div class="card card-body">
+                    <p>
+                      An Operating System (OS) is software that manages computer hardware, software resources, and provides services for programs. Examples include Windows, Linux, and macOS. It acts as an intermediary between users and hardware.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Process Management -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-2"
+                  aria-expanded="false"
+                  aria-controls="concept-2"
+                >
+                  Process Management
+                </div>
+                <div class="collapse" id="concept-2">
+                  <div class="card card-body">
+                    <p>
+                      The OS manages processes (running programs) by allocating CPU time, handling process states (e.g., running, waiting), and providing mechanisms for process creation and termination.
+                    </p>
+                    <pre><code class="language-python">import os
+print(f"Process ID: {os.getpid()}")  # Get current process ID</code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Threads -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-3"
+                  aria-expanded="false"
+                  aria-controls="concept-3"
+                >
+                  Threads
+                </div>
+                <div class="collapse" id="concept-3">
+                  <div class="card card-body">
+                    <p>
+                      Threads are lightweight units of execution within a process. The OS schedules threads to utilize CPU resources efficiently.
+                    </p>
+                    <pre><code class="language-python">import threading
+
+def task():
+    print(f"Thread ID: {threading.current_thread().ident}")
+
+thread = threading.Thread(target=task)
+thread.start()
+thread.join()
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Memory Management -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-4"
+                  aria-expanded="false"
+                  aria-controls="concept-4"
+                >
+                  Memory Management
+                </div>
+                <div class="collapse" id="concept-4">
+                  <div class="card card-body">
+                    <p>
+                      The OS allocates and deallocates memory for processes, manages virtual memory, and ensures efficient use of RAM through techniques like paging and segmentation.
+                    </p>
+                    <p><em>(Demonstrated conceptually; Python abstracts memory management)</em></p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- File Systems -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-5"
+                  aria-expanded="false"
+                  aria-controls="concept-5"
+                >
+                  File Systems
+                </div>
+                <div class="collapse" id="concept-5">
+                  <div class="card card-body">
+                    <p>
+                      The OS manages file storage, retrieval, and organization on disk using file systems (e.g., NTFS, ext4). It provides APIs for file operations.
+                    </p>
+                    <pre><code class="language-python">import os
+with open("example.txt", "w") as f:
+    f.write("Hello, OS!")
+print(os.path.exists("example.txt"))  # Check if file exists
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- CPU Scheduling -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-6"
+                  aria-expanded="false"
+                  aria-controls="concept-6"
+                >
+                  CPU Scheduling
+                </div>
+                <div class="collapse" id="concept-6">
+                  <div class="card card-body">
+                    <p>
+                      CPU scheduling determines which process or thread runs on the CPU at any given time. Common algorithms include First-Come-First-Serve (FCFS), Round Robin, and Priority Scheduling.
+                    </p>
+                    <p><em>(Managed by the OS; Python example simulates multitasking)</em></p>
+                    <pre><code class="language-python">from multiprocessing import Process
+
+def task(name):
+    print(f"Task {name} running")
+
+processes = [Process(target=task, args=(i,)) for i in range(3)]
+for p in processes:
+    p.start()
+for p in processes:
+    p.join()
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Inter-Process Communication (IPC) -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-7"
+                  aria-expanded="false"
+                  aria-controls="concept-7"
+                >
+                  Inter-Process Communication (IPC)
+                </div>
+                <div class="collapse" id="concept-7">
+                  <div class="card card-body">
+                    <p>
+                      IPC allows processes to communicate and synchronize. Methods include pipes, message queues, and shared memory.
+                    </p>
+                    <pre><code class="language-python">from multiprocessing import Process, Pipe
+
+def sender(conn):
+    conn.send("Hello from sender")
+    conn.close()
+
+parent_conn, child_conn = Pipe()
+p = Process(target=sender, args=(child_conn,))
+p.start()
+print(parent_conn.recv())
+p.join()
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Deadlocks -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-8"
+                  aria-expanded="false"
+                  aria-controls="concept-8"
+                >
+                  Deadlocks
+                </div>
+                <div class="collapse" id="concept-8">
+                  <div class="card card-body">
+                    <p>
+                      A deadlock occurs when two or more processes are unable to proceed because each is waiting for a resource the other holds. The OS detects and resolves deadlocks using algorithms like Banker’s Algorithm.
+                    </p>
+                    <p><em>(Conceptual; Python example simulates a simple deadlock)</em></p>
+                    <pre><code class="language-python">import threading
+
+lock1 = threading.Lock()
+lock2 = threading.Lock()
+
+def thread1():
+    with lock1:
+        with lock2:
+            print("Thread 1")
+
+def thread2():
+    with lock2:
+        with lock1:
+            print("Thread 2")
+
+t1 = threading.Thread(target=thread1)
+t2 = threading.Thread(target=thread2)
+t1.start()
+t2.start()
+t1.join()
+t2.join()
+                    </code></pre>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Virtual Memory -->
+            <li class="animate-fade-in">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#concept-9"
+                  aria-expanded="false"
+                  aria-controls="concept-9"
+                >
+                  Virtual Memory
+                </div>
+                <div class="collapse" id="concept-9">
+                  <div class="card card-body">
+                    <p>
+                      Virtual memory allows processes to use more memory than physically available by mapping virtual addresses to physical addresses, using paging or swapping.
+                    </p>
+                    <p><em>(Managed by the OS; no direct Python control)</em></p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Solved Problems Tab -->
+        <div
+          class="tab-pane fade"
+          id="solved"
+          role="tabpanel"
+          aria-labelledby="solved-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#solved-1"
+                  aria-expanded="false"
+                  aria-controls="solved-1"
+                >
+                  List Running Processes
+                </div>
+                <div class="collapse" id="solved-1">
+                  <div class="card card-body">
+                    <p>
+                      Use Python to list the current process ID and simulate process management.
+                    </p>
+                    <pre><code class="language-python">import os
+import psutil
+
+print(f"Current Process ID: {os.getpid()}")
+for proc in psutil.process_iter(['pid', 'name']):
+    print(f"PID: {proc.info['pid']}, Name: {proc.info['name']}")
+                    </code></pre>
+                    <button class="btn btn-success run-code">Run Code</button>
+                    <div class="output mt-2">Output: List of process IDs and names</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Practice Problems Tab -->
+        <div
+          class="tab-pane fade"
+          id="practice"
+          role="tabpanel"
+          aria-labelledby="practice-tab"
+        >
+          <ol class="problem-list">
+            <li class="animate-slide-up">
+              <div class="section">
+                <div
+                  class="question"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#practice-1"
+                  aria-expanded="false"
+                  aria-controls="practice-1"
+                >
+                  Simulate Round Robin Scheduling
+                </div>
+                <div class="collapse" id="practice-1">
+                  <div class="card card-body">
+                    <p>
+                      Write a Python program to simulate Round Robin CPU scheduling with a given time quantum.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer bg-light text-center py-4 mt-4 animate-fade-in-up">
+      <a href="./content2.html" target="_blank" style="text-decoration: none;"><p>Operating Systems</p></a>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+      integrity="sha512-7aW6NgQSU/VEpXJtr7MtwbPGL+H20QkBqBbsRG2FnU70a+KA4SdFH1U0NTNA3sIQ6nG/ScbUkg+Y3K8qoQSvEvQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script src="../assets/js/content.js"></script>
+  </body>
+</html>
