@@ -3,73 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experiment 6: Laser Beam Waist Characterization by Knife Edge Technique</title>
+  <title>Practical Experiment</title>
   <link rel="stylesheet" href="../assets/css/content.css"> <!-- Link your CSS file here -->
 </head>
 <body>
 
   <header>
-    <h1>Experiment 6: Laser Beam Waist Characterization by Knife Edge Technique</h1>
+    <h1>Self-Imaging/Talbot Effect Experiment Report</h1>
   </header>
 
   <main class="content">
     <section class="section" id="aim">
       <h2>Aim</h2>
-      <p>To characterize the waist of a laser beam using the Knife Edge Technique.</p>
+      <p>To calculate the grating period using the Talbot/self-imaging effect.</p>
     </section>
 
     <section class="section" id="apparatus">
       <h2>Apparatus</h2>
       <p>The equipment and materials required for the experiment are:</p>
       <ul>
-        <li>Laser Source</li>
-        <li>Knife Edge</li>
-        <li>Translation Stage</li>
-        <li>Photodetector</li>
-        <li>Power Meter</li>
-        <li>Beam Profile Analyzer (optional)</li>
+        <li>Laser</li>
+        <li>Lens</li>
+        <li>Gratings</li>
+        <li>Microscopic Object</li>
+        <li>CCD Camera</li>
       </ul>
     </section>
 
     <section class="section" id="theory">
       <h2>Theory</h2>
-      <p>The waist of a laser beam is the region where the beam diameter is at its minimum, and the intensity profile follows a Gaussian distribution. The Knife Edge Technique is a method used to measure the beam waist by partially blocking the beam and recording the power as a function of the knife edge position.</p>
-      <p>By plotting the power variation and fitting the data to a Gaussian function, the beam waist (ω<sub>0</sub>) and other parameters such as the Rayleigh range can be determined. This technique provides a precise measurement of the laser beam's spatial characteristics.</p>
+      <p>The Talbot effect is a near-field diffraction phenomenon where a periodic structure, such as a diffraction grating, creates self-imaging at regular distances along the propagation direction. It was first discovered by Henry Fox Talbot in 1836.</p>
+      <p>When a coherent light wave illuminates a periodic grating, the wave diffracts and reconstructs its intensity distribution at specific distances called Talbot planes, and the regular distance is called the Talbot length, and the repeated images are called self-images or Talbot images. The periodic pattern is repeated at these planes without the need for a lens.</p>
+      <p>Furthermore, at half the Talbot length, a self-image also occurs, but phase-shifted by half a period (the physical meaning of this is that it is laterally shifted by half the width of the grating period). This effect is widely used in optics, imaging, and lithography.</p>
+      <p>The optical Talbot effect for monochromatic light is shown as a "Talbot carpet" in Figure 1. At the bottom of the figure, the light can be seen diffracting through a grating, and this pattern is reproduced at the top of the picture (one Talbot length away from the grating). At regular fractions of the Talbot length, the sub-images form.</p>
+      <p><img src="../assets/img/talbot_carpet.png" alt="Talbot Carpet" style="width: 100%;"> <!-- Placeholder for Figure 1 --></p>
+      <p class="center">Figure 1: Talbot Carpet</p>
     </section>
 
     <section class="section" id="procedure">
       <h2>Procedure</h2>
-      <p>Follow these steps to perform the experiment:</p>
+      <p>Step-by-step instructions for the experiment:</p>
       <ol>
-        <li>Set up the laser source on an optical table, ensuring proper alignment of the beam.</li>
-        <li>Place the knife edge on a translation stage and position it perpendicular to the laser beam.</li>
-        <li>Place the photodetector behind the knife edge to measure the transmitted power.</li>
-        <li>Move the knife edge incrementally across the beam using the translation stage, and record the corresponding power readings using the power meter.</li>
-        <li>Plot the measured power as a function of the knife edge position.</li>
-        <li>Fit the data to a Gaussian function to determine the beam waist (ω<sub>0</sub>) and other beam parameters.</li>
+        <li><strong>Laser Source Setup:</strong>
+          <ul>
+            <li>Use a He-Ne laser (632.8 nm) as the coherent light source.</li>
+            <li>Ensure the laser output is stable and well-aligned.</li>
+          </ul>
+        </li>
+        <li><strong>Beam Expansion and Collimation:</strong>
+          <ul>
+            <li>Place a microscope objective (MO) after the laser to expand the beam.</li>
+            <li>Use a lens to convert the diverging beam into a collimated beam.</li>
+            <li>Adjust the lens position to achieve proper collimation.</li>
+          </ul>
+        </li>
+        <li><strong>Grating Placement:</strong>
+          <ul>
+            <li>Position the unknown grating perpendicular to the collimated beam.</li>
+            <li>Ensure the grating is correctly aligned to avoid angular misalignment.</li>
+          </ul>
+        </li>
+        <li><strong>Capturing the Talbot Image:</strong>
+          <ul>
+            <li>Place a CCD camera at different distances along the propagation axis.</li>
+            <li>Observe and record multiple self-images of the grating.</li>
+            <li>Adjust the camera position to capture a clear Talbot pattern.</li>
+          </ul>
+        </li>
+        <li><strong>Measurement of Talbot Distance:</strong>
+          <ul>
+            <li>Identify the distance between the grating and the first self-image plane.</li>
+            <li>Measure the Talbot distance (Z<sub>T</sub>) from the CCD images.</li>
+          </ul>
+        </li>
+        <li><strong>Calculation of Grating Period:</strong>
+          <ul>
+            <li>Use the Talbot formula: <span class="math">Z<sub>T</sub> = P<sup>2</sup> / λ</span></li>
+            <li>Solve for the grating period: <span class="math">P = √(Z<sub>T</sub> λ)</span></li>
+            <li>Substitute the measured Talbot distance Z<sub>T</sub> and He-Ne laser wavelength λ = 632.8 nm to find P.</li>
+          </ul>
+        </li>
+        <li><strong>Analysis and Verification:</strong>
+          <ul>
+            <li>Compare the calculated grating period with standard values.</li>
+          </ul>
+        </li>
       </ol>
     </section>
 
     <section class="section" id="observations">
       <h2>Observations</h2>
-      <p>Record the following observations:</p>
-      <ul>
-        <li>Knife edge positions and corresponding power readings.</li>
-        <li>Gaussian fit of the power data.</li>
-        <li>Calculated beam waist (ω<sub>0</sub>), Rayleigh range, and beam divergence.</li>
-      </ul>
+      <p>When the collimated laser beam passed through the unknown grating, multiple self-images appeared at specific distances along the propagation axis.</p>
+      <p>Clear self-images of the grating were observed at certain distances, confirming the Talbot effect.</p>
+      <p>The observations shown below illustrate the calculation of grating period in lines per millimetre for two different gratings and comparison of error percentage calculation with actual period of grating.</p>
+      <p><strong>Grating 1 Self-Images:</strong></p>
+      <div style="display: flex;">
+        <img style="width: 33%;" src="../assets/img/self_image_grating1_a.png" alt="Self-image at 9.3 cm">
+        <img style="width: 33%;" src="../assets/img/self_image_grating1_b.png" alt="Self-image at 10.8 cm">
+        <img style="width: 33%;" src="../assets/img/self_image_grating1_c.png" alt="Self-image at 12.4 cm">
+      </div>
+      <p class="center">Figure 2: Self-images distance from Grating 1 (a) 9.3 cm, (b) 10.8 cm, (c) 12.4 cm</p>
+      <p><strong>Grating 2 Self-Images:</strong></p>
+      <div style="display: flex;">
+        <img style="width: 33%;" src="../assets/img/self_image_grating2_a.png" alt="Self-image at 7.1 cm">
+        <img style="width: 33%;" src="../assets/img/self_image_grating2_b.png" alt="Self-image at 9.6 cm">
+        <img style="width: 33%;" src="../assets/img/self_image_grating2_c.png" alt="Self-image at 12.2 cm">
+      </div>
+      <p class="center">Figure 3: Self-images distance from Grating 2 (a) 7.1 cm, (b) 9.6 cm, (c) 12.2 cm</p>
+      <p><img src="../assets/img/double_freq_grating2.png" alt="Double frequency grating image" style="width: 100%;"></p>
+      <p class="center">Figure 4: Double frequency grating image of Grating 2 at distance 10.9 cm</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Grating</th>
+            <th>Distance (cm)</th>
+            <th>Distance between 2 images (cm)</th>
+            <th>Estimated grating period (lines/mm)</th>
+            <th>Average grating period (lines/mm)</th>
+            <th>Actual grating period (lines/mm)</th>
+            <th>Percentage error in calculation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">1</td>
+            <td>9.3</td>
+            <td rowspan="2">1.5</td>
+            <td>10.264</td>
+            <td rowspan="3">10.101</td>
+            <td rowspan="3">10</td>
+            <td rowspan="3">1.01%</td>
+          </tr>
+          <tr>
+            <td>10.8</td>
+            <td rowspan="2">9.938</td>
+          </tr>
+          <tr>
+            <td>12.4</td>
+            <td>1.6</td>
+          </tr>
+          <tr>
+            <td rowspan="3">2</td>
+            <td>7.1</td>
+            <td rowspan="2">2.5</td>
+            <td>7.950</td>
+            <td rowspan="3">7.873</td>
+            <td rowspan="3">8</td>
+            <td rowspan="3">1.58%</td>
+          </tr>
+          <tr>
+            <td>9.6</td>
+            <td rowspan="2">7.796</td>
+          </tr>
+          <tr>
+            <td>12.2</td>
+            <td>2.6</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section class="section" id="conclusion">
-      <h2>Conclusion/Results</h2>
-      <p>The experiment successfully characterized the laser beam waist using the Knife Edge Technique. The beam waist (ω<sub>0</sub>) and other parameters such as the Rayleigh range were calculated, demonstrating the Gaussian nature of the laser beam profile.</p>
+      <h2>Conclusion</h2>
+      <p>The estimated period of gratings was calculated to be 10.101 lines/mm and 7.873 lines/mm, where the standard values of the gratings are 10 lines/mm and 8 lines/mm, respectively. The percentage errors in the calculations were 1.01% and 1.58%, indicating a close match with the actual values and confirming the validity of the Talbot effect for determining grating periods.</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; Guided Wave Optics Lab Report. <a href="../pages/content1.html" target="_blank">Open in New Tab</a></p>
-    <p style="padding-left: 70%;">Additya Akash Mishra</p>
-    <p style="padding-left: 77.5%;">SC24M156</p>
+    <a href="../pages/content6.html" target="_blank">© Self-Imaging/Talbot Effect Experiment Report</a>
+    <p>Additya Akash Mishra</p>
+    <p>SC24M156</p>
   </footer>
 
 </body>

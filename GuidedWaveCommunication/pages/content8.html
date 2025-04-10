@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical Experiment</title>
+  <link rel="stylesheet" href="../assets/css/content.css"> <!-- Link your CSS file here -->
+</head>
+<body>
+
+  <header>
+    <h1>Generation of Vortex Beam Experiment Report</h1>
+  </header>
+
+  <main class="content">
+    <section class="section" id="aim">
+      <h2>Aim</h2>
+      <p>Generation of a vortex beam using a binary hologram.</p>
+    </section>
+
+    <section class="section" id="apparatus">
+      <h2>Apparatus Required</h2>
+      <p>The equipment and materials required for the experiment are:</p>
+      <ul>
+        <li>Laser</li>
+        <li>Microscope objective</li>
+        <li>Pinhole</li>
+        <li>Iris diaphragm</li>
+        <li>Mirrors</li>
+        <li>Beam-splitter</li>
+        <li>Lenses</li>
+        <li>Printed holograms</li>
+        <li>Camera</li>
+      </ul>
+    </section>
+
+    <section class="section" id="theory">
+      <h2>Theory</h2>
+      <p>By using the principle of computer-generated holography, a user-defined wavefront of a vortex beam can be generated. The complex amplitude of the beam is mathematically represented as:</p>
+      <p class="center"><span class="math">A(x, y) = e<sup>i(φ(x, y) - τ(x, y))</sup></span></p>
+      <p>Here, <span class="math">φ(x, y)</span> represents the desired phase function and <span class="math">τ(x, y)</span> represents a linear tilt function. The tilt function, <span class="math">τ(x, y) = f<sub>0</sub>x + f<sub>0</sub>y</span>, represents the amount of deflection of the desired beam with respect to the undiffracted zero-order beam. The algorithm defining the transmittance function, <span class="math">g<sub>t</sub>(x, y)</span>, of the binary hologram to generate the object beam is given as:</p>
+      <p class="center"><span class="math">g<sub>t</sub>(x, y) = { 1 if cos[φ(x, y) + τ(x, y)] ≥ 0, 0 if cos[φ(x, y) + τ(x, y)] < 0 }</span></p>
+      <p>The complex amplitude profile just after the hologram plane is in fact given by the transmittance function <span class="math">g<sub>t</sub>(x, y)</span>. The light diffracted by the hologram, when focused by a lens, results in the formation of diffraction spots corresponding to various diffraction orders.</p>
+    </section>
+
+    <section class="section" id="experimental-setup">
+      <h2>Experimental Setup</h2>
+      <p><strong>Beam Expansion & Collimation:</strong> The laser beam is first expanded using a microscope objective and collimated by lens L1.</p>
+      <p><strong>Beam Splitting & Diffraction:</strong> A beam splitter (BS) and mirrors direct the beam onto the printed hologram (grating pattern). The hologram diffracts the beam into multiple orders.</p>
+      <p><strong>Isolation of Diffraction Orders:</strong> An iris diaphragm (ID) isolates the +1 order, filtering out unwanted diffraction orders. The isolated +1 order is focused onto a digital camera (CCD).</p>
+      <p><strong>Interference Recording:</strong> The reflected beam from mirror M1 is blocked initially. Later, the 0th order (undiffracted beam) is combined with the +1 order to create an interferogram. This records the interference pattern between a plane wavefront and a user-defined wavefront.</p>
+      <p><img src="../assets/img/content8_1.png" alt="Experimental Setup" style="width: 100%;"> <!-- Placeholder for Fig 1 --></p>
+      <p class="center">Figure 1: Experimental Setup</p>
+    </section>
+
+    <section class="section" id="observations">
+      <h2>Observation</h2>
+      <p><img src="../assets/img/content8_2.png" alt="Interference Pattern" style="height: 250px;"> <!-- Placeholder for Fig 3 --></p>
+      <p class="center">Figure 2: Interference Pattern</p>
+    </section>
+
+    <section class="section" id="results">
+      <h2>Results</h2>
+      <p>Generated a vortex beam using a binary hologram and observed the vortex beam and the interference pattern between both the plane wavefront and vortex wavefront.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="../pages/content8.html" target="_blank">© Generation of Vortex Beam Experiment Report</a>
+    <p>Additya Akash Mishra</p>
+    <p>SC24M156</p>
+  </footer>
+
+</body>
+</html>
