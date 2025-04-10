@@ -3,74 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experiment 4: Setting up a Fiber Optic Analog Link</title>
+  <title>Practical Experiment</title>
   <link rel="stylesheet" href="../assets/css/content.css"> <!-- Link your CSS file here -->
 </head>
 <body>
 
   <header>
-    <h1>Experiment 4: Setting up a Fiber Optic Analog Link</h1>
+    <h1>Fibre Optic Analog Link Experiment Report</h1>
   </header>
 
   <main class="content">
     <section class="section" id="aim">
       <h2>Aim</h2>
-      <p>1. To set up an 850nm fiber optic analog link and observe the relationship between the input signal and the received signal.</p>
-      <p>2. To measure the bandwidth of the link.</p>
+      <p>To set up an 850 nm fibre optic analog link and observe the relationship between the input signal and the received signal, and to measure the bandwidth of the link.</p>
     </section>
 
     <section class="section" id="apparatus">
       <h2>Apparatus</h2>
       <p>The equipment and materials required for the experiment are:</p>
       <ul>
-        <li>OFT Kit (Optical Fiber Trainer Kit)</li>
+        <li>OFT Kit</li>
         <li>Oscilloscope</li>
-        <li>Function Generator</li>
-        <li>1m and 3m Optical Fiber</li>
-        <li>Connecting Cables</li>
+        <li>Function generator</li>
+        <li>1 m and 3 m fiber</li>
       </ul>
     </section>
 
     <section class="section" id="theory">
       <h2>Theory</h2>
-      <p>A fiber optic analog link is used to transmit analog signals, such as audio or video, through an optical fiber. The analog input signal is converted to an optical signal using a transmitter and sent through the fiber. At the receiver end, the optical signal is converted back into an electrical signal for analysis or playback.</p>
-      <p>The bandwidth of the link determines the range of frequencies it can transmit without significant loss or distortion. The efficiency and quality of the link depend on factors such as fiber length, wavelength, and system components.</p>
+      <p>The LED used is an 850 nm LED. The fibre is a multimode fibre with a core diameter of 1000 μm. The detector is a simple PIN detector. The LED optical power output is directly proportional to the current driving the LED. Similarly, for the PIN diode, the current is proportional to the amount of light falling on the detector. Thus, even though the LED and the PIN diode are nonlinear devices, the current in the PIN diode is directly proportional to the driving current of the LED. This makes the optical communication system a linear system.</p>
     </section>
 
     <section class="section" id="procedure">
       <h2>Procedure</h2>
-      <p>Follow these steps to perform the experiment:</p>
+      <p>Step-by-step instructions for the experiment:</p>
       <ol>
-        <li>Set up the OFT Kit, ensuring the transmitter and receiver modules are properly connected.</li>
-        <li>Connect the function generator to the transmitter module and set it to generate a sinusoidal signal of a specific frequency.</li>
-        <li>Use the 1m optical fiber to connect the transmitter and receiver modules.</li>
-        <li>Connect the output of the receiver module to an oscilloscope to observe the received signal.</li>
-        <li>Compare the input and output signals to analyze the relationship between them.</li>
-        <li>Repeat the experiment using the 3m optical fiber and observe the differences in signal quality and amplitude.</li>
-        <li>To measure the bandwidth, vary the frequency of the input signal and note the frequency at which the output signal starts to attenuate significantly.</li>
+        <li>Identify the interfaces on the OFT with the help of the layout (refer to Table 1.1 and Figures 1, 2, and 3).</li>
+        <li>Use the 1 m and 3 m optical fibres provided with the OFT. Ensure that the ends of the fiber are clean.</li>
+        <li>Set the switch SW8 to the ANALOG position. Switch the power on (located at the top right-hand corner).</li>
+        <li>Connect a BNC-BNC cable from the function generator to the BNC socket I/O3.</li>
+        <li>Connect the signal post I/O3 to the ANALOG IN post P11 using a patch cord.</li>
+        <li>Connect one end of the 1 m fiber to the LED source LED1 in the Optical Tx1 block.</li>
+        <li>Connect the other end of the fiber to the detector PD1 in the Optical Rx1 block.</li>
+      </ol>
+
+      <h3>Input-Output Relationship of Link</h3>
+      <ol>
+        <li>Feed a sinusoidal wave of 1 kHz, 1 Vpp signal (with zero DC) from the function generator to P11.</li>
+        <li>Observe the PIN detector output signal at P32 in the Optical Rx1 block.</li>
+        <li>Vary the input signal level driving the LED and observe the received signal at the PIN detector.</li>
+        <li>Plot the received signal peak-to-peak amplitude with respect to the input signal peak-to-peak amplitude.</li>
+      </ol>
+
+      <h3>Gain Control</h3>
+      <ol>
+        <li>The PIN detector at P32 is amplified, with amplifier gain controlled by the GAIN potentiometer.</li>
+        <li>With a 3 Vpp input signal at P11, observe P31 as the gain potentiometer is varied.</li>
+        <li>Note that the signal at P31 gets clipped below 0 V and above 3.5 V.</li>
+      </ol>
+
+      <h3>Bandwidth of Fiber Link</h3>
+      <ol>
+        <li>Apply a 2 Vpp sinusoidal signal at P11 and observe the output at P31. Adjust gain such that no clipping takes place.</li>
+        <li>Vary the frequency of the input signal from 100 Hz to 5 MHz and measure the amplitude of the received signal.</li>
+        <li>Plot the received signal amplitude as a function of frequency (use a logarithmic scale for frequency). Note the frequency range for which the response is flat.</li>
+        <li>Note the frequency at which the received signal starts getting distorted. Explain this using the bandwidth obtained.</li>
       </ol>
     </section>
 
     <section class="section" id="observations">
       <h2>Observations</h2>
-      <p>Record the following observations:</p>
-      <ul>
-        <li>Amplitude and quality of the received signal for 1m and 3m fibers.</li>
-        <li>Frequency at which the output signal attenuates significantly (bandwidth measurement).</li>
-        <li>Relationship between input and output signal waveforms.</li>
-      </ul>
+      <h3>Input-Output Relationship</h3>
+      <p>For a sine wave input at 1 kHz, the input-output variation is observed as follows:</p>
+      <p>[Note: Placeholder for Input-Output relation graph or table, as data is incomplete in the document.]</p>
+
+      <h3>Frequency Response</h3>
+      <p>The frequency response of a sinusoidal signal at 1 V input voltage is observed as follows:</p>
+      <p>[Note: Placeholder for Frequency Response graph or table, as data is incomplete in the document.]</p>
     </section>
 
-    <section class="section" id="conclusion">
-      <h2>Conclusion/Results</h2>
-      <p>The experiment successfully demonstrated the setup of a fiber optic analog link and its ability to transmit analog signals over varying distances. The bandwidth of the link was measured, and the impact of fiber length on signal quality was observed.</p>
+    <section class="section" id="inferences">
+      <h2>Inferences</h2>
+      <p>The linear relationship between the input and output of the fiber link was observed when the signal was within the operating frequency of the fiber.</p>
+      <p>Signal clipping began at 850 mV input sinusoidal 1 kHz signal peak-to-peak amplitude.</p>
+      <p>The bandwidth of the fiber was observed to be from 1 kHz to 1 MHz, after which the signal gets distorted and attenuates rapidly, producing noise at 6 MHz.</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; Guided Wave Optics Lab Report. <a href="../pages/content1.html" target="_blank">Open in New Tab</a></p>
-    <p style="padding-left: 70%;">Additya Akash Mishra</p>
-    <p style="padding-left: 77.5%;">SC24M156</p>
+    <a href="../pages/content4.html" target="_blank">© Fibre Optic Analog Link Experiment Report</a>
+    <p>Additya Akash Mishra</p>
+    <p>SC24M156</p>
   </footer>
 
 </body>

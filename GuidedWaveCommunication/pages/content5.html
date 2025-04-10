@@ -3,78 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experiment 5: Quantum Cryptography Using Classical Light</title>
+  <title>Practical Experiment</title>
   <link rel="stylesheet" href="../assets/css/content.css"> <!-- Link your CSS file here -->
 </head>
 <body>
 
   <header>
-    <h1>Experiment 5: Quantum Cryptography Using Classical Light</h1>
+    <h1>Modes in Single Mode Fiber Experiment Report</h1>
   </header>
 
   <main class="content">
     <section class="section" id="aim">
       <h2>Aim</h2>
-      <p>To set up a quantum cryptography experiment to study key distribution and detect an eavesdropper using classical light.</p>
+      <p>To study the output modes of a single-mode fiber with the change of input polarization.</p>
     </section>
 
     <section class="section" id="apparatus">
       <h2>Apparatus</h2>
       <p>The equipment and materials required for the experiment are:</p>
       <ul>
-        <li>Polarizing Beam Splitter</li>
-        <li>Polarizer</li>
-        <li>Single Photon Source</li>
-        <li>Detector</li>
+        <li>He-Ne Laser source</li>
+        <li>Mirrors</li>
+        <li>Beam splitters</li>
+        <li>Single-mode fiber (SMF)</li>
+        <li>Wave plates (Quarter-Wave Plates - QWP1, QWP3)</li>
+        <li>Polarizer (P)</li>
+        <li>Objective lens (L1, L2)</li>
+        <li>Analyzer (A)</li>
+        <li>Charge-Coupled Device (CCD)</li>
       </ul>
     </section>
 
     <section class="section" id="theory">
       <h2>Theory</h2>
-      <p>Quantum cryptography is a technique that uses the principles of quantum mechanics to secure communication. It relies on the properties of photons, such as polarization, to encode and distribute cryptographic keys. Any attempt to intercept the key introduces detectable disturbances, ensuring the security of the communication.</p>
-      <p>In this experiment, classical light is used to simulate quantum cryptographic principles. Key distribution and eavesdropping detection are studied using a setup of polarizers and detectors.</p>
+      <p>In optical fibers, modes represent stable field distributions of light that propagate without changing shape. The number of modes depends on the fiber's core diameter, numerical aperture (NA), and operating wavelength. Fibers are classified as single-mode (SMF) or multimode (MMF). SMFs support only the fundamental mode (LP01), which has a Gaussian-like intensity distribution and is used in long-distance communication due to minimal dispersion. MMFs support multiple modes, leading to modal dispersion, which limits their use to short distances.</p>
+      <p>The number of supported modes is determined by the V-number: <span class="math">V = 2πaNA / λ</span>, where <span class="math">a</span> is the core radius and <span class="math">λ</span> is the wavelength. If <span class="math">V < 2.405</span>, the fiber operates in single-mode; otherwise, it supports multiple modes. Modes are categorized as Linearly Polarized (LP) modes in weakly guiding fibers, while Hybrid modes (HE, EH) are used for strong guiding fibers. In multimode fibers, different modes travel at different speeds, causing intermodal dispersion, while polarization mode dispersion (PMD) can affect signal integrity in birefringent fibers. These mode characteristics play a crucial role in fiber-optic communications, sensors, and imaging applications.</p>
+    </section>
+
+    <section class="section" id="experimental-setup">
+      <h2>Experimental Setup</h2>
+      <p>The setup consists of a He-Ne laser that generates a coherent light beam. The beam first passes through a polarizer (P) and a quarter-wave plate (QWP1) to adjust its polarization state. The light is then focused using a lens (L1) into a single-mode fiber (SMF) for transmission. At the output of the fiber, a second lens (L2) collimates the emerging beam before it passes through another quarter-wave plate (QWP3) and an analyzer (A). Finally, the processed light is captured by a CCD camera, allowing observation of mode variations.</p>
+      <p><img src="../assets/img/content5_1.png" alt="Experimental Setup: Modes in SMF" style="width: 100%;"> <!-- Placeholder for Figure 1 --></p>
+      <p class="center">Figure 1: Experimental Setup: Modes in SMF</p>
     </section>
 
     <section class="section" id="procedure">
       <h2>Procedure</h2>
-      <p>Follow these steps to perform the experiment:</p>
-
-      <h3>Part 1: Key Distribution</h3>
+      <p>Step-by-step instructions for the experiment:</p>
       <ol>
-        <li>Set up the single photon source (or classical light source) to emit light beams through a polarizing beam splitter.</li>
-        <li>Use polarizers to encode polarization angles for key distribution: 0°, 45°, 90°, and 135°.</li>
-        <li>Direct the encoded light beams to a receiver equipped with a polarizing beam splitter and detectors.</li>
-        <li>Record the received polarization angles and verify the key distribution between sender (Alice) and receiver (Bob).</li>
-      </ol>
-
-      <h3>Part 2: Detecting an Eavesdropper</h3>
-      <ol>
-        <li>Introduce an intermediate polarizing beam splitter to simulate an eavesdropper (Eve) attempting to intercept the key.</li>
-        <li>Measure the disturbances in polarization at the receiver's end caused by Eve's presence.</li>
-        <li>Analyze the discrepancies between the distributed keys to detect eavesdropping.</li>
+        <li>Align the He-Ne laser to ensure a stable beam path.</li>
+        <li>Adjust the polarizer (P) and QWP1 to set the desired input polarization.</li>
+        <li>Focus the laser beam into the single-mode fiber using lens L1.</li>
+        <li>Observe the output beam through the CCD camera while varying the input polarization.</li>
+        <li>Use QWP3 and analyzer (A) to further analyze the polarization state at the output.</li>
+        <li>Record and analyze the mode structure for different input polarization states.</li>
       </ol>
     </section>
 
     <section class="section" id="observations">
       <h2>Observations</h2>
-      <p>Record the following observations:</p>
-      <ul>
-        <li>Key distribution efficiency (percentage of correctly received keys).</li>
-        <li>Impact of eavesdropping on the polarization states of the light.</li>
-        <li>Differences in key accuracy with and without the presence of an eavesdropper.</li>
-      </ul>
+      <p>The output mode remains nearly Gaussian for ideal single-mode fiber propagation.</p>
+      <p>Changing the input polarization leads to variations in intensity distribution and minor changes in mode structure.</p>
+      <p>The analyzer and second quarter-wave plate allow for further control and visualization of polarization-dependent effects.</p>
+      <p><img src="../assets/img/content5_2.PNG" alt="Fundamental Mode through SMF" style="width: 100%;"> <!-- Placeholder for Figure 2 --></p>
+      <p class="center">Figure 2: Fundamental Mode through SMF</p>
+      <p><img src="../assets/img/content5_4.png" alt="Distorted beam after readjusting SMF" style="width: 100%;"> <!-- Placeholder for Figure 4 --></p>
+      <p class="center">Figure 4: Distorted beam after readjusting SMF</p>
     </section>
 
     <section class="section" id="conclusion">
-      <h2>Conclusion/Results</h2>
-      <p>The experiment demonstrated the principles of quantum cryptography using classical light. Successful key distribution was achieved, and eavesdropping was detected through the disturbances introduced in the polarization states. This highlights the robustness of quantum cryptography in securing communication.</p>
+      <h2>Conclusion</h2>
+      <p>This experiment demonstrates that the output mode of a single-mode fiber is influenced by the polarization of the input light. By adjusting the input polarization using wave plates and a polarizer, we can observe variations in the output mode structure.</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; Guided Wave Optics Lab Report. <a href="../pages/content1.html" target="_blank">Open in New Tab</a></p>
-    <p style="padding-left: 70%;">Additya Akash Mishra</p>
-    <p style="padding-left: 77.5%;">SC24M156</p>
+    <a href="../pages/content5.html" target="_blank">© Modes in Single Mode Fiber Experiment Report</a>
+    <p>Additya Akash Mishra</p>
+    <p>SC24M156</p>
   </footer>
 
 </body>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical Experiment</title>
+  <link rel="stylesheet" href="../assets/css/content.css"> <!-- Link your CSS file here -->
+</head>
+<body>
+
+  <header>
+    <h1>Setting Up a Fibre Optic Digital Link Experiment Report</h1>
+  </header>
+
+  <main class="content">
+    <section class="section" id="introduction">
+      <h2>Introduction</h2>
+      <p>The OFT can be used to set up two fibre optic digital links: one at a wavelength of 650 nm and the other at 850 nm. LED1, in the Optical Tx1 block, is an 850 nm LED, and LED2, in the Optical Tx2 block, is a 650 nm LED. PD1, in the Optical Rx1 block, is a PIN detector whose current is proportional to the optical power falling on the detector. The received signal is amplified and converted to a TTL signal using a comparator. The GAIN control plays a crucial role in this conversion. PD2, in the Optical Rx2 block, is another receiver that directly outputs a TTL signal. Both PIN detectors can receive 650 nm as well as 850 nm signals, though their sensitivity is lower at 650 nm.</p>
+    </section>
+
+    <section class="section" id="objective">
+      <h2>Objective</h2>
+      <p>To learn to set up 850 nm and 650 nm digital links and to measure the maximum bit rate supportable on these links. Setting up a digital link is central to the rest of the experiments described in this manual.</p>
+    </section>
+
+    <section class="section" id="equipment">
+      <h2>Equipment Required</h2>
+      <ul>
+        <li>OFT</li>
+        <li>Two-channel, 20 MHz Oscilloscope</li>
+        <li>Function generator, 1 Hz - 10 MHz</li>
+      </ul>
+    </section>
+
+    <section class="section" id="procedure">
+      <h2>Procedure</h2>
+
+      <h3>Set Up</h3>
+      <ol>
+        <li>The interfaces used in the experiment are summarized in Table 2.1. Identify them on the OFT with the help of the layout diagram (Fig 2.1). The block diagram of the subsystems used in this experiment is shown in Fig 2.2. Set the jumpers and switches as given in Table 2.1 to start the experiment.</li>
+        <li>Set the switch SW8 to the DIGITAL position.</li>
+        <li>Connect a 1 m optical fibre between LED1 and the PIN detector PD1.</li>
+      </ol>
+
+      <h3>Setting Up a Digital Link at 850 nm</h3>
+      <ol start="4">
+        <li>Remove the shorting plugs of the coded data shorting links, S6 in the Manchester coder block and S26 in the Decoder & Clock Recovery block. Ensure that the shorting plug of jumper JP2 is across posts B & A1 [for PD1 receiver selection]. Feed a TTL signal of about 20 kHz from the function generator to post B of S6. Use the BNC I/Os for feeding and observing signals as described in Experiment 1. Observe the received analog signal at the amplifier post P31 on channel 1 of the oscilloscope [trigger the oscilloscope with the channel 1 signal]. Note that the signal at P31 gets cut off above 3.5 V. Increase and decrease the GAIN and observe the effect.</li>
+        <li>Observe the received signal at post A of S26 on channel 2 of the oscilloscope while still observing the signal at P31 on channel 1 [trigger the oscilloscope on channel 1]. Note that the signal at S26 is the inverted version of the signal at P31. Vary the GAIN potentiometer setting. Note that even though the received signal at P31 changes with gain, the output at S26 does not. Reduce the gain until the signal at P31 is less than 0.5 V. [If the signal does not drop below 0.5 V even at the lowest gain setting, pull the fibre out slightly at the receiver to reduce the level below 0.5 V.] Note that the signal at S26 now becomes all high. This is because the P31 signal is fed to the comparator-cum-inverter to give the signal at S26 as shown in Fig 2.3. The comparator reference voltage is 0.55 V, and unless the signal amplitude is greater than 0.55 V, the comparator output is high. Verify this.</li>
+        <li>Set the gain such that the signal at P31 is about 2 V. Observe the input signal from the function generator on channel 1 and the received TTL signal at post A of S26 on channel 2. Vary the frequency of the input signal and observe the output response. What is the maximum bit rate that can be transmitted on this digital link?</li>
+        <li>Repeat Steps 4, 5, and 6 with the 3 m fibre.</li>
+      </ol>
+
+      <h3>Setting Up a Digital Link at 650 nm</h3>
+      <ol start="8">
+        <li>Use the 1 m fibre and insert it into LED2. Observe the light output at the other end of the fibre [keeping it away from the eye]. The output is a bright red signal because the light output at around 650 nm is in the visible range. The other end of the fibre should now be inserted into PD1.</li>
+        <li>Repeat Steps 4, 5, and 6 with this new link.</li>
+        <li>Use the 3 m fibre and set up the 650 nm digital link between LED2 and PD1. Repeat Steps 4, 5, and 6.</li>
+      </ol>
+
+      <h3>Setting Up a TTL to TTL Digital Link at 650 nm</h3>
+      <ol start="11">
+        <li>Change the shorting plug in jumper JP2 across posts B & A2 [for selection of PD2 receiver]. Use the 1 m fibre to connect LED2 and optical receiver PD2.</li>
+        <li>Feed a TTL signal of 20 kHz at post B of S6 and observe the received TTL signal at post A of S26. Display both signals on the oscilloscope on channels 1 and 2 respectively [triggering with channel 1]. Note that the GAIN control does not play any role now in the operation of the link. The receiver at PD2 is an integrated PIN diode and comparator that directly gives out a TTL signal. Vary the frequency and find the maximum bit rate that can be transmitted on this link.</li>
+        <li>Repeat Steps 11 and 12 using the 3 m fibre.</li>
+      </ol>
+
+      <h3>Setting Up an 850 nm TTL to Direct Digital Link</h3>
+      <ol start="14">
+        <li>Use the 1 m fibre to connect LED1 and PD2. Feed a TTL signal of 20 kHz at post B of S6 and observe the received signal at post A of S26. Display both signals on the oscilloscope. An 850 nm TTL to direct digital link is obtained. Vary the frequency and find the maximum bit rate that can be transmitted on this link.</li>
+        <li>Repeat Step 14 with the 3 m fibre.</li>
+      </ol>
+
+      <h3>Comparing Responsitivity of PIN Diode at 850 nm and 650 nm</h3>
+      <ol start="16">
+        <li>Change the shorting plug in JP2 to connect A1 and B (for PD1 receiver selection). Using the 1 m fibre, connect LED1 (850 nm) and PD1. Let the GAIN control be at the minimum level. Feed a 20 kHz TTL signal at post B of S6. Measure the peak-to-peak voltage at P31 and designate it as V1.</li>
+        <li>Now connect the fibre between LED2 (650 nm) and PD1 without changing any other setting. Measure the peak-to-peak voltage at P31 and designate it as V2.</li>
+        <li>The factory setting for the light output at the end of 1 m fibre for LED1 is 3 dB higher (two times) than that for LED2. The PIN diode current "i" can be written as <span class="math">i = ρP</span>, where P is the optical intensity of the light falling on the detector and ρ is the responsitivity. The voltage at P31 is directly proportional to the PIN diode current "i". Using the results of Steps 16 and 17, compare the responsitivity of the diode at 650 nm and 850 nm using the expression <span class="math">V1 / V2 = (ρ1 P1) / (ρ2 P2)</span>, where P1 is twice P2 (at factory setting) and ρ1 and ρ2 are responsitivities of the diode at 850 nm and 650 nm respectively.</li>
+      </ol>
+
+      <p><img src="../assets/img/content7_1.png" alt="Block Diagram for Experiment 2"> <!-- Placeholder for Fig 2.2 --></p>
+      <p class="center">Block Diagram for Experiment 2</p>
+      <p><img src="../assets/img/content7_2.png" alt="Comparator to convert received signal into TTL signal"> <!-- Placeholder for Fig 2.3 --></p>
+      <p class="center">Comparator to convert received signal into a TTL signal</p>
+    </section>
+
+    <section class="section" id="interface-details">
+      <h2>Interface Details</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Identification Name</th>
+            <th>Function</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>SW8</td>
+            <td>Analog/Digital selection switch. Should be set to DIGITAL position</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>LED1 (850 nm)</td>
+            <td>850 nm LED</td>
+            <td>Optical Tx1 Block</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>LED2 (650 nm)</td>
+            <td>650 nm LED</td>
+            <td>Optical Tx2 Block</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>PD2</td>
+            <td>Optical Receiver with TTL output</td>
+            <td>Optical Rx2 Block</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>PD1</td>
+            <td>PIN Detector</td>
+            <td>Optical Rx1 Block</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>P31</td>
+            <td>PIN Detector signal after gain</td>
+            <td>Optical Rx1 Block</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>JP2</td>
+            <td>PD1/PD2 Receiver Select. Posts B & A1 should be shorted to select PD1</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>GAIN</td>
+            <td>GAIN Control Potentiometer</td>
+            <td>Optical Rx1 Block</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>S6 (coded data)</td>
+            <td>Manchester Coded Data shorting link. Post A: Coder output, Post B: Input to Tx1/Tx2/Electrical. Posts A & B should be shorted</td>
+            <td>Manchester Coder Block</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>S26 (coded data)</td>
+            <td>Received Manchester Coded data shorting link. Post A: Receiver output (Rx1/Rx2), Post B: Input to decoder & clock recovery block. Posts A & B should be shorted</td>
+            <td>Decoder & Clock Recovery Block</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>I/O1, I/O2, I/O3</td>
+            <td>Input/Output BNCs and posts for feeding in and observing signals</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section" id="observations">
+      <h2>Observations</h2>
+      <p>The following observations were recorded for the digital links at 850 nm and 650 nm using the oscilloscope:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Digital Link at 850 nm</th>
+            <th>Digital Link at 650 nm</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Cutoff Frequency</strong></td>
+            <td>2.12 MHz</td>
+            <td>2.83 MHz</td>
+          </tr>
+          <tr>
+            <td><strong>Amplitude</strong></td>
+            <td>5 V</td>
+            <td>5 V</td>
+          </tr>
+          <tr>
+            <td><strong>Oscilloscope Output Image</strong></td>
+            <td>
+              <p><img src="../assets/img/content7_3.png" alt="Oscilloscope Output for 850 nm" style="width: 100%;"></p>
+              <p class="center">Oscilloscope Output for 850 nm (Cutoff Frequency: 2.12 MHz, Amplitude: 5 V)</p>
+            </td>
+            <td>
+              <p><img src="../assets/img/content7_4.png" alt="Oscilloscope Output for 650 nm" style="width: 100%;"></p>
+              <p class="center">Oscilloscope Output for 650 nm (Cutoff Frequency: 2.83 MHz, Amplitude: 5 V)</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>TTL to TTL Digital Link</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>TTL to TTL Output (850 nm)</th>
+            <th>TTL to TTL Output (650 nm)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Description</strong></td>
+            <td>Stable TTL signal observed with a source frequency of 850 kHz</td>
+            <td>Stable TTL signal observed with a source frequency of 650 kHz</td>
+          </tr>
+          <tr>
+            <td><strong>Oscilloscope Output Image</strong></td>
+            <td>
+              <p><img src="../assets/img/content7_5.png" alt="TTL to TTL Output for 850 nm" style="width: 100%;"></p>
+              <p class="center">TTL to TTL Output for 850 nm</p>
+            </td>
+            <td>
+              <p><img src="../assets/img/content7_6.png" alt="TTL to TTL Output for 650 nm" style="width: 100%;"></p>
+              <p class="center">TTL to TTL Output for 650 nm</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section" id="summing-up">
+      <h2>Conclusion</h2>
+      <p>This experiment successfully demonstrated the setup of digital fibre optic links at wavelengths of 650 nm and 850 nm using the provided transmitters and receivers. The PIN diode (PD1) was shown to produce a current output proportional to the incident light intensity, with the received signal being amplified and processed through a comparator to generate a digital output signal. The experiment also involved measuring the maximum bit rates supported by these links, revealing cutoff frequencies of 2.83 MHz for 650 nm and 2.12 MHz for 850 nm. Additionally, the relative responsivities of the PIN diode at 650 nm and 850 nm were evaluated, providing insights into its performance across different wavelengths.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="../pages/content7.html" target="_blank">© Setting Up a Fibre Optic Digital Link Experiment Report</a>
+    <p>Additya Akash Mishra</p>
+    <p>SC24M156</p>
+  </footer>
+
+</body>
+</html>
