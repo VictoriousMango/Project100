@@ -38,7 +38,83 @@
       <h2>Procedure</h2>
       <p>Step-by-step instructions for the experiment:</p>
       <ol>
-        <li>Identify the interfaces on the OFT with the help of the layout (refer to Table 1.1 and Figures 1, 2, and 3).</li>
+        <li>Identify the interfaces on the OFT with the help of the layout (refer the following figures and tables).
+          <h3>Table 1.1</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>S.No.</th>
+                <th>Identification Name</th>
+                <th>Function</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>P11 ANALOG IN</td>
+                <td>Used to feed in analog sinusoidal 1Vp-p signal</td>
+                <td>Transmitter Block</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>P32 PD1 O/P</td>
+                <td>PIN Detector signal monitoring post</td>
+                <td>Optical Rx1 Block</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>P31</td>
+                <td>Received signal with amplification</td>
+                <td>Optical Rx1 Block</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>GAIN</td>
+                <td>Gain adjustment Potentiometer</td>
+                <td>Optical Rx1 Block</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>SW8</td>
+                <td>Analog/Digital selection switch Should be set to ANALOG position</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>LED1 850nm</td>
+                <td>850 nm LED (source)</td>
+                <td>Optical Tx1 Block</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>PD1</td>
+                <td>Pin Detector</td>
+                <td>Optical Rx1 Block</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>I/O1, I/O2, I/O3</td>
+                <td>Input/Output BNCs and Posts 
+                  <ol>
+                    <li>for feeding in signal to the Experimentor from function generator or </li>
+                    <li>to observe signal from the Experimentor on the Oscilloscope.</li>
+                  </ol></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <tr>
+              <td><img src="../assets/img/content4_1.png" alt=""></td>
+              <td><img src="../assets/img/content4_2.png" alt=""></td>
+            </tr>
+            <tr>
+              <th>Figure 1: OFT Layout</th>
+              <th>Figure 2: Enter Caption</th>
+            </tr>
+          </table>
+        </li>
         <li>Use the 1 m and 3 m optical fibres provided with the OFT. Ensure that the ends of the fiber are clean.</li>
         <li>Set the switch SW8 to the ANALOG position. Switch the power on (located at the top right-hand corner).</li>
         <li>Connect a BNC-BNC cable from the function generator to the BNC socket I/O3.</li>
@@ -73,13 +149,20 @@
 
     <section class="section" id="observations">
       <h2>Observations</h2>
-      <h3>Input-Output Relationship</h3>
-      <p>For a sine wave input at 1 kHz, the input-output variation is observed as follows:</p>
-      <p>[Note: Placeholder for Input-Output relation graph or table, as data is incomplete in the document.]</p>
-
-      <h3>Frequency Response</h3>
-      <p>The frequency response of a sinusoidal signal at 1 V input voltage is observed as follows:</p>
-      <p>[Note: Placeholder for Frequency Response graph or table, as data is incomplete in the document.]</p>
+      <table style="width: inherit;">
+        <tr>
+          <th>Input-Output Relationship</th>
+          <th>Frequency Response</th>
+        </tr>
+        <tr>
+          <td><img src="../assets/img/content4_3.png" alt="" style="width: 100%;"></td>
+          <td><img src="../assets/img/content4_4.png" alt="" style="width: 100%;"></td>
+        </tr>
+        <tr>
+          <td>For a sine wave input at 1 kHz, the input-output variation is observed</td>
+          <td>The frequency response of a sinusoidal signal at 1 V input voltage is observed</td>
+        </tr>
+      </table>
     </section>
 
     <section class="section" id="inferences">
