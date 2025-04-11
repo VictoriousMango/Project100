@@ -3,162 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Practical Experiment</title>
+  <title>Self Imaging (Talbot Effect) Experiment Report</title>
   <link rel="stylesheet" href="../assets/css/content.css"> <!-- Link your CSS file here -->
 </head>
 <body>
 
   <header>
-    <h1>Self-Imaging/Talbot Effect Experiment Report</h1>
+    <h1>Self Imaging (Talbot Effect) Experiment Report</h1>
   </header>
 
   <main class="content">
     <section class="section" id="aim">
       <h2>Aim</h2>
-      <p>To calculate the grating period using the Talbot/self-imaging effect.</p>
+      <p>To study the phenomenon of self-imaging, also known as the Talbot effect, using a He-Ne laser and two different periodic grating structures.</p>
     </section>
 
     <section class="section" id="apparatus">
       <h2>Apparatus</h2>
-      <p>The equipment and materials required for the experiment are:</p>
+      <p>The following equipment was used in the experiment:</p>
       <ul>
-        <li>Laser</li>
-        <li>Lens</li>
-        <li>Gratings</li>
-        <li>Microscopic Object</li>
-        <li>CCD Camera</li>
+        <li>He-Ne laser source</li>
+        <li>Microscope objective</li>
+        <li>Collimating lens</li>
+        <li>Two periodic gratings</li>
+        <li>CCD camera</li>
+        <li>Iris diaphragm</li>
       </ul>
     </section>
 
     <section class="section" id="theory">
       <h2>Theory</h2>
-      <p>The Talbot effect is a near-field diffraction phenomenon where a periodic structure, such as a diffraction grating, creates self-imaging at regular distances along the propagation direction. It was first discovered by Henry Fox Talbot in 1836.</p>
-      <p>When a coherent light wave illuminates a periodic grating, the wave diffracts and reconstructs its intensity distribution at specific distances called Talbot planes, and the regular distance is called the Talbot length, and the repeated images are called self-images or Talbot images. The periodic pattern is repeated at these planes without the need for a lens.</p>
-      <p>Furthermore, at half the Talbot length, a self-image also occurs, but phase-shifted by half a period (the physical meaning of this is that it is laterally shifted by half the width of the grating period). This effect is widely used in optics, imaging, and lithography.</p>
-      <p>The optical Talbot effect for monochromatic light is shown as a "Talbot carpet" in Figure 1. At the bottom of the figure, the light can be seen diffracting through a grating, and this pattern is reproduced at the top of the picture (one Talbot length away from the grating). At regular fractions of the Talbot length, the sub-images form.</p>
-      <p><img src="../assets/img/talbot_carpet.png" alt="Talbot Carpet" style="width: 100%;"> <!-- Placeholder for Figure 1 --></p>
-      <p class="center">Figure 1: Talbot Carpet</p>
+      <p>The Talbot effect, first observed by Henry Fox Talbot over 170 years ago, refers to the phenomenon of self-imaging of a periodic structure when illuminated with coherent light. When a monochromatic and coherent light beam, such as that from a laser, passes through or is reflected from a periodic structure, it diffracts into multiple orders. At specific distances from the grating, these diffracted waves interfere constructively to reproduce the original grating pattern. These distances are called Talbot distances. Mathematically, if a periodic object with spatial period \( d \) is illuminated by a plane wave of wavelength \( \lambda \), the light field at a distance \( z \) from the object under the paraxial approximation is given by:</p>
+      <p class="center">\( E(X) \propto \sum_{n=-\infty}^{\infty} c_n e^{i 2 \pi n X / d} e^{-i \pi n^2 \lambda z / d^2} \)</p>
+      <p>where \( c_n \) is the amplitude of the \( n \)th Fourier component.</p>
+      <p>Self-imaging occurs at distances where all diffraction orders are in phase. These distances are given by:</p>
+      <p class="center">\( z_m = m \frac{d^2}{\lambda}, \quad m \in \mathbb{Z}^{+} \)</p>
+      <p>At these Talbot planes, the original pattern is reproduced. For odd values of \( m \), the image is shifted laterally by half a period due to a \( \pi \) phase shift in the odd diffraction orders.</p>
     </section>
 
     <section class="section" id="procedure">
       <h2>Procedure</h2>
-      <p>Step-by-step instructions for the experiment:</p>
       <ol>
-        <li><strong>Laser Source Setup:</strong>
-          <ul>
-            <li>Use a He-Ne laser (632.8 nm) as the coherent light source.</li>
-            <li>Ensure the laser output is stable and well-aligned.</li>
-          </ul>
-        </li>
-        <li><strong>Beam Expansion and Collimation:</strong>
-          <ul>
-            <li>Place a microscope objective (MO) after the laser to expand the beam.</li>
-            <li>Use a lens to convert the diverging beam into a collimated beam.</li>
-            <li>Adjust the lens position to achieve proper collimation.</li>
-          </ul>
-        </li>
-        <li><strong>Grating Placement:</strong>
-          <ul>
-            <li>Position the unknown grating perpendicular to the collimated beam.</li>
-            <li>Ensure the grating is correctly aligned to avoid angular misalignment.</li>
-          </ul>
-        </li>
-        <li><strong>Capturing the Talbot Image:</strong>
-          <ul>
-            <li>Place a CCD camera at different distances along the propagation axis.</li>
-            <li>Observe and record multiple self-images of the grating.</li>
-            <li>Adjust the camera position to capture a clear Talbot pattern.</li>
-          </ul>
-        </li>
-        <li><strong>Measurement of Talbot Distance:</strong>
-          <ul>
-            <li>Identify the distance between the grating and the first self-image plane.</li>
-            <li>Measure the Talbot distance (Z<sub>T</sub>) from the CCD images.</li>
-          </ul>
-        </li>
-        <li><strong>Calculation of Grating Period:</strong>
-          <ul>
-            <li>Use the Talbot formula: <span class="math">Z<sub>T</sub> = P<sup>2</sup> / λ</span></li>
-            <li>Solve for the grating period: <span class="math">P = √(Z<sub>T</sub> λ)</span></li>
-            <li>Substitute the measured Talbot distance Z<sub>T</sub> and He-Ne laser wavelength λ = 632.8 nm to find P.</li>
-          </ul>
-        </li>
-        <li><strong>Analysis and Verification:</strong>
-          <ul>
-            <li>Compare the calculated grating period with standard values.</li>
-          </ul>
-        </li>
+        <li>The optical setup was arranged as per the schematic for Talbot imaging.</li>
+        <li>The iris diaphragm was adjusted to ensure uniform illumination of the gratings.</li>
+        <li>Each grating was placed in the setup, one at a time.</li>
+        <li>The CCD camera was positioned at various distances from the grating.</li>
+        <li>The output pattern was observed and recorded to identify self-imaging distances.</li>
+        <li>Distances between consecutive self-imaging planes were noted.</li>
       </ol>
     </section>
 
     <section class="section" id="observations">
       <h2>Observations</h2>
-      <p>When the collimated laser beam passed through the unknown grating, multiple self-images appeared at specific distances along the propagation axis.</p>
-      <p>Clear self-images of the grating were observed at certain distances, confirming the Talbot effect.</p>
-      <p>The observations shown below illustrate the calculation of grating period in lines per millimetre for two different gratings and comparison of error percentage calculation with actual period of grating.</p>
-      <p><strong>Grating 1 Self-Images:</strong></p>
-      <div style="display: flex;">
-        <img style="width: 33%;" src="../assets/img/self_image_grating1_a.png" alt="Self-image at 9.3 cm">
-        <img style="width: 33%;" src="../assets/img/self_image_grating1_b.png" alt="Self-image at 10.8 cm">
-        <img style="width: 33%;" src="../assets/img/self_image_grating1_c.png" alt="Self-image at 12.4 cm">
-      </div>
-      <p class="center">Figure 2: Self-images distance from Grating 1 (a) 9.3 cm, (b) 10.8 cm, (c) 12.4 cm</p>
-      <p><strong>Grating 2 Self-Images:</strong></p>
-      <div style="display: flex;">
-        <img style="width: 33%;" src="../assets/img/self_image_grating2_a.png" alt="Self-image at 7.1 cm">
-        <img style="width: 33%;" src="../assets/img/self_image_grating2_b.png" alt="Self-image at 9.6 cm">
-        <img style="width: 33%;" src="../assets/img/self_image_grating2_c.png" alt="Self-image at 12.2 cm">
-      </div>
-      <p class="center">Figure 3: Self-images distance from Grating 2 (a) 7.1 cm, (b) 9.6 cm, (c) 12.2 cm</p>
-      <p><img src="../assets/img/double_freq_grating2.png" alt="Double frequency grating image" style="width: 100%;"></p>
-      <p class="center">Figure 4: Double frequency grating image of Grating 2 at distance 10.9 cm</p>
-
+      <p>Self-imaging of the gratings was observed at specific distances. For the two gratings used, the Talbot distances were determined as follows:</p>
       <table>
         <thead>
           <tr>
             <th>Grating</th>
-            <th>Distance (cm)</th>
-            <th>Distance between 2 images (cm)</th>
-            <th>Estimated grating period (lines/mm)</th>
-            <th>Average grating period (lines/mm)</th>
-            <th>Actual grating period (lines/mm)</th>
-            <th>Percentage error in calculation</th>
+            <th>Talbot Distance (\( z_T \), cm)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Grating 1</td><td>1.5</td></tr>
+          <tr><td>Grating 2</td><td>2.5</td></tr>
+        </tbody>
+      </table>
+      <p>Given that the wavelength of the He-Ne laser is:</p>
+      <p class="center">\( \lambda = 632.8 \, \text{nm} = 632.8 \times 10^{-9} \, \text{m} \)</p>
+      <p>The periods of the gratings were calculated using the formula:</p>
+      <p class="center">\( d = \sqrt{\lambda z_T} \)</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Grating</th>
+            <th>Period (\( d \), m)</th>
+            <th>Frequency (\( f \), lines/mm)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td rowspan="3">1</td>
-            <td>9.3</td>
-            <td rowspan="2">1.5</td>
-            <td>10.264</td>
-            <td rowspan="3">10.101</td>
-            <td rowspan="3">10</td>
-            <td rowspan="3">1.01%</td>
+            <td>Grating 1</td>
+            <td>\( 9.75 \times 10^{-5} \)</td>
+            <td>10.26</td>
           </tr>
           <tr>
-            <td>10.8</td>
-            <td rowspan="2">9.938</td>
+            <td>Grating 2</td>
+            <td>\( 1.26 \times 10^{-4} \)</td>
+            <td>7.94</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="center">Figure 1: Illustration of Talbot Effect Setup</p>
+      <p><img src="../assets/img/content6_1.png" alt="Figure 1" style="width: 100%;"></p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Grating</th>
+            <th>Distance 1</th>
+            <th>Distance 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Grating 1</td>
+            <td>
+              <img src="../assets/img/content6_2.png" alt="Grating 1 at 7 cm" style="width: 45%;">
+              <p class="center">a) At distance of 7 cm</p>
+            </td>
+            <td>
+              <img src="../assets/img/content6_3.png" alt="Grating 1 at 9.5 cm" style="width: 45%;">
+              <p class="center">b) At distance of 9.5 cm</p>
+            </td>
           </tr>
           <tr>
-            <td>12.4</td>
-            <td>1.6</td>
-          </tr>
-          <tr>
-            <td rowspan="3">2</td>
-            <td>7.1</td>
-            <td rowspan="2">2.5</td>
-            <td>7.950</td>
-            <td rowspan="3">7.873</td>
-            <td rowspan="3">8</td>
-            <td rowspan="3">1.58%</td>
-          </tr>
-          <tr>
-            <td>9.6</td>
-            <td rowspan="2">7.796</td>
-          </tr>
-          <tr>
-            <td>12.2</td>
-            <td>2.6</td>
+            <td>Grating 2</td>
+            <td>
+              <img src="../assets/img/content6_4.png" alt="Grating 2 at 7 cm" style="width: 45%;">
+              <p class="center">a) At distance of 7 cm</p>
+            </td>
+            <td>
+              <img src="../assets/img/content6_5.png" alt="Grating 2 at 8.5 cm" style="width: 45%;">
+              <p class="center">b) At distance of 8.5 cm</p>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -166,15 +133,20 @@
 
     <section class="section" id="conclusion">
       <h2>Conclusion</h2>
-      <p>The estimated period of gratings was calculated to be 10.101 lines/mm and 7.873 lines/mm, where the standard values of the gratings are 10 lines/mm and 8 lines/mm, respectively. The percentage errors in the calculations were 1.01% and 1.58%, indicating a close match with the actual values and confirming the validity of the Talbot effect for determining grating periods.</p>
+      <ul>
+        <li>The Talbot effect was successfully demonstrated using two different periodic gratings.</li>
+        <li>The Talbot distances were observed to be 1.5 cm and 2.5 cm for the two gratings.</li>
+        <li>The calculated grating frequencies were 10.26 lines/mm and 7.94 lines/mm respectively.</li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <a href="../pages/content6.html" target="_blank">© Self-Imaging/Talbot Effect Experiment Report</a>
+    <a href="../pages/content2.html" target="_blank">© Self Imaging (Talbot Effect) Experiment Report</a>
     <p>Additya Akash Mishra</p>
     <p>SC24M156</p>
   </footer>
-
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>

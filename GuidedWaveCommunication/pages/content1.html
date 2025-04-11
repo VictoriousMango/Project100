@@ -15,129 +15,199 @@
   <main class="content">
     <section class="section" id="aim">
       <h2>Aim</h2>
-      <p>To measure bending losses, propagation losses, and losses due to variation of input power in optical fibers.</p>
+      <p>To quantify the different types of losses in an optical fiber, specifically focusing on:</p>
+      <ul>
+        <li>Bending losses due to fiber curvature.</li>
+        <li>Propagation losses over a fixed fiber length.</li>
+        <li>Variations in losses related to changes in input power using a polarizer.</li>
+      </ul>
     </section>
 
     <section class="section" id="apparatus">
       <h2>Apparatus</h2>
       <p>The equipment and materials required for the experiment are:</p>
       <ul>
-        <li>Laser diode</li>
-        <li>Bending loss apparatus</li>
-        <li>Optical fiber</li>
-        <li>Fiber coupler</li>
+        <li>Laser Diode</li>
+        <li>Bending Loss Apparatus</li>
+        <li>Optical Fiber</li>
+        <li>Fiber Coupler</li>
         <li>Detector</li>
-        <li>Output measurement unit</li>
+        <li>Output Measurement Unit</li>
+        <li>Polarizer</li>
       </ul>
     </section>
 
     <section class="section" id="theory">
       <h2>Theory</h2>
-      <p>Optical fibers experience losses due to bending, propagation, and input power variation. Bending losses occur when light escapes the fiber due to sharp bends, while propagation losses result from scattering and absorption of light as it propagates through the fiber.</p>
+      <p>Optical fibers experience losses due to bending, propagation, and input power variation. Bending losses occur when light escapes the fiber due to sharp bends, while propagation losses result from scattering and absorption of light as it propagates through the fiber. Input power variation losses are influenced by changes in polarization.</p>
       <p><strong>Propagation Loss Formula:</strong></p>
-      <p class="center">Propagation Loss (dB) = 10 log<sub>10</sub>(P<sub>out</sub> / P<sub>in</sub>)</p>
+      <p class="center">Loss (dB) = 10 log<sub>10</sub>(P<sub>in</sub> / P<sub>out</sub>)</p>
     </section>
 
     <section class="section" id="procedure">
       <h2>Procedure</h2>
       <p>Step-by-step instructions for the experiment:</p>
       <ol>
-        <li>Set up the apparatus with a laser diode, fiber coupler, and detector.</li>
-        <li>For bending losses, measure the transmitted power for different bend circumferences using the bending loss apparatus.</li>
-        <li>For propagation losses, measure the input and output power of the fiber and calculate the loss using the formula.</li>
-        <li>For input power variation, vary the polarizer angle and observe the transmitted power.</li>
+        <li><strong>Measuring Bending Losses:</strong>
+          <ul>
+            <li>Connect the laser diode to the fiber coupler and couple the light into the fiber.</li>
+            <li>Secure the fiber onto the bending loss apparatus with adjustable curvature.</li>
+            <li>Connect the output of the fiber to the detector and output measurement unit.</li>
+            <li>Record the initial optical power (without bending) as a reference.</li>
+            <li>Change the bend radius on the apparatus, recording the corresponding output power at each bend.</li>
+            <li>Repeat the process with different bend radii to observe the relationship between bending curvature and power loss.</li>
+          </ul>
+        </li>
+        <li><strong>Measuring Propagation Losses:</strong>
+          <ul>
+            <li>Use a fixed length of fiber (60 cm) without any intentional bends.</li>
+            <li>Connect the laser to the fiber input and the fiber output to the detector and measurement unit.</li>
+            <li>Record the output power for the fixed fiber length.</li>
+            <li>Calculate the propagation loss using the formula: Loss (dB) = 10 log(P<sub>in</sub> / P<sub>out</sub>).</li>
+          </ul>
+        </li>
+        <li><strong>Measuring Input Power Variation Losses:</strong>
+          <ul>
+            <li>Use a polarizer to adjust the laser diode's output power.</li>
+            <li>Connect the fiber to the detector and output measurement unit.</li>
+            <li>Rotate the polarizer to vary the input power level from the laser diode.</li>
+            <li>Record the corresponding output power for each polarizer position.</li>
+            <li>Analyze the data to determine how the losses relate to changes in input power.</li>
+          </ul>
+        </li>
       </ol>
     </section>
-    <br>
 
     <section class="section" id="observations">
       <h2>Observations</h2>
       <h3>Bending Loss</h3>
-      <div style="display: flex;">
-        <img style="width: 50%;" src="../assets/img/content1_1.png" alt="">
-        <img style="width: 50%;" src="../assets/img/content1_2.png" alt="">
-      </div>
+      <p><strong>Bending Loss (dB) vs. Bend Circumference</strong></p>
+      <p><img src="../assets/img/content1_1_1.png" alt="Figure 1: Enter Caption" style="width: 100%;"></p>
+      <p class="center">Figure 1: Bending Loss vs. Bend Circumference</p>
       <table>
         <thead>
           <tr>
             <th>Level</th>
-            <th>Circumference of Bend</th>
-            <th>Trial-1 (MicroA)</th>
-            <th>Trial-2 (MicroA)</th>
-            <th>Avg Value</th>
-            <th>Bending Loss (in db)</th>
+            <th>Circumference (cm)</th>
+            <th>Output Power (µA)</th>
+            <th>Bending Loss (dB)</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>L1</td><td>20.5</td><td>23.5</td><td>23.5</td><td>23.5</td><td>-1.9122500218473841</td></tr>
-          <tr><td>L2</td><td>17.5</td><td>22.3</td><td>21.5</td><td>21.9</td><td>-2.2184874961635637</td></tr>
-          <tr><td>L3</td><td>14.5</td><td>20.8</td><td>21.3</td><td>21.05</td><td>-2.3904076428478755</td></tr>
-          <tr><td>L4</td><td>11.5</td><td>19.4</td><td>18.7</td><td>19.05</td><td>-2.8239788444483653</td></tr>
+          <tr><td>L1</td><td>20.5</td><td>23.5</td><td>1.912250022</td></tr>
+          <tr><td>L2</td><td>17.5</td><td>21.5</td><td>2.298544045</td></tr>
+          <tr><td>L3</td><td>14.5</td><td>21.3</td><td>2.33913261</td></tr>
+          <tr><td>L4</td><td>11.5</td><td>18.7</td><td>2.904512579</td></tr>
+        </tbody>
+      </table>
+      <hr>
+
+      <h3>Propagation Loss</h3>
+      <p><strong>Propagation Loss (dB) for Optical Fiber of Length 60 cm</strong></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Input Current (µA)</th>
+            <th>Output Current (µA)</th>
+            <th>Propagation Loss (dB)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>200</td><td>36.5</td><td>7.387371312</td></tr>
         </tbody>
       </table>
       <hr>
 
       <h3>Varying Power</h3>
-      <img style="width: 100%;" src="../assets/img/content1_3.png" alt="">
+      <p><strong>Output Intensity vs. Polarizer Angle</strong></p>
+      <p><img src="../assets/img/content1_3_1.png" alt="Figure 2: Varying Power" style="width: 100%;"></p>
+      <p class="center">Figure 2: Varying Power</p>
       <table>
         <thead>
           <tr>
-            <th>Polarizer Angle</th>
-            <th>Power (MicroA)</th>
-            <th>Loss due to Varying Intensity</th>
+            <th>Polarizer Angle (°°)</th>
+            <th>Input Intensity (µA)</th>
+            <th>Output Intensity (µA)</th>
+            <th>Laser Angle (°°)</th>
+            <th>Loss (dB)</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>0</td><td>0.5</td><td>-18.633228601204557</td></tr>
-          <tr><td>5</td><td>0.6</td><td>-17.841416140728313</td></tr>
-          <tr><td>10</td><td>0.7</td><td>-17.17194824442218</td></tr>
-          <tr><td>15</td><td>1</td><td>-15.622928644564746</td></tr>
-          <tr><td>20</td><td>1.5</td><td>-13.862016054007935</td></tr>
-          <tr><td>25</td><td>2.3</td><td>-12.005650284388821</td></tr>
-          <tr><td>30</td><td>2.7</td><td>-11.309291002974874</td></tr>
-          <tr><td>35</td><td>3.4</td><td>-10.308139474142198</td></tr>
-          <tr><td>40</td><td>4.1</td><td>-9.495090077367392</td></tr>
-          <tr><td>45</td><td>5.1</td><td>-8.547226883585385</td></tr>
-          <tr><td>50</td><td>7.4</td><td>-6.930611447254985</td></tr>
-          <tr><td>55</td><td>8.4</td><td>-6.3801357839459305</td></tr>
-          <tr><td>60</td><td>8.7</td><td>-6.227736118378562</td></tr>
-          <tr><td>65</td><td>10.4</td><td>-5.452595251576944</td></tr>
-          <tr><td>70</td><td>10.6</td><td>-5.369869991917044</td></tr>
-          <tr><td>75</td><td>10.9</td><td>-5.24866366515851</td></tr>
-          <tr><td>80</td><td>12.4</td><td>-4.688711792942397</td></tr>
-          <tr><td>85</td><td>12.9</td><td>-4.5170315415722575</td></tr>
-          <tr><td>90</td><td>13.4</td><td>-4.35188066091667</td></tr>
-          <tr><td>100</td><td>12.6</td><td>-4.619223193389118</td></tr>
-          <tr><td>110</td><td>11.2</td><td>-5.1307484178629315</td></tr>
-          <tr><td>120</td><td>8.7</td><td>-6.227736118378562</td></tr>
-          <tr><td>130</td><td>7.1</td><td>-7.110345157373995</td></tr>
-          <tr><td>140</td><td>5.6</td><td>-8.141048374502745</td></tr>
-          <tr><td>150</td><td>3.5</td><td>-10.182248201061991</td></tr>
-          <tr><td>160</td><td>1.9</td><td>-12.835392635036458</td></tr>
-          <tr><td>170</td><td>0.9</td><td>-16.0805035501715</td></tr>
-          <tr><td>180</td><td>0.6</td><td>-17.841416140728313</td></tr>
-          <tr><td>190</td><td>0.8</td><td>-16.59202877464531</td></tr>
+          <tr>
+            <td>330</td>
+            <td>143.2</td>
+            <td>24.0</td>
+            <td>65</td>
+            <td>7.8</td>
+          </tr>
+          <tr>
+            <td>350</td>
+            <td>400.3</td>
+            <td>49.7</td>
+            <td>45</td>
+            <td>9.1</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>657.3</td>
+            <td>78.0</td>
+            <td>25</td>
+            <td>9.3</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>793.9</td>
+            <td>93.0</td>
+            <td>5</td>
+            <td>9.3</td>
+          </tr>
+          <tr>
+            <td>50</td>
+            <td>746.4</td>
+            <td>91.5</td>
+            <td>15</td>
+            <td>9.1</td>
+          </tr>
+          <tr>
+            <td>70</td>
+            <td>537.0</td>
+            <td>70.9</td>
+            <td>35</td>
+            <td>8.8</td>
+          </tr>
+          <tr>
+            <td>90</td>
+            <td>263.6</td>
+            <td>40.5</td>
+            <td>55</td>
+            <td>8.1</td>
+          </tr>
+          <tr>
+            <td>110</td>
+            <td>53.9</td>
+            <td>18.0</td>
+            <td>75</td>
+            <td>4.8</td>
+          </tr>
         </tbody>
       </table>
-      <hr>
-
-
-      <h3>Propagation Loss</h3>
-      <p><strong>Power In:</strong> 200 MicroA</p>
-      <p><strong>Power Out:</strong> 36.5 MicroA</p>
-      <p><strong>Propagation Loss:</strong> -7.39 dB</p>
     </section>
 
     <section class="section" id="conclusion">
-      <h2>Conclusion/Results</h2>
-      <p>The experiment successfully demonstrated the impact of bending, propagation, and input power variation on optical fiber losses. Bending losses increased with sharper bends, propagation losses were observed due to scattering and absorption, and power variation losses correlated with the polarizer angle.</p>
+      <h2>Conclusion</h2>
+      <ul>
+        <li>Bending losses increase as the bend radius decreases.</li>
+        <li>Propagation losses increase proportionally with fiber length.</li>
+        <li>Input power variations affect overall losses in the fiber, as quantified using a polarizer.</li>
+        <li>Fiber losses during the experiment may be due to bending, improper coupling, connector losses, polarization changes, scattering, and mechanical disturbances.</li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <a href="../pages/content1.html" target="_blank">&copy; Guided Wave Optics Lab Report. </a>
-    <p>Additya Akash Mishra</p>
-    <p>SC24M156</p>
+    <a href="../pages/content1.html" target="_blank">© Losses in Optical Fiber Experiment Report</a>
+    <p>Aditya Krishna Talande</p>
+    <p>SC21B143</p>
   </footer>
 
 </body>
