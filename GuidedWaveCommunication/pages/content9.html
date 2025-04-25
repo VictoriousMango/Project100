@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum Cryptography Experiment Report</title>
+  <link rel="stylesheet" href="../assets/css/content.css"> <!-- Link your CSS file here -->
+</head>
+<body>
+
+  <header>
+    <h1>Quantum Cryptography Experiment Report</h1>
+  </header>
+
+  <main class="content">
+    <section class="section" id="aim">
+      <h2>Aim</h2>
+      <p>To demonstrate the principles of quantum cryptography using the BB84 protocol and to detect eavesdropping during quantum key distribution (QKD) through polarization-based encoding.</p>
+    </section>
+
+    <section class="section" id="apparatus">
+      <h2>Apparatus</h2>
+      <ul>
+        <li>EDU-QCRY1/M Quantum Cryptography Demonstration Kit</li>
+        <li>Laser Diode Module (CPS635R-C2)</li>
+        <li>Polarization Rotators (\( \lambda / 2 \) Plates)</li>
+        <li>Polarizing Beamsplitters (PBS)</li>
+        <li>Optical Breadboards and Mounting Hardware</li>
+        <li>Sensors and Sensor Electronics</li>
+        <li>Laser Electronics</li>
+        <li>Power Supply</li>
+        <li>Protective Gloves</li>
+      </ul>
+    </section>
+
+    <section class="section" id="theory">
+      <h2>Theory</h2>
+      <p>Quantum cryptography uses principles of quantum mechanics to securely transmit information. The BB84 protocol is one of the most well-known quantum key distribution (QKD) methods. It enables two users, Alice and Bob, to establish a shared secret key with the ability to detect any eavesdropping by a third party (Eve).</p>
+      <h3>One-Time Pad</h3>
+      <p>A one-time pad is an encryption technique that is unbreakable if:</p>
+      <ul>
+        <li>The key is as long as the message,</li>
+        <li>The key is used only once,</li>
+        <li>The key is truly random,</li>
+        <li>The key is known only to the sender and receiver.</li>
+      </ul>
+      <p>Encryption is done by performing a bitwise XOR between the message and the key.</p>
+      <h3>Quantum Key Distribution with BB84</h3>
+      <p>BB84 uses the polarization of photons to encode bits. Alice sends photons randomly polarized in one of two bases:</p>
+      <ul>
+        <li>\( + \) basis (rectilinear): \( 0^\circ \) for bit 0, \( 90^\circ \) for bit 1</li>
+        <li>\( \times \) basis (diagonal): \( -45^\circ \) for bit 0, \( 45^\circ \) for bit 1</li>
+      </ul>
+      <p>Bob also measures the incoming photons using a randomly chosen basis. After transmission, they publicly compare bases and keep only the bits where their bases match.</p>
+      <p><img src="../assets/img/content9_1.png" alt="Quantum Cryptography Setup" style="width: 100%;"></p>
+      <p class="center">Figure 3: Quantum Cryptography Setup with the Bases \( + (0^\circ \text{ and } 90^\circ) \) and \( \times (-45^\circ \text{ and } 45^\circ) \)</p>
+      <h3>Eavesdropper Detection</h3>
+      <p>Eve cannot copy or measure a quantum state without disturbing it (No-Cloning Theorem). If Eve measures in the wrong basis, it introduces detectable errors. By comparing a subset of the key, Alice and Bob can estimate the error rate. A high error rate (e.g., \( \approx 25\% \)) suggests eavesdropping.</p>
+      <p><img src="../assets/img/content9_2.png" alt="Eavesdropper Eve between Alice and Bob" style="width: 100%;"></p>
+      <p class="center">Figure 4: Eavesdropper Eve between Alice and Bob</p>
+    </section>
+
+    <section class="section" id="procedure">
+      <h2>Procedure</h2>
+      <ol>
+        <li><strong>Setup:</strong> Assemble laser, polarizers, PBS, detectors, and electronics. Align the laser for horizontal polarization.</li>
+        <li><strong>Key Transmission:</strong>
+          <ul>
+            <li>Alice randomly selects a bit and a basis (\( + \) or \( \times \)), sets the polarization, and sends the photon.</li>
+            <li>Bob randomly selects a basis and records the measurement outcome.</li>
+          </ul>
+        </li>
+        <li><strong>Basis Comparison:</strong>
+          <ul>
+            <li>Alice and Bob publicly announce their basis choices.</li>
+            <li>They retain only the bits where their bases matched - this forms the raw key.</li>
+          </ul>
+        </li>
+        <li><strong>Eavesdropper Detection:</strong>
+          <ul>
+            <li>Alice and Bob compare a subset of the key.</li>
+            <li>If the error rate is high (\( \approx 25\% \)), Eve is detected and the key is discarded.</li>
+            <li>Otherwise, they proceed with the final key (excluding test bits).</li>
+          </ul>
+        </li>
+        <li><strong>Message Encryption and Decryption:</strong>
+          <ul>
+            <li>Alice encrypts a message using the final key and one-time pad XOR.</li>
+            <li>She sends the encrypted message.</li>
+            <li>Bob decrypts it using the same key.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="observations">
+      <h2>Observations</h2>
+      <h3>BB84 Protocol Run</h3>
+      <p>The following table presents a sample run of the BB84 protocol between Alice and Bob. Only the bits where Alice and Bob used the same basis are included in the generated key. If the bases differ, the measurement is either discarded or considered random due to quantum uncertainty.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Alice's Bit</th>
+            <th>Basis (Alice)</th>
+            <th>Angle (\( ^\circ \))</th>
+            <th>Basis (Bob)</th>
+            <th>Measured Bit</th>
+            <th>Generated Key</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Plus</td><td>90</td><td>Plus</td><td>1</td><td>1</td></tr>
+          <tr><td>1</td><td>Cross</td><td>45</td><td>Plus</td><td>1</td><td>-</td></tr>
+          <tr><td>0</td><td>Plus</td><td>0</td><td>Cross</td><td>1</td><td>-</td></tr>
+          <tr><td>0</td><td>Cross</td><td>-45</td><td>Cross</td><td>0</td><td>0</td></tr>
+          <tr><td>0</td><td>Plus</td><td>0</td><td>Plus</td><td>0</td><td>0</td></tr>
+          <tr><td>0</td><td>Cross</td><td>-45</td><td>Plus</td><td>Random</td><td>-</td></tr>
+          <tr><td>1</td><td>Plus</td><td>90</td><td>Plus</td><td>1</td><td>1</td></tr>
+          <tr><td>1</td><td>Cross</td><td>45</td><td>Cross</td><td>1</td><td>1</td></tr>
+          <tr><td>1</td><td>Plus</td><td>90</td><td>Cross</td><td>0</td><td>-</td></tr>
+          <tr><td>1</td><td>Cross</td><td>45</td><td>Cross</td><td>1</td><td>1</td></tr>
+          <tr><td>0</td><td>Plus</td><td>0</td><td>Plus</td><td>0</td><td>0</td></tr>
+          <tr><td>1</td><td>Cross</td><td>45</td><td>Plus</td><td>1</td><td>-</td></tr>
+          <tr><td>1</td><td>Plus</td><td>90</td><td>Plus</td><td>1</td><td>1</td></tr>
+          <tr><td>0</td><td>Cross</td><td>-45</td><td>Plus</td><td>Random</td><td>-</td></tr>
+          <tr><td>1</td><td>Plus</td><td>90</td><td>Cross</td><td>Random</td><td>-</td></tr>
+          <tr><td>1</td><td>Cross</td><td>45</td><td>Cross</td><td>1</td><td>1</td></tr>
+          <tr><td>0</td><td>Plus</td><td>0</td><td>Cross</td><td>1</td><td>-</td></tr>
+          <tr><td>0</td><td>Cross</td><td>-45</td><td>Cross</td><td>0</td><td>0</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Final Generated Key:</strong> 1001110110</p>
+      <p><strong>Key Length:</strong> 10 bits (from 18 trials)</p>
+      <p><strong>Note:</strong> "Random" or mismatched bases lead to discarded measurements, maintaining security and integrity of the key.</p>
+      <h3>Encryption and Decryption of the Word "AA"</h3>
+      <p>Each character is represented using 5-bit binary encoding. For "A", the binary code is assumed to be 00000. Therefore, the word "AA" is encoded as:</p>
+      <div style="display: flex; flex-direction: row; justify-content: space-around;">
+      <table style="width: 45%;">
+        <thead>
+          <tr>
+            <th></th>
+            <th colspan="5">A</th>
+            <th colspan="5">A</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th>0</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Binary Word</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Key</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Encrypted Bits</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+      <table style="width: 45%;">
+        <thead>
+          <tr>
+            <th></th>
+            <th colspan="5">A</th>
+            <th colspan="5">A</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th>0</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Encrypted Bits</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Key</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Decrypted Bits</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Word</td>
+            <td colspan="5">A</td>
+            <td colspan="5">A</td>
+          </tr>
+        </tbody>
+      </table> 
+        </div>
+      <h3>Detection of Eavesdropping in BB84 Protocol</h3>
+      <p>A quantum key distribution scenario where an eavesdropper (Eve) intercepts and measures the photons before sending them to Bob. Due to quantum disturbance, mismatched bases introduce errors that can be detected statistically.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Trial</th>
+            <th>Alice's Bit</th>
+            <th>Alice's Basis</th>
+            <th>Eve's Basis</th>
+            <th>Bob's Basis</th>
+            <th>Bob's Bit</th>
+            <th>Bases Match?</th>
+            <th>Error Detected?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>1</td><td>Plus</td><td>Plus</td><td>Plus</td><td>1</td><td>Yes</td><td>No</td></tr>
+          <tr><td>2</td><td>0</td><td>Cross</td><td>Plus</td><td>Cross</td><td>1</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td>3</td><td>1</td><td>Plus</td><td>Cross</td><td>Plus</td><td>0</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td>4</td><td>0</td><td>Cross</td><td>Cross</td><td>Cross</td><td>0</td><td>Yes</td><td>No</td></tr>
+          <tr><td>5</td><td>1</td><td>Plus</td><td>Plus</td><td>Plus</td><td>1</td><td>Yes</td><td>No</td></tr>
+          <tr><td>6</td><td>0</td><td>Cross</td><td>Plus</td><td>Plus</td><td>1</td><td>No</td><td>-</td></tr>
+          <tr><td>7</td><td>1</td><td>Cross</td><td>Plus</td><td>Cross</td><td>1</td><td>Yes</td><td>-</td></tr>
+          <tr><td>8</td><td>1</td><td>Cross</td><td>Cross</td><td>Cross</td><td>1</td><td>Yes</td><td>No</td></tr>
+          <tr><td>9</td><td>0</td><td>Plus</td><td>Cross</td><td>Plus</td><td>1</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td>10</td><td>0</td><td>Cross</td><td>Plus</td><td>Cross</td><td>0</td><td>Yes</td><td>No</td></tr>
+        </tbody>
+      </table>
+      <h4>Analysis:</h4>
+      <ul>
+        <li>Trials with matching bases (Alice = Bob): 8</li>
+        <li>Errors observed in those 8 trials: 3</li>
+        <li>Error Rate: 3 out of 8 => 37.5%</li>
+      </ul>
+      <p>Since the observed error rate exceeds the acceptable threshold ~ 25% , this indicates the presence of an eavesdropper (Eve). Alice and Bob should discard the key and restart the process.</p>
+    </section>
+
+    <section class="section" id="conclusion">
+      <h2>Conclusion</h2>
+      <p>The experiment successfully demonstrated secure key generation using quantum cryptography based on the BB84 protocol. The presence of an eavesdropper (Eve) was detected through a statistical increase in error rate. This validates the principle that quantum mechanics enables fundamentally secure communication.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="../pages/content3.html" target="_blank">© Quantum Cryptography Experiment Report</a>
+    <p>Additya Akash Mishra</p>
+    <p>SC24M156</p>
+  </footer>
+
+</body>
+</html>
