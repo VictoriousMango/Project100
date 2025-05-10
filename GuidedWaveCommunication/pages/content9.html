@@ -23,7 +23,7 @@
       <ul>
         <li>EDU-QCRY1/M Quantum Cryptography Demonstration Kit</li>
         <li>Laser Diode Module (CPS635R-C2)</li>
-        <li>Polarization Rotators (\( \lambda / 2 \) Plates)</li>
+        <li>Polarization Rotators (λ/2 Plates)</li>
         <li>Polarizing Beamsplitters (PBS)</li>
         <li>Optical Breadboards and Mounting Hardware</li>
         <li>Sensors and Sensor Electronics</li>
@@ -48,16 +48,15 @@
       <h3>Quantum Key Distribution with BB84</h3>
       <p>BB84 uses the polarization of photons to encode bits. Alice sends photons randomly polarized in one of two bases:</p>
       <ul>
-        <li>\( + \) basis (rectilinear): \( 0^\circ \) for bit 0, \( 90^\circ \) for bit 1</li>
-        <li>\( \times \) basis (diagonal): \( -45^\circ \) for bit 0, \( 45^\circ \) for bit 1</li>
+        <li>+ basis (rectilinear): 0° for bit 0, 90° for bit 1</li>
+        <li>× basis (diagonal): -45° for bit 0, 45° for bit 1</li>
+
       </ul>
       <p>Bob also measures the incoming photons using a randomly chosen basis. After transmission, they publicly compare bases and keep only the bits where their bases match.</p>
       <p><img src="../assets/img/content9_1.png" alt="Quantum Cryptography Setup" style="width: 100%;"></p>
-      <p class="center">Figure 3: Quantum Cryptography Setup with the Bases \( + (0^\circ \text{ and } 90^\circ) \) and \( \times (-45^\circ \text{ and } 45^\circ) \)</p>
       <h3>Eavesdropper Detection</h3>
-      <p>Eve cannot copy or measure a quantum state without disturbing it (No-Cloning Theorem). If Eve measures in the wrong basis, it introduces detectable errors. By comparing a subset of the key, Alice and Bob can estimate the error rate. A high error rate (e.g., \( \approx 25\% \)) suggests eavesdropping.</p>
+      <p>Eve cannot copy or measure a quantum state without disturbing it (No-Cloning Theorem). If Eve measures in the wrong basis, it introduces detectable errors. By comparing a subset of the key, Alice and Bob can estimate the error rate. A high error rate (e.g., ~ 25% ) suggests eavesdropping.</p>
       <p><img src="../assets/img/content9_2.png" alt="Eavesdropper Eve between Alice and Bob" style="width: 100%;"></p>
-      <p class="center">Figure 4: Eavesdropper Eve between Alice and Bob</p>
     </section>
 
     <section class="section" id="procedure">
@@ -66,7 +65,7 @@
         <li><strong>Setup:</strong> Assemble laser, polarizers, PBS, detectors, and electronics. Align the laser for horizontal polarization.</li>
         <li><strong>Key Transmission:</strong>
           <ul>
-            <li>Alice randomly selects a bit and a basis (\( + \) or \( \times \)), sets the polarization, and sends the photon.</li>
+            <li>Alice randomly selects a bit and a basis (+ or ×), sets the polarization, and sends the photon.</li>
             <li>Bob randomly selects a basis and records the measurement outcome.</li>
           </ul>
         </li>
@@ -79,7 +78,7 @@
         <li><strong>Eavesdropper Detection:</strong>
           <ul>
             <li>Alice and Bob compare a subset of the key.</li>
-            <li>If the error rate is high (\( \approx 25\% \)), Eve is detected and the key is discarded.</li>
+            <li>If the error rate is high ~ 25%, Eve is detected and the key is discarded.</li>
             <li>Otherwise, they proceed with the final key (excluding test bits).</li>
           </ul>
         </li>
