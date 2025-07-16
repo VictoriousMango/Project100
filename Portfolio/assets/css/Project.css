@@ -108,6 +108,7 @@ img, video {
     color: white; /* Optional: Change text color for better readability */
     padding: 5px; /* Optional: Add padding for better spacing */
     width: 100%;
+    max-height: max-content;
 }
 
 .project__card.active {
@@ -125,4 +126,24 @@ img, video {
 }
 .project__card.active  .project__card-title{
     width: 45%;
+}
+
+@media (max-width: 600px) {
+    .project__card {
+        width: 40%;
+        flex-direction: column;
+    }
+    .project__card.active .project__card-right {
+    display: block;
+    width: 100%;
+    }
+
+    .project__card.active .project__card-left {
+        width: 100%;
+    }
+    .project__card.active  .project__card-title{
+        width: 100%;
+        position: absolute;
+        top: 0%;
+    }
 }

@@ -15,7 +15,7 @@ a {
     width: inherit;
     margin: 0 auto;
     background-color: var(--resume-card-bg);
-    padding: 30px;
+    /* padding: 15px; */
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -40,10 +40,11 @@ a {
 .resume-content {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
     height: 65vh;
     overflow: auto;
     scrollbar-width: none;
+    padding: 15px;
 }
 
 /* Left Column */
@@ -51,7 +52,7 @@ a {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     /* background-color: var(--resume-card-bg); */
 }
 
@@ -60,7 +61,7 @@ a {
     flex: 2;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 /* Resume Card */
@@ -90,7 +91,7 @@ a {
 
 /* Lists */
 .resume__ul {
-    list-style: none;
+    /* list-style: none; */
     padding-left: 20px;
 }
 
@@ -103,5 +104,8 @@ a {
 @media (max-width: 600px) {
     .container {
         padding: 1%;
+    }
+    .resume-content {
+        flex-direction: column;
     }
 }
